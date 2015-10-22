@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>52606DE8-904A-423D-91FC-6FAED7F3B274</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TwentyOneTournament2016</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>72D20B2D294D2E8A9A7A232408D61F3EAFC6ED15</key>
+		<string>https://github.com/21-Tournament-2016/21iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TwentyOneTournament2016/TwentyOneTournament2016.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>72D20B2D294D2E8A9A7A232408D61F3EAFC6ED15</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/21-Tournament-2016/21iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>72D20B2D294D2E8A9A7A232408D61F3EAFC6ED15</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>72D20B2D294D2E8A9A7A232408D61F3EAFC6ED15</string>
+			<key>IDESourceControlWCCName</key>
+			<string>21iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
