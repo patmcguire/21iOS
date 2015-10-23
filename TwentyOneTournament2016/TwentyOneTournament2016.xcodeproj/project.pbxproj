@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1367D4C71BD8942000D5AD61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1367D4C61BD8942000D5AD61 /* AppDelegate.swift */; };
-		1367D4C91BD8942000D5AD61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1367D4C81BD8942000D5AD61 /* ViewController.swift */; };
 		1367D4CC1BD8942000D5AD61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1367D4CA1BD8942000D5AD61 /* Main.storyboard */; };
 		1367D4CE1BD8942000D5AD61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1367D4CD1BD8942000D5AD61 /* Images.xcassets */; };
 		1367D4D11BD8942000D5AD61 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1367D4CF1BD8942000D5AD61 /* LaunchScreen.xib */; };
 		1367D4DD1BD8942000D5AD61 /* TwentyOneTournament2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1367D4DC1BD8942000D5AD61 /* TwentyOneTournament2016Tests.swift */; };
+		43A387391BD9B94200FEB900 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A387381BD9B94200FEB900 /* HomeScreen.swift */; settings = {ASSET_TAGS = (); }; };
+		43A3873B1BD9BB8B00FEB900 /* RegSeasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3873A1BD9BB8B00FEB900 /* RegSeasonViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		43A3873D1BD9BB9D00FEB900 /* PlayoffsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3873C1BD9BB9D00FEB900 /* PlayoffsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		43A3873F1BD9BBAB00FEB900 /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3873E1BD9BBAB00FEB900 /* TeamListViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		43A387411BD9BBB800FEB900 /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A387401BD9BBB800FEB900 /* StandingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +33,17 @@
 		1367D4C11BD8942000D5AD61 /* TwentyOneTournament2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwentyOneTournament2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1367D4C51BD8942000D5AD61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1367D4C61BD8942000D5AD61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1367D4C81BD8942000D5AD61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1367D4CB1BD8942000D5AD61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1367D4CD1BD8942000D5AD61 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1367D4D01BD8942000D5AD61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1367D4D61BD8942000D5AD61 /* TwentyOneTournament2016Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwentyOneTournament2016Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1367D4DB1BD8942000D5AD61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1367D4DC1BD8942000D5AD61 /* TwentyOneTournament2016Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyOneTournament2016Tests.swift; sourceTree = "<group>"; };
+		43A387381BD9B94200FEB900 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		43A3873A1BD9BB8B00FEB900 /* RegSeasonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegSeasonViewController.swift; sourceTree = "<group>"; };
+		43A3873C1BD9BB9D00FEB900 /* PlayoffsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayoffsViewController.swift; sourceTree = "<group>"; };
+		43A3873E1BD9BBAB00FEB900 /* TeamListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListViewController.swift; sourceTree = "<group>"; };
+		43A387401BD9BBB800FEB900 /* StandingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +86,12 @@
 			isa = PBXGroup;
 			children = (
 				1367D4C61BD8942000D5AD61 /* AppDelegate.swift */,
-				1367D4C81BD8942000D5AD61 /* ViewController.swift */,
 				1367D4CA1BD8942000D5AD61 /* Main.storyboard */,
+				43A387381BD9B94200FEB900 /* HomeScreen.swift */,
+				43A3873A1BD9BB8B00FEB900 /* RegSeasonViewController.swift */,
+				43A3873C1BD9BB9D00FEB900 /* PlayoffsViewController.swift */,
+				43A3873E1BD9BBAB00FEB900 /* TeamListViewController.swift */,
+				43A387401BD9BBB800FEB900 /* StandingsViewController.swift */,
 				1367D4CD1BD8942000D5AD61 /* Images.xcassets */,
 				1367D4CF1BD8942000D5AD61 /* LaunchScreen.xib */,
 				1367D4C41BD8942000D5AD61 /* Supporting Files */,
@@ -156,6 +168,7 @@
 		1367D4B91BD8942000D5AD61 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = 21Tournament;
 				TargetAttributes = {
@@ -212,8 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1367D4C91BD8942000D5AD61 /* ViewController.swift in Sources */,
 				1367D4C71BD8942000D5AD61 /* AppDelegate.swift in Sources */,
+				43A387391BD9B94200FEB900 /* HomeScreen.swift in Sources */,
+				43A387411BD9BBB800FEB900 /* StandingsViewController.swift in Sources */,
+				43A3873D1BD9BB9D00FEB900 /* PlayoffsViewController.swift in Sources */,
+				43A3873F1BD9BBAB00FEB900 /* TeamListViewController.swift in Sources */,
+				43A3873B1BD9BB8B00FEB900 /* RegSeasonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
