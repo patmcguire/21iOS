@@ -7,7 +7,11 @@
 //
 
 #import "ParseOps.h"
+@interface ParseOps()
+
+@end
 
 @implementation ParseOps
+
 
 @end
