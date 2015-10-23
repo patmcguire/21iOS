@@ -12,13 +12,15 @@
 		1367D4CE1BD8942000D5AD61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1367D4CD1BD8942000D5AD61 /* Images.xcassets */; };
 		1367D4D11BD8942000D5AD61 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1367D4CF1BD8942000D5AD61 /* LaunchScreen.xib */; };
 		1367D4DD1BD8942000D5AD61 /* TwentyOneTournament2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1367D4DC1BD8942000D5AD61 /* TwentyOneTournament2016Tests.swift */; };
-		4393D05C1BD9DD9F0001DDC5 /* gameTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4393D05B1BD9DD9F0001DDC5 /* gameTblCell.xib */; settings = {ASSET_TAGS = (); }; };
-		4393D05E1BD9DE860001DDC5 /* gameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4393D05D1BD9DE860001DDC5 /* gameCell.swift */; settings = {ASSET_TAGS = (); }; };
-		43A387391BD9B94200FEB900 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A387381BD9B94200FEB900 /* HomeScreen.swift */; settings = {ASSET_TAGS = (); }; };
-		43A3873B1BD9BB8B00FEB900 /* RegSeasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3873A1BD9BB8B00FEB900 /* RegSeasonViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		43A3873D1BD9BB9D00FEB900 /* PlayoffsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3873C1BD9BB9D00FEB900 /* PlayoffsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		43A3873F1BD9BBAB00FEB900 /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3873E1BD9BBAB00FEB900 /* TeamListViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		43A387411BD9BBB800FEB900 /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A387401BD9BBB800FEB900 /* StandingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		1391B0CE1BDAA33C00012AEE /* ParseOps.m in Sources */ = {isa = PBXBuildFile; fileRef = 1391B0CD1BDAA33C00012AEE /* ParseOps.m */; settings = {ASSET_TAGS = (); }; };
+		4393D05C1BD9DD9F0001DDC5 /* gameTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4393D05B1BD9DD9F0001DDC5 /* gameTblCell.xib */; };
+		4393D05E1BD9DE860001DDC5 /* gameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4393D05D1BD9DE860001DDC5 /* gameCell.swift */; };
+		43A387391BD9B94200FEB900 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A387381BD9B94200FEB900 /* HomeScreen.swift */; };
+		43A3873B1BD9BB8B00FEB900 /* RegSeasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3873A1BD9BB8B00FEB900 /* RegSeasonViewController.swift */; };
+		43A3873D1BD9BB9D00FEB900 /* PlayoffsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3873C1BD9BB9D00FEB900 /* PlayoffsViewController.swift */; };
+		43A3873F1BD9BBAB00FEB900 /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3873E1BD9BBAB00FEB900 /* TeamListViewController.swift */; };
+		43A387411BD9BBB800FEB900 /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A387401BD9BBB800FEB900 /* StandingsViewController.swift */; };
+		5744CFD030F7D8F783FCDBCC /* Pods_TwentyOneTournament2016.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3BAC8635A59D14DB2AAB96 /* Pods_TwentyOneTournament2016.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,9 @@
 		1367D4D61BD8942000D5AD61 /* TwentyOneTournament2016Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwentyOneTournament2016Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1367D4DB1BD8942000D5AD61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1367D4DC1BD8942000D5AD61 /* TwentyOneTournament2016Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyOneTournament2016Tests.swift; sourceTree = "<group>"; };
+		1391B0CB1BDAA33C00012AEE /* TwentyOneTournament2016-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TwentyOneTournament2016-Bridging-Header.h"; sourceTree = "<group>"; };
+		1391B0CC1BDAA33C00012AEE /* ParseOps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseOps.h; sourceTree = "<group>"; };
+		1391B0CD1BDAA33C00012AEE /* ParseOps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseOps.m; sourceTree = "<group>"; };
 		4393D05B1BD9DD9F0001DDC5 /* gameTblCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = gameTblCell.xib; sourceTree = "<group>"; };
 		4393D05D1BD9DE860001DDC5 /* gameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameCell.swift; sourceTree = "<group>"; };
 		43A387381BD9B94200FEB900 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -48,6 +53,9 @@
 		43A3873C1BD9BB9D00FEB900 /* PlayoffsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayoffsViewController.swift; sourceTree = "<group>"; };
 		43A3873E1BD9BBAB00FEB900 /* TeamListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListViewController.swift; sourceTree = "<group>"; };
 		43A387401BD9BBB800FEB900 /* StandingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandingsViewController.swift; sourceTree = "<group>"; };
+		5C93B3AD78E5F1312F952AB3 /* Pods-TwentyOneTournament2016.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwentyOneTournament2016.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwentyOneTournament2016/Pods-TwentyOneTournament2016.release.xcconfig"; sourceTree = "<group>"; };
+		A647E74F2FFC37B62363AFF0 /* Pods-TwentyOneTournament2016.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwentyOneTournament2016.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwentyOneTournament2016/Pods-TwentyOneTournament2016.debug.xcconfig"; sourceTree = "<group>"; };
+		EC3BAC8635A59D14DB2AAB96 /* Pods_TwentyOneTournament2016.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwentyOneTournament2016.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5744CFD030F7D8F783FCDBCC /* Pods_TwentyOneTournament2016.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +83,8 @@
 				1367D4C31BD8942000D5AD61 /* TwentyOneTournament2016 */,
 				1367D4D91BD8942000D5AD61 /* TwentyOneTournament2016Tests */,
 				1367D4C21BD8942000D5AD61 /* Products */,
+				B2E527E938800B6A387F2D45 /* Pods */,
+				2C886FC97039A70BB263394B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +112,9 @@
 				1367D4CD1BD8942000D5AD61 /* Images.xcassets */,
 				1367D4CF1BD8942000D5AD61 /* LaunchScreen.xib */,
 				1367D4C41BD8942000D5AD61 /* Supporting Files */,
+				1391B0CC1BDAA33C00012AEE /* ParseOps.h */,
+				1391B0CD1BDAA33C00012AEE /* ParseOps.m */,
+				1391B0CB1BDAA33C00012AEE /* TwentyOneTournament2016-Bridging-Header.h */,
 			);
 			path = TwentyOneTournament2016;
 			sourceTree = "<group>";
@@ -130,6 +144,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		2C886FC97039A70BB263394B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC3BAC8635A59D14DB2AAB96 /* Pods_TwentyOneTournament2016.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2E527E938800B6A387F2D45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A647E74F2FFC37B62363AFF0 /* Pods-TwentyOneTournament2016.debug.xcconfig */,
+				5C93B3AD78E5F1312F952AB3 /* Pods-TwentyOneTournament2016.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1367D4E01BD8942000D5AD61 /* Build configuration list for PBXNativeTarget "TwentyOneTournament2016" */;
 			buildPhases = (
+				F8D210217AF0FB79E5A49E55 /* Check Pods Manifest.lock */,
 				1367D4BD1BD8942000D5AD61 /* Sources */,
 				1367D4BE1BD8942000D5AD61 /* Frameworks */,
 				1367D4BF1BD8942000D5AD61 /* Resources */,
+				7B6476C149CB19B7CA95BBF4 /* Embed Pods Frameworks */,
+				8C393DACA677C77AABA26A09 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -227,6 +261,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7B6476C149CB19B7CA95BBF4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TwentyOneTournament2016/Pods-TwentyOneTournament2016-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C393DACA677C77AABA26A09 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TwentyOneTournament2016/Pods-TwentyOneTournament2016-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8D210217AF0FB79E5A49E55 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1367D4BD1BD8942000D5AD61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -234,6 +316,7 @@
 			files = (
 				4393D05E1BD9DE860001DDC5 /* gameCell.swift in Sources */,
 				1367D4C71BD8942000D5AD61 /* AppDelegate.swift in Sources */,
+				1391B0CE1BDAA33C00012AEE /* ParseOps.m in Sources */,
 				43A387391BD9B94200FEB900 /* HomeScreen.swift in Sources */,
 				43A387411BD9BBB800FEB900 /* StandingsViewController.swift in Sources */,
 				43A3873D1BD9BB9D00FEB900 /* PlayoffsViewController.swift in Sources */,
@@ -363,21 +446,28 @@
 		};
 		1367D4E11BD8942000D5AD61 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A647E74F2FFC37B62363AFF0 /* Pods-TwentyOneTournament2016.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TwentyOneTournament2016/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TwentyOneTournament2016/TwentyOneTournament2016-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		1367D4E21BD8942000D5AD61 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C93B3AD78E5F1312F952AB3 /* Pods-TwentyOneTournament2016.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TwentyOneTournament2016/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TwentyOneTournament2016/TwentyOneTournament2016-Bridging-Header.h";
 			};
 			name = Release;
 		};

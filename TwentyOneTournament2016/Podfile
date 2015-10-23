@@ -1,0 +1,11 @@
+platform :ios, "8.0"
+use_frameworks!
+
+target 'TwentyOneTournament2016' do
+pod 'Parse'
+end
+
+target 'TwentyOneTournament2016Tests' do
+
+end
+
