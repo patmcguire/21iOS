@@ -12,6 +12,8 @@
 		1367D4CE1BD8942000D5AD61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1367D4CD1BD8942000D5AD61 /* Images.xcassets */; };
 		1367D4D11BD8942000D5AD61 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1367D4CF1BD8942000D5AD61 /* LaunchScreen.xib */; };
 		1367D4DD1BD8942000D5AD61 /* TwentyOneTournament2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1367D4DC1BD8942000D5AD61 /* TwentyOneTournament2016Tests.swift */; };
+		4393D05C1BD9DD9F0001DDC5 /* gameTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4393D05B1BD9DD9F0001DDC5 /* gameTblCell.xib */; settings = {ASSET_TAGS = (); }; };
+		4393D05E1BD9DE860001DDC5 /* gameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4393D05D1BD9DE860001DDC5 /* gameCell.swift */; settings = {ASSET_TAGS = (); }; };
 		43A387391BD9B94200FEB900 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A387381BD9B94200FEB900 /* HomeScreen.swift */; settings = {ASSET_TAGS = (); }; };
 		43A3873B1BD9BB8B00FEB900 /* RegSeasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3873A1BD9BB8B00FEB900 /* RegSeasonViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		43A3873D1BD9BB9D00FEB900 /* PlayoffsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3873C1BD9BB9D00FEB900 /* PlayoffsViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -39,6 +41,8 @@
 		1367D4D61BD8942000D5AD61 /* TwentyOneTournament2016Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwentyOneTournament2016Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1367D4DB1BD8942000D5AD61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1367D4DC1BD8942000D5AD61 /* TwentyOneTournament2016Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyOneTournament2016Tests.swift; sourceTree = "<group>"; };
+		4393D05B1BD9DD9F0001DDC5 /* gameTblCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = gameTblCell.xib; sourceTree = "<group>"; };
+		4393D05D1BD9DE860001DDC5 /* gameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameCell.swift; sourceTree = "<group>"; };
 		43A387381BD9B94200FEB900 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		43A3873A1BD9BB8B00FEB900 /* RegSeasonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegSeasonViewController.swift; sourceTree = "<group>"; };
 		43A3873C1BD9BB9D00FEB900 /* PlayoffsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayoffsViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				43A387381BD9B94200FEB900 /* HomeScreen.swift */,
 				43A3873A1BD9BB8B00FEB900 /* RegSeasonViewController.swift */,
 				43A3873C1BD9BB9D00FEB900 /* PlayoffsViewController.swift */,
+				4393D05D1BD9DE860001DDC5 /* gameCell.swift */,
+				4393D05B1BD9DD9F0001DDC5 /* gameTblCell.xib */,
 				43A3873E1BD9BBAB00FEB900 /* TeamListViewController.swift */,
 				43A387401BD9BBB800FEB900 /* StandingsViewController.swift */,
 				1367D4CD1BD8942000D5AD61 /* Images.xcassets */,
@@ -205,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4393D05C1BD9DD9F0001DDC5 /* gameTblCell.xib in Resources */,
 				1367D4CC1BD8942000D5AD61 /* Main.storyboard in Resources */,
 				1367D4D11BD8942000D5AD61 /* LaunchScreen.xib in Resources */,
 				1367D4CE1BD8942000D5AD61 /* Images.xcassets in Resources */,
@@ -225,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4393D05E1BD9DE860001DDC5 /* gameCell.swift in Sources */,
 				1367D4C71BD8942000D5AD61 /* AppDelegate.swift in Sources */,
 				43A387391BD9B94200FEB900 /* HomeScreen.swift in Sources */,
 				43A387411BD9BBB800FEB900 /* StandingsViewController.swift in Sources */,
