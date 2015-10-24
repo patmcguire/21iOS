@@ -10,10 +10,12 @@ import Foundation
 import UIKit
 
 class HomeScreen: UIViewController {
+    var parseOperator = ParseOps.init()
     
     override func viewDidLoad() {
-    
 
+        parseOperator.runTestOps()
+        
     }
     
     
