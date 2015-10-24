@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Standings View Controller-->
+        <!--Standings-->
         <scene sceneID="CY4-Rv-FCL">
             <objects>
-                <viewController id="grc-PL-vQ5" customClass="StandingsViewController" customModule="TwentyOneTournament2016" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Standings" id="grc-PL-vQ5" customClass="StandingsViewController" customModule="TwentyOneTournament2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5C7-Q3-VIL"/>
                         <viewControllerLayoutGuide type="bottom" id="WUE-dk-FOG"/>
@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="730.5" y="1207.5"/>
         </scene>
-        <!--Home Screen-->
+        <!--21 - 2016-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="HomeScreen" customModule="TwentyOneTournament2016" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="21 - 2016" id="vXZ-lx-hvc" customClass="HomeScreen" customModule="TwentyOneTournament2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="1483.5" y="494.25"/>
         </scene>
-        <!--Team List View Controller-->
+        <!--Teams-->
         <scene sceneID="hZX-5r-HIW">
             <objects>
-                <viewController id="Ahi-Ei-RGT" customClass="TeamListViewController" customModule="TwentyOneTournament2016" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Teams" id="Ahi-Ei-RGT" customClass="TeamListViewController" customModule="TwentyOneTournament2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n2V-xy-WZe"/>
                         <viewControllerLayoutGuide type="bottom" id="HEZ-B8-C60"/>
@@ -207,10 +207,10 @@
             </objects>
             <point key="canvasLocation" x="2266.5" y="1207.5"/>
         </scene>
-        <!--Playoffs View Controller-->
+        <!--Playoffs-->
         <scene sceneID="wJE-5N-Bt3">
             <objects>
-                <viewController id="1Sx-Pr-l14" customClass="PlayoffsViewController" customModule="TwentyOneTournament2016" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Playoffs" id="1Sx-Pr-l14" customClass="PlayoffsViewController" customModule="TwentyOneTournament2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SbM-ph-a9h"/>
                         <viewControllerLayoutGuide type="bottom" id="vLu-VA-Iml"/>
@@ -257,10 +257,10 @@
             </objects>
             <point key="canvasLocation" x="2275.5" y="-164.25"/>
         </scene>
-        <!--Reg Season View Controller-->
+        <!--Regular Season-->
         <scene sceneID="yzn-9K-idN">
             <objects>
-                <viewController id="Ma2-ve-pwr" customClass="RegSeasonViewController" customModule="TwentyOneTournament2016" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Regular Season" id="Ma2-ve-pwr" customClass="RegSeasonViewController" customModule="TwentyOneTournament2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ubC-aR-OIi"/>
                         <viewControllerLayoutGuide type="bottom" id="jQy-K5-LJ1"/>
@@ -269,35 +269,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hN7-qE-bWc">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vr-6T-vmV">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="&gt;"/>
-                                <connections>
-                                    <action selector="nextRoundBtn:" destination="Ma2-ve-pwr" eventType="touchUpInside" id="eWF-Se-v3U"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIY-5x-NAd">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="&lt;"/>
-                                <connections>
-                                    <action selector="prevRoundBtn:" destination="Ma2-ve-pwr" eventType="touchUpInside" id="bkO-eq-ynz"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H0X-Bj-OoW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H0X-Bj-OoW">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextCell" textLabel="APQ-hB-7yn" rowHeight="46" style="IBUITableViewCellStyleDefault" id="MlQ-Hv-pYj">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextCell" textLabel="APQ-hB-7yn" rowHeight="70" style="IBUITableViewCellStyleDefault" id="MlQ-Hv-pYj">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MlQ-Hv-pYj" id="sJ1-ns-kbH">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="44.5"/>
@@ -318,68 +297,112 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="121" width="400" height="438"/>
-                                </variation>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round #" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hN7-qE-bWc">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="vtu-fe-7f3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="vtu-fe-7f3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="vtu-fe-7f3"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vr-6T-vmV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextRoundBtn:" destination="Ma2-ve-pwr" eventType="touchUpInside" id="eWF-Se-v3U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIY-5x-NAd">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="prevRoundBtn:" destination="Ma2-ve-pwr" eventType="touchUpInside" id="bkO-eq-ynz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="H0X-Bj-OoW" firstAttribute="leading" secondItem="cx2-WS-YHV" secondAttribute="leadingMargin" constant="-20" id="9xG-FZ-L11"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Vr-6T-vmV" secondAttribute="trailing" id="B9z-Cu-WdO"/>
-                            <constraint firstItem="hN7-qE-bWc" firstAttribute="top" secondItem="ubC-aR-OIi" secondAttribute="bottom" constant="8" id="Jgj-6g-oSW"/>
+                            <constraint firstItem="H0X-Bj-OoW" firstAttribute="top" secondItem="hN7-qE-bWc" secondAttribute="bottom" id="H9Z-qw-e7s"/>
                             <constraint firstItem="9Vr-6T-vmV" firstAttribute="top" secondItem="ubC-aR-OIi" secondAttribute="bottom" constant="3" id="JnR-Mz-oVC"/>
-                            <constraint firstItem="H0X-Bj-OoW" firstAttribute="centerY" secondItem="cx2-WS-YHV" secondAttribute="centerY" id="MBR-g0-6AI"/>
                             <constraint firstItem="hN7-qE-bWc" firstAttribute="centerX" secondItem="cx2-WS-YHV" secondAttribute="centerX" id="NH6-7d-l11"/>
+                            <constraint firstItem="hN7-qE-bWc" firstAttribute="leading" secondItem="cx2-WS-YHV" secondAttribute="leading" id="Q0h-We-jB1"/>
+                            <constraint firstItem="hN7-qE-bWc" firstAttribute="top" secondItem="ubC-aR-OIi" secondAttribute="bottom" id="VWA-Ns-YzF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="H0X-Bj-OoW" secondAttribute="trailing" constant="-20" id="WDP-Lg-qDD"/>
-                            <constraint firstItem="H0X-Bj-OoW" firstAttribute="top" secondItem="hN7-qE-bWc" secondAttribute="bottom" constant="28" id="XJk-bP-yAo"/>
                             <constraint firstItem="mIY-5x-NAd" firstAttribute="top" secondItem="ubC-aR-OIi" secondAttribute="bottom" constant="3" id="YXg-ty-ZPs"/>
                             <constraint firstItem="H0X-Bj-OoW" firstAttribute="centerX" secondItem="cx2-WS-YHV" secondAttribute="centerX" id="ggu-V8-o08"/>
+                            <constraint firstItem="jQy-K5-LJ1" firstAttribute="top" secondItem="H0X-Bj-OoW" secondAttribute="bottom" id="n9h-zI-rn4"/>
+                            <constraint firstAttribute="trailing" secondItem="hN7-qE-bWc" secondAttribute="trailing" id="rPO-lc-Z0S"/>
                             <constraint firstAttribute="leadingMargin" secondItem="mIY-5x-NAd" secondAttribute="leading" id="xZ5-dg-KIa"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="H0X-Bj-OoW"/>
                                 <exclude reference="hN7-qE-bWc"/>
                                 <exclude reference="9Vr-6T-vmV"/>
                                 <exclude reference="mIY-5x-NAd"/>
-                                <exclude reference="H0X-Bj-OoW"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="NH6-7d-l11"/>
+                                <exclude reference="Q0h-We-jB1"/>
+                                <exclude reference="VWA-Ns-YzF"/>
+                                <exclude reference="rPO-lc-Z0S"/>
                                 <exclude reference="YXg-ty-ZPs"/>
                                 <exclude reference="xZ5-dg-KIa"/>
                                 <exclude reference="9xG-FZ-L11"/>
-                                <exclude reference="MBR-g0-6AI"/>
+                                <exclude reference="H9Z-qw-e7s"/>
                                 <exclude reference="WDP-Lg-qDD"/>
-                                <exclude reference="XJk-bP-yAo"/>
                                 <exclude reference="ggu-V8-o08"/>
-                                <exclude reference="Jgj-6g-oSW"/>
-                                <exclude reference="NH6-7d-l11"/>
                                 <exclude reference="B9z-Cu-WdO"/>
                                 <exclude reference="JnR-Mz-oVC"/>
+                                <exclude reference="n9h-zI-rn4"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
+                                <include reference="H0X-Bj-OoW"/>
                                 <include reference="hN7-qE-bWc"/>
                                 <include reference="9Vr-6T-vmV"/>
                                 <include reference="mIY-5x-NAd"/>
-                                <include reference="H0X-Bj-OoW"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="NH6-7d-l11"/>
+                                <include reference="Q0h-We-jB1"/>
+                                <include reference="VWA-Ns-YzF"/>
+                                <include reference="rPO-lc-Z0S"/>
                                 <include reference="YXg-ty-ZPs"/>
                                 <include reference="xZ5-dg-KIa"/>
                                 <include reference="9xG-FZ-L11"/>
-                                <include reference="MBR-g0-6AI"/>
+                                <include reference="H9Z-qw-e7s"/>
                                 <include reference="WDP-Lg-qDD"/>
-                                <include reference="XJk-bP-yAo"/>
                                 <include reference="ggu-V8-o08"/>
-                                <include reference="Jgj-6g-oSW"/>
-                                <include reference="NH6-7d-l11"/>
                                 <include reference="B9z-Cu-WdO"/>
                                 <include reference="JnR-Mz-oVC"/>
+                                <include reference="n9h-zI-rn4"/>
                             </mask>
                         </variation>
                     </view>
@@ -397,7 +420,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T9e-cb-ttF" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rWy-TA-alI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="rWy-TA-alI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>

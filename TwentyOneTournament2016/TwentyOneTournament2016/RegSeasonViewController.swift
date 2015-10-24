@@ -62,6 +62,7 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         
         super.viewDidLoad()
+
         
         roundNum = 1
         
@@ -75,7 +76,7 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         
         roundLbl.text = "Round \(roundNum)"
         
-        self.tableView.tableFooterView = UIView(frame: CGRectZero)
+        self.tableView.rowHeight = 70.0
     }
     
     
@@ -96,14 +97,12 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         
 
         //This is the part that I'm not sure makes sense or not. It definitely works but not sure if this is the best way to do it.
-        if i < teamList.count-1{
+        let row = indexPath.row
         
-            cell.teamOneLbl.text = "\(teamList[i])"
-            cell.teamTwoLbl.text = "\(teamList[i+1])"
+            cell.teamOneLbl.text = "\(teamList[row*2])"
+            cell.teamTwoLbl.text = "\(teamList[row*2+1])"
+            cell.gameCountLbl.text = "\(row+1)"
             
-            i = i+2
-            
-        }
         
         return cell
     }
