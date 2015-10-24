@@ -15,6 +15,7 @@ class gameCell: UITableViewCell {
 
     @IBOutlet var teamTwoLbl: UILabel!
     
+    @IBOutlet var gameCountLbl: UILabel!
 
     /*
     // MARK: - Navigation
