@@ -13,7 +13,10 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     
     var roundNum = 1
     
-    let gameList = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+    var teamList = []
+    
+    var i = 0
+
     
     let textCellIdentifier = "cell"
     
@@ -24,9 +27,18 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     
 
     @IBAction func nextRoundBtn(sender: AnyObject) {
-        roundNum++
+        
+        if roundNum < 10{
+            roundNum++
+        }
         
         roundLbl.text = "Round \(roundNum)"
+        
+        teamList = getRoundSchedule(roundNum)
+        
+        i = 0
+        
+        self.tableView.reloadData()
     }
     
     @IBAction func prevRoundBtn(sender: AnyObject) {
@@ -37,6 +49,12 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         
         roundLbl.text = "Round \(roundNum)"
         
+        teamList = getRoundSchedule(roundNum)
+        
+        i = 0
+        
+        self.tableView.reloadData()
+        
     }
     
  
@@ -45,6 +63,10 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         
         super.viewDidLoad()
         
+        roundNum = 1
+        
+        teamList = getRoundSchedule(roundNum)
+        
         let nib = UINib(nibName: "gameTblCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: textCellIdentifier)
         
@@ -52,6 +74,8 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.dataSource = self
         
         roundLbl.text = "Round \(roundNum)"
+        
+        self.tableView.tableFooterView = UIView(frame: CGRectZero)
     }
     
     
@@ -61,7 +85,8 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gameList.count
+        
+        return teamList.count/2
     }
     
     
@@ -69,13 +94,16 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         
         let cell: gameCell = self.tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! gameCell
         
-        let row = indexPath.row
+
+        //This is the part that I'm not sure makes sense or not. It definitely works but not sure if this is the best way to do it.
+        if i < teamList.count-1{
         
-        
-        cell.teamOneLbl.text = "\(gameList[row])"
-        cell.teamTwoLbl.text = "\(gameList[row])"
-        
-//        cell.textLabel?.text = "\(gameList[row])"
+            cell.teamOneLbl.text = "\(teamList[i])"
+            cell.teamTwoLbl.text = "\(teamList[i+1])"
+            
+            i = i+2
+            
+        }
         
         return cell
     }
@@ -84,7 +112,8 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        print("Button tapped")
+        
+        print("\(teamList[indexPath.row*2]) vs. \(teamList[indexPath.row*2+1])")
     }
     
     
