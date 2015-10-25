@@ -11,11 +11,22 @@ import UIKit
 
 class HomeScreen: UIViewController {
     
-    override func viewDidLoad() {
     
+    
+    @IBAction func centerBtn(sender: AnyObject) {
+        print("Center button tapped")
+    }
 
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(false)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
     
 }
