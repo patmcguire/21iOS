@@ -21,6 +21,11 @@
 		43A3873F1BD9BBAB00FEB900 /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3873E1BD9BBAB00FEB900 /* TeamListViewController.swift */; };
 		43A387411BD9BBB800FEB900 /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A387401BD9BBB800FEB900 /* StandingsViewController.swift */; };
 		43DBC3E31BDBF2B100BB2DC7 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBC3E21BDBF2B100BB2DC7 /* Schedule.swift */; settings = {ASSET_TAGS = (); }; };
+		43DBC3EA1BDD5C9E00BB2DC7 /* PlayoffsR1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBC3E91BDD5C9E00BB2DC7 /* PlayoffsR1.swift */; settings = {ASSET_TAGS = (); }; };
+		43DBC3EC1BDD5CAA00BB2DC7 /* PlayoffsR2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBC3EB1BDD5CAA00BB2DC7 /* PlayoffsR2.swift */; settings = {ASSET_TAGS = (); }; };
+		43DBC3EE1BDD5CBF00BB2DC7 /* PlayoffsR3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBC3ED1BDD5CBF00BB2DC7 /* PlayoffsR3.swift */; settings = {ASSET_TAGS = (); }; };
+		43DBC3F01BDD5CCD00BB2DC7 /* PlayoffsR4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBC3EF1BDD5CCD00BB2DC7 /* PlayoffsR4.swift */; settings = {ASSET_TAGS = (); }; };
+		43DBC3F21BDD5CD900BB2DC7 /* PlayoffsR5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBC3F11BDD5CD900BB2DC7 /* PlayoffsR5.swift */; settings = {ASSET_TAGS = (); }; };
 		5744CFD030F7D8F783FCDBCC /* Pods_TwentyOneTournament2016.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3BAC8635A59D14DB2AAB96 /* Pods_TwentyOneTournament2016.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +60,11 @@
 		43A3873E1BD9BBAB00FEB900 /* TeamListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListViewController.swift; sourceTree = "<group>"; };
 		43A387401BD9BBB800FEB900 /* StandingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandingsViewController.swift; sourceTree = "<group>"; };
 		43DBC3E21BDBF2B100BB2DC7 /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		43DBC3E91BDD5C9E00BB2DC7 /* PlayoffsR1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayoffsR1.swift; sourceTree = "<group>"; };
+		43DBC3EB1BDD5CAA00BB2DC7 /* PlayoffsR2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayoffsR2.swift; sourceTree = "<group>"; };
+		43DBC3ED1BDD5CBF00BB2DC7 /* PlayoffsR3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayoffsR3.swift; sourceTree = "<group>"; };
+		43DBC3EF1BDD5CCD00BB2DC7 /* PlayoffsR4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayoffsR4.swift; sourceTree = "<group>"; };
+		43DBC3F11BDD5CD900BB2DC7 /* PlayoffsR5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayoffsR5.swift; sourceTree = "<group>"; };
 		5C93B3AD78E5F1312F952AB3 /* Pods-TwentyOneTournament2016.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwentyOneTournament2016.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwentyOneTournament2016/Pods-TwentyOneTournament2016.release.xcconfig"; sourceTree = "<group>"; };
 		A647E74F2FFC37B62363AFF0 /* Pods-TwentyOneTournament2016.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwentyOneTournament2016.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwentyOneTournament2016/Pods-TwentyOneTournament2016.debug.xcconfig"; sourceTree = "<group>"; };
 		EC3BAC8635A59D14DB2AAB96 /* Pods_TwentyOneTournament2016.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwentyOneTournament2016.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +185,11 @@
 			isa = PBXGroup;
 			children = (
 				43A3873C1BD9BB9D00FEB900 /* PlayoffsViewController.swift */,
+				43DBC3E91BDD5C9E00BB2DC7 /* PlayoffsR1.swift */,
+				43DBC3EB1BDD5CAA00BB2DC7 /* PlayoffsR2.swift */,
+				43DBC3ED1BDD5CBF00BB2DC7 /* PlayoffsR3.swift */,
+				43DBC3EF1BDD5CCD00BB2DC7 /* PlayoffsR4.swift */,
+				43DBC3F11BDD5CD900BB2DC7 /* PlayoffsR5.swift */,
 			);
 			name = Playoffs;
 			sourceTree = "<group>";
@@ -349,8 +364,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43DBC3F21BDD5CD900BB2DC7 /* PlayoffsR5.swift in Sources */,
+				43DBC3EE1BDD5CBF00BB2DC7 /* PlayoffsR3.swift in Sources */,
 				4393D05E1BD9DE860001DDC5 /* gameCell.swift in Sources */,
 				1367D4C71BD8942000D5AD61 /* AppDelegate.swift in Sources */,
+				43DBC3EA1BDD5C9E00BB2DC7 /* PlayoffsR1.swift in Sources */,
+				43DBC3EC1BDD5CAA00BB2DC7 /* PlayoffsR2.swift in Sources */,
+				43DBC3F01BDD5CCD00BB2DC7 /* PlayoffsR4.swift in Sources */,
 				1391B0CE1BDAA33C00012AEE /* ParseOps.m in Sources */,
 				43DBC3E31BDBF2B100BB2DC7 /* Schedule.swift in Sources */,
 				43A387391BD9B94200FEB900 /* HomeScreen.swift in Sources */,
