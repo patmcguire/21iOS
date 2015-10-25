@@ -10,7 +10,9 @@ import Foundation
 import UIKit
 
 class HomeScreen: UIViewController {
+    var parseOperator = ParseOps.init()
     
+<<<<<<< HEAD
     
     
     @IBAction func centerBtn(sender: AnyObject) {
@@ -21,7 +23,6 @@ class HomeScreen: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-    }
     
     
     override func viewWillDisappear(animated: Bool) {

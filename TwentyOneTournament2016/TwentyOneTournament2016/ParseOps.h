@@ -11,4 +11,6 @@
 
 @interface ParseOps : NSObject
 
+-(void)runTestOps;
+
 @end
