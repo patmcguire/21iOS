@@ -17,18 +17,14 @@ class HomeScreen: UIViewController {
     @IBAction func centerBtn(sender: AnyObject) {
         print("Center button tapped")
     }
-
     
     override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-        
+        navigationItem.title = "21 Tournament 2016"
     }
+
     
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(false)
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        navigationItem.title = nil
     }
     
 }
