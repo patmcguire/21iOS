@@ -27,9 +27,12 @@ class StandingsViewController: UIViewController{
                 {
                     print("Team Name: \(team.teamName) Wins: \(team.wins) Losses \(team.losses) Cup Differential: \(team.cupDifferential)");
                 }
+                    //Do anything that needs to use the retrieved objects in this area.
+                        //Example: print("5th Team: \(self.teams[5].teamName)")
             })
         })
-
+        
+        //Don't try to use the objects in this area 'cause it wont work...
     }
     
 }
