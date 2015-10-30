@@ -7,6 +7,8 @@
 //
 
 #import "ParseOps.h"
+#import "StandingsTeam.h"
+
 @interface ParseOps()
 
 @end
@@ -31,44 +33,15 @@
     NSLog(@"The test has been run");
 }
 
--(void)getTeam
-{
-    
-}
-
 -(void)printTeams:(NSArray*)teams
 {
     NSLog(@"%lu", teams.count);
 }
 
--(void)getAllTeams
+
+-(NSMutableArray*)getStandings
 {
-
-}
-
-
--(void)getMatch
-{
-    
-}
-
--(void)getMatches
-{
-    
-}
-
--(void)getRound
-{
-    
-}
-
--(void)getRounds
-{
-    
-}
-
--(void)getStandings
-{
+    NSMutableArray* teamArray = [[NSMutableArray alloc]init];
     PFQuery *query = [PFQuery queryWithClassName:@"Team"];
     [query addDescendingOrder:@"wins"];
     [query addDescendingOrder:@"CD"];
@@ -79,8 +52,10 @@
         NSString *wins = team[@"wins"];
         NSString *losses = team[@"losses"];
         NSString *CD = team[@"CD"];
-        NSLog(@"%@ %@ %@ %@", name, wins, losses, CD);
+        StandingsTeam *standingsTeam = [[StandingsTeam alloc] init:name wins:[wins intValue] losses:[losses intValue] cupDifferential:[CD intValue]];
+        [teamArray addObject:standingsTeam];
     }
+    return teamArray;
 }
 
 @end

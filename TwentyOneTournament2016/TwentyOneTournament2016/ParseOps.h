@@ -12,6 +12,6 @@
 @interface ParseOps : NSObject
 
 -(void)runTestOps;
--(void)getStandings;
+-(NSMutableArray*)getStandings;
 
 @end

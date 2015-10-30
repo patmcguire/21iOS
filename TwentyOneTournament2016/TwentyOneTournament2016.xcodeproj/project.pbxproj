@@ -13,6 +13,7 @@
 		1367D4D11BD8942000D5AD61 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1367D4CF1BD8942000D5AD61 /* LaunchScreen.xib */; };
 		1367D4DD1BD8942000D5AD61 /* TwentyOneTournament2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1367D4DC1BD8942000D5AD61 /* TwentyOneTournament2016Tests.swift */; };
 		1391B0CE1BDAA33C00012AEE /* ParseOps.m in Sources */ = {isa = PBXBuildFile; fileRef = 1391B0CD1BDAA33C00012AEE /* ParseOps.m */; settings = {ASSET_TAGS = (); }; };
+		13F66A2C1BE3349900E11670 /* StandingsTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F66A2B1BE3349900E11670 /* StandingsTeam.m */; settings = {ASSET_TAGS = (); }; };
 		4393D05C1BD9DD9F0001DDC5 /* gameTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4393D05B1BD9DD9F0001DDC5 /* gameTblCell.xib */; };
 		4393D05E1BD9DE860001DDC5 /* gameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4393D05D1BD9DE860001DDC5 /* gameCell.swift */; };
 		43A387391BD9B94200FEB900 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A387381BD9B94200FEB900 /* HomeScreen.swift */; };
@@ -52,6 +53,8 @@
 		1391B0CB1BDAA33C00012AEE /* TwentyOneTournament2016-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TwentyOneTournament2016-Bridging-Header.h"; sourceTree = "<group>"; };
 		1391B0CC1BDAA33C00012AEE /* ParseOps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseOps.h; sourceTree = "<group>"; };
 		1391B0CD1BDAA33C00012AEE /* ParseOps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseOps.m; sourceTree = "<group>"; };
+		13F66A2A1BE3349900E11670 /* StandingsTeam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandingsTeam.h; sourceTree = "<group>"; };
+		13F66A2B1BE3349900E11670 /* StandingsTeam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandingsTeam.m; sourceTree = "<group>"; };
 		4393D05B1BD9DD9F0001DDC5 /* gameTblCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = gameTblCell.xib; sourceTree = "<group>"; };
 		4393D05D1BD9DE860001DDC5 /* gameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameCell.swift; sourceTree = "<group>"; };
 		43A387381BD9B94200FEB900 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -112,6 +115,7 @@
 		1367D4C31BD8942000D5AD61 /* TwentyOneTournament2016 */ = {
 			isa = PBXGroup;
 			children = (
+				13F66A291BE3342D00E11670 /* Objects */,
 				1367D4C61BD8942000D5AD61 /* AppDelegate.swift */,
 				1367D4CA1BD8942000D5AD61 /* Main.storyboard */,
 				43A387381BD9B94200FEB900 /* HomeScreen.swift */,
@@ -152,6 +156,15 @@
 				1367D4DB1BD8942000D5AD61 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13F66A291BE3342D00E11670 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				13F66A2A1BE3349900E11670 /* StandingsTeam.h */,
+				13F66A2B1BE3349900E11670 /* StandingsTeam.m */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 		2C886FC97039A70BB263394B /* Frameworks */ = {
@@ -369,6 +382,7 @@
 				4393D05E1BD9DE860001DDC5 /* gameCell.swift in Sources */,
 				1367D4C71BD8942000D5AD61 /* AppDelegate.swift in Sources */,
 				43DBC3EA1BDD5C9E00BB2DC7 /* PlayoffsR1.swift in Sources */,
+				13F66A2C1BE3349900E11670 /* StandingsTeam.m in Sources */,
 				43DBC3EC1BDD5CAA00BB2DC7 /* PlayoffsR2.swift in Sources */,
 				43DBC3F01BDD5CCD00BB2DC7 /* PlayoffsR4.swift in Sources */,
 				1391B0CE1BDAA33C00012AEE /* ParseOps.m in Sources */,
