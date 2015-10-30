@@ -116,6 +116,4 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     
-    
-    
 }

@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="730.5" y="1207.5"/>
         </scene>
-        <!--21 - 2016-->
+        <!--21 Tournament-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController title="21 - 2016" id="vXZ-lx-hvc" customClass="HomeScreen" customModule="TwentyOneTournament2016" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="21 Tournament" id="vXZ-lx-hvc" customClass="HomeScreen" customModule="TwentyOneTournament2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -72,6 +72,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Vif-Vr-RLq">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="-65" width="400" height="801"/>
+                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1FV-o1-5dd">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -80,6 +83,9 @@
                                 <state key="normal" title="Regular Season">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="-3" width="201" height="339"/>
+                                </variation>
                                 <connections>
                                     <segue destination="Ma2-ve-pwr" kind="show" id="Fp8-vm-tZK"/>
                                 </connections>
@@ -91,6 +97,9 @@
                                 <state key="normal" title="Standings">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="340" width="201" height="357"/>
+                                </variation>
                                 <connections>
                                     <segue destination="grc-PL-vQ5" kind="show" id="dl0-mQ-UBY"/>
                                 </connections>
@@ -102,6 +111,9 @@
                                 <state key="normal" title="Teams">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="203" y="339" width="201" height="359"/>
+                                </variation>
                                 <connections>
                                     <segue destination="Ahi-Ei-RGT" kind="show" id="Z6h-ak-gtC"/>
                                 </connections>
@@ -133,6 +145,9 @@
                                 <state key="normal" title="Playoffs">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="203" y="0.0" width="201" height="333"/>
+                                </variation>
                                 <connections>
                                     <segue destination="Bra-AE-WIy" kind="show" id="eqm-xP-6VH"/>
                                 </connections>
@@ -156,7 +171,8 @@
                                         <exclude reference="mId-1C-gbQ"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="125" y="261" width="150" height="150"/>
                                     <mask key="constraints">
                                         <include reference="cvg-ZB-xLy"/>
                                         <include reference="mId-1C-gbQ"/>
@@ -174,15 +190,16 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="MjM-ug-P6O" secondAttribute="bottom" id="2Fj-gQ-zs5"/>
                             <constraint firstItem="1FV-o1-5dd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="40e-GX-Nj2"/>
                             <constraint firstItem="6ml-Jd-Qxn" firstAttribute="centerY" secondItem="kOl-ab-igP" secondAttribute="centerY" id="8vV-mb-vY8"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Vif-Vr-RLq" secondAttribute="bottom" id="9r2-Hm-Wfo"/>
                             <constraint firstItem="Vif-Vr-RLq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Bf1-Fg-tfs"/>
                             <constraint firstItem="1FV-o1-5dd" firstAttribute="width" secondItem="WzX-Ha-ZOc" secondAttribute="width" id="EOY-Iw-heC"/>
+                            <constraint firstItem="Vif-Vr-RLq" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="EqJ-Ys-auR"/>
                             <constraint firstItem="RNp-MG-AEx" firstAttribute="leading" secondItem="kOl-ab-igP" secondAttribute="trailing" constant="-76" id="F3h-9E-CGo"/>
                             <constraint firstAttribute="trailing" secondItem="Vif-Vr-RLq" secondAttribute="trailing" id="FVm-ag-ZBW"/>
                             <constraint firstAttribute="trailing" secondItem="MjM-ug-P6O" secondAttribute="trailing" id="KHv-yy-mfI"/>
                             <constraint firstItem="RNp-MG-AEx" firstAttribute="centerY" secondItem="Vif-Vr-RLq" secondAttribute="centerY" id="KiT-YF-xDr"/>
                             <constraint firstItem="WzX-Ha-ZOc" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="KpC-gd-prQ"/>
                             <constraint firstItem="6ml-Jd-Qxn" firstAttribute="width" secondItem="kOl-ab-igP" secondAttribute="width" id="Kv6-Ng-8xZ"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Vif-Vr-RLq" secondAttribute="bottom" id="OOL-my-oWa"/>
                             <constraint firstItem="MjM-ug-P6O" firstAttribute="top" secondItem="kOl-ab-igP" secondAttribute="bottom" constant="-1" id="UQU-YX-S9e"/>
                             <constraint firstItem="6ml-Jd-Qxn" firstAttribute="top" secondItem="WzX-Ha-ZOc" secondAttribute="bottom" constant="6" id="bYK-Kg-fGT"/>
                             <constraint firstItem="WzX-Ha-ZOc" firstAttribute="width" secondItem="6ml-Jd-Qxn" secondAttribute="width" id="efF-re-SJR"/>
@@ -193,7 +210,6 @@
                             <constraint firstItem="MjM-ug-P6O" firstAttribute="top" secondItem="6ml-Jd-Qxn" secondAttribute="bottom" constant="-2" id="m3Q-Iy-Ypg"/>
                             <constraint firstItem="MjM-ug-P6O" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ma4-pV-LBf"/>
                             <constraint firstItem="1FV-o1-5dd" firstAttribute="centerY" secondItem="WzX-Ha-ZOc" secondAttribute="centerY" id="r8l-sL-Cpn"/>
-                            <constraint firstItem="Vif-Vr-RLq" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="-64" id="rrO-XX-WAy"/>
                             <constraint firstItem="kOl-ab-igP" firstAttribute="top" secondItem="1FV-o1-5dd" secondAttribute="bottom" constant="4" id="wog-kr-3Wc"/>
                         </constraints>
                         <variation key="default">
@@ -211,8 +227,8 @@
                                 <exclude reference="EOY-Iw-heC"/>
                                 <exclude reference="r8l-sL-Cpn"/>
                                 <exclude reference="Bf1-Fg-tfs"/>
+                                <exclude reference="EqJ-Ys-auR"/>
                                 <exclude reference="FVm-ag-ZBW"/>
-                                <exclude reference="rrO-XX-WAy"/>
                                 <exclude reference="KpC-gd-prQ"/>
                                 <exclude reference="efF-re-SJR"/>
                                 <exclude reference="ehq-aB-qry"/>
@@ -231,7 +247,7 @@
                                 <exclude reference="m3Q-Iy-Ypg"/>
                                 <exclude reference="ma4-pV-LBf"/>
                                 <exclude reference="2Fj-gQ-zs5"/>
-                                <exclude reference="OOL-my-oWa"/>
+                                <exclude reference="9r2-Hm-Wfo"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -249,8 +265,8 @@
                                 <include reference="EOY-Iw-heC"/>
                                 <include reference="r8l-sL-Cpn"/>
                                 <include reference="Bf1-Fg-tfs"/>
+                                <include reference="EqJ-Ys-auR"/>
                                 <include reference="FVm-ag-ZBW"/>
-                                <include reference="rrO-XX-WAy"/>
                                 <include reference="KpC-gd-prQ"/>
                                 <include reference="efF-re-SJR"/>
                                 <include reference="ehq-aB-qry"/>
@@ -269,11 +285,11 @@
                                 <include reference="m3Q-Iy-Ypg"/>
                                 <include reference="ma4-pV-LBf"/>
                                 <include reference="2Fj-gQ-zs5"/>
-                                <include reference="OOL-my-oWa"/>
+                                <include reference="9r2-Hm-Wfo"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="HHn-cN-Due"/>
+                    <navigationItem key="navigationItem" title="21 Tournament 2016" id="e3d-VW-qd0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -590,7 +606,6 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T9e-cb-ttF" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="rWy-TA-alI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
