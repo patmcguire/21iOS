@@ -11,8 +11,21 @@ import UIKit
 
 class StandingsViewController: UIViewController{
     
+    var parseOperations = ParseOps.init()
+    var teams = []
     
-   
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    override func viewDidLoad() {
+        activityIndicator.startAnimating()
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY, 0), {
+            print("Getting Standings...")
+            self.parseOperations.getStandings()
+            dispatch_async(dispatch_get_main_queue(), {
+                self.activityIndicator.stopAnimating()
+            })
+        })
+
+    }
     
 }

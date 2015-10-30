@@ -36,10 +36,16 @@
     
 }
 
--(void)getTeams
+-(void)printTeams:(NSArray*)teams
 {
-    
+    NSLog(@"%lu", teams.count);
 }
+
+-(void)getAllTeams
+{
+
+}
+
 
 -(void)getMatch
 {
@@ -59,6 +65,22 @@
 -(void)getRounds
 {
     
+}
+
+-(void)getStandings
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"Team"];
+    [query addDescendingOrder:@"wins"];
+    [query addDescendingOrder:@"CD"];
+    NSArray* teams = [query findObjects];
+    for (PFObject *team in teams)
+    {
+        NSString *name = team[@"teamName"];
+        NSString *wins = team[@"wins"];
+        NSString *losses = team[@"losses"];
+        NSString *CD = team[@"CD"];
+        NSLog(@"%@ %@ %@ %@", name, wins, losses, CD);
+    }
 }
 
 @end
