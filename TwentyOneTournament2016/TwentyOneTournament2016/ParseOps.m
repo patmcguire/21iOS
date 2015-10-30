@@ -15,7 +15,17 @@
 
 @implementation ParseOps
 
-- (instancetype)init
+static ParseOps *sharedOps = nil;
+
++ (ParseOps *)sharedOps
+{
+    if (sharedOps == nil){
+        sharedOps = [[super allocWithZone:NULL] init];
+    }
+    return sharedOps;
+}
+
+- (id)init
 {
     self = [super init];
     if (self) {

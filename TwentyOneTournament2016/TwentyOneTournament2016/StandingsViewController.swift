@@ -12,7 +12,6 @@ import UIKit
 
 class StandingsViewController: UIViewController{
     
-    var parseOperations = ParseOps.init()
     var teams = []
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -21,7 +20,7 @@ class StandingsViewController: UIViewController{
         activityIndicator.startAnimating()
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY, 0), {
             print("Getting Standings...")
-            self.teams = self.parseOperations.getStandings()
+            self.teams = ParseOps.sharedOps().getStandings()
             dispatch_async(dispatch_get_main_queue(), {
                 self.activityIndicator.stopAnimating()
                 for team in self.teams
