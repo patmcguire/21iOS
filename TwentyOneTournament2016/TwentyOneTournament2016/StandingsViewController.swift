@@ -45,7 +45,8 @@ class StandingsViewController: UIViewController, UITableViewDataSource, UITableV
                 
             })
         })
-
+        
+        //Don't try to use the objects in this area 'cause it wont work...
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
