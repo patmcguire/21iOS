@@ -36,11 +36,8 @@ class StandingsViewController: UIViewController, UITableViewDataSource, UITableV
             self.teams = ParseOps.sharedOps().getStandings()
             dispatch_async(dispatch_get_main_queue(), {
                 self.activityIndicator.stopAnimating()
-                for team in self.teams
-                {
-//                    print("Team Name: \(team.teamName) Wins: \(team.wins) Losses \(team.losses) Cup Differential: \(team.cupDifferential)");
-                }
                 
+                //Do everthing you need to do with the Parse Objects in this area.
                 self.tableView.reloadData()
                 
             })
