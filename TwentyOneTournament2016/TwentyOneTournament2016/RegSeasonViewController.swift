@@ -25,6 +25,38 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet var roundLbl: UILabel!
     
+    @IBAction func swipeRight(sender: AnyObject) {
+        
+        if roundNum > 1{
+            roundNum--
+        }
+        
+        roundLbl.text = "Round \(roundNum)"
+        
+        teamList = getRoundSchedule(roundNum)
+        
+        i = 0
+        
+        self.tableView.reloadData()
+        
+    }
+    
+    @IBAction func swipeLeft(sender: AnyObject) {
+        
+        if roundNum < 10{
+            roundNum++
+        }
+        
+        roundLbl.text = "Round \(roundNum)"
+        
+        teamList = getRoundSchedule(roundNum)
+        
+        i = 0
+        
+        self.tableView.reloadData()
+        
+    }
+    
 
     @IBAction func nextRoundBtn(sender: AnyObject) {
         
@@ -111,6 +143,7 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
+        performSegueWithIdentifier("modalSegue", sender: nil)
         
         print("\(teamList[indexPath.row*2]) vs. \(teamList[indexPath.row*2+1])")
     }
