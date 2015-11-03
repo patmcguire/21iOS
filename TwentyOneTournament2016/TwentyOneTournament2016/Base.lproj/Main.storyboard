@@ -19,21 +19,6 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mID-Ld-Muh">
-                                <rect key="frame" x="20" y="20" width="20" height="20"/>
-                                <animations/>
-                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSQ-Nr-reF">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="96" y="83" width="0.0" height="0.0"/>
-                                </variation>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vyk-Bp-1zd">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
@@ -65,6 +50,21 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSQ-Nr-reF">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="96" y="83" width="0.0" height="0.0"/>
+                                </variation>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mID-Ld-Muh">
+                                <rect key="frame" x="20" y="20" width="20" height="20"/>
+                                <animations/>
+                                <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -78,8 +78,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="wSQ-Nr-reF"/>
                                 <exclude reference="Vyk-Bp-1zd"/>
+                                <exclude reference="wSQ-Nr-reF"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="eN9-wL-hQo"/>
@@ -92,8 +92,8 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="wSQ-Nr-reF"/>
                                 <include reference="Vyk-Bp-1zd"/>
+                                <include reference="wSQ-Nr-reF"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="eN9-wL-hQo"/>
@@ -502,6 +502,85 @@
             </objects>
             <point key="canvasLocation" x="2266.5" y="1207.5"/>
         </scene>
+        <!--gamePopup-->
+        <scene sceneID="dfb-Nb-WSA">
+            <objects>
+                <viewController storyboardIdentifier="gamePopup" title="gamePopup" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="MRm-ur-VN2" customClass="gamePopup" customModule="TwentyOneTournament2016" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mGe-DD-YZf"/>
+                        <viewControllerLayoutGuide type="bottom" id="DPd-IQ-dPC"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="aPw-ce-CML">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="erM-vJ-bPh">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="kAh-hL-8UG"/>
+                                    <constraint firstAttribute="height" constant="400" id="zvM-nq-P1g"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="kAh-hL-8UG"/>
+                                        <exclude reference="zvM-nq-P1g"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="kAh-hL-8UG"/>
+                                        <include reference="zvM-nq-P1g"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEL-c4-qbM">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeBtn:" destination="MRm-ur-VN2" eventType="touchUpInside" id="sW7-Cd-1Ww"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="erM-vJ-bPh" firstAttribute="centerY" secondItem="aPw-ce-CML" secondAttribute="centerY" id="IPf-EZ-o3i"/>
+                            <constraint firstItem="oEL-c4-qbM" firstAttribute="centerY" secondItem="aPw-ce-CML" secondAttribute="centerY" id="MXM-Hy-Afu"/>
+                            <constraint firstItem="oEL-c4-qbM" firstAttribute="centerX" secondItem="aPw-ce-CML" secondAttribute="centerX" id="b1d-K3-0xi"/>
+                            <constraint firstItem="erM-vJ-bPh" firstAttribute="centerX" secondItem="aPw-ce-CML" secondAttribute="centerX" id="tmm-kP-jkG"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="erM-vJ-bPh"/>
+                                <exclude reference="oEL-c4-qbM"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="IPf-EZ-o3i"/>
+                                <exclude reference="tmm-kP-jkG"/>
+                                <exclude reference="MXM-Hy-Afu"/>
+                                <exclude reference="b1d-K3-0xi"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="erM-vJ-bPh"/>
+                                <include reference="oEL-c4-qbM"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="IPf-EZ-o3i"/>
+                                <include reference="tmm-kP-jkG"/>
+                                <include reference="MXM-Hy-Afu"/>
+                                <include reference="b1d-K3-0xi"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hnh-QW-r9l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-207" y="-164.25"/>
+        </scene>
         <!--Regular Season-->
         <scene sceneID="yzn-9K-idN">
             <objects>
@@ -518,8 +597,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexBackgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.24540751689189189" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextCell" textLabel="APQ-hB-7yn" rowHeight="70" style="IBUITableViewCellStyleDefault" id="MlQ-Hv-pYj">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -542,19 +622,21 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25245460304054052" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round #" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hN7-qE-bWc">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="vtu-fe-7f3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
+                                <color key="highlightedColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="vtu-fe-7f3"/>
@@ -569,6 +651,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vr-6T-vmV">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                 <state key="normal" title="&gt;">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -579,6 +662,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIY-5x-NAd">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                 <state key="normal" title="&lt;">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -588,7 +672,8 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="H0X-Bj-OoW" firstAttribute="leading" secondItem="cx2-WS-YHV" secondAttribute="leadingMargin" constant="-20" id="9xG-FZ-L11"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Vr-6T-vmV" secondAttribute="trailing" id="B9z-Cu-WdO"/>
@@ -650,13 +735,28 @@
                                 <include reference="ggu-V8-o08"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="YpD-1T-qhK" appends="YES" id="tQz-1Y-W1G"/>
+                            <outletCollection property="gestureRecognizers" destination="L3i-dX-800" appends="YES" id="zkr-uM-p1C"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="roundLbl" destination="hN7-qE-bWc" id="nKk-af-WSb"/>
                         <outlet property="tableView" destination="H0X-Bj-OoW" id="7lL-Va-N5x"/>
+                        <segue destination="MRm-ur-VN2" kind="presentation" identifier="modalSegue" id="aIm-wA-grz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixG-fA-o5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="YpD-1T-qhK">
+                    <connections>
+                        <action selector="swipeLeft:" destination="Ma2-ve-pwr" id="0Cx-kL-OjM"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="L3i-dX-800">
+                    <connections>
+                        <action selector="swipeRight:" destination="Ma2-ve-pwr" id="V9x-2M-Kbj"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="730.5" y="-164.25"/>
         </scene>

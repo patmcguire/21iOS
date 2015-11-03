@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="365" height="80"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HyE-kC-ryv" id="tm0-zU-hbU">
-                <rect key="frame" x="0.0" y="0.0" width="365" height="80"/>
+                <rect key="frame" x="0.0" y="0.0" width="365" height="79.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RegSeasonCell" translatesAutoresizingMaskIntoConstraints="NO" id="jKw-z4-79m">
@@ -23,6 +23,7 @@
                         <rect key="frame" x="107" y="28" width="56" height="23"/>
                         <animations/>
                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSE-W3-KP5">
@@ -35,7 +36,6 @@
                         <rect key="frame" x="171" y="31" width="22" height="20"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GameCounter" translatesAutoresizingMaskIntoConstraints="NO" id="aSl-jq-brs">
