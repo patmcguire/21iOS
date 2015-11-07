@@ -16,6 +16,10 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     var teamList = []
     
     var i = 0
+    
+    var teamOne = ""
+    
+    var teamTwo = ""
 
     
     let textCellIdentifier = "cell"
@@ -143,9 +147,22 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
+        teamOne = teamList[indexPath.row*2] as! String
+        teamTwo = teamList[indexPath.row*2+1] as! String
+        
         performSegueWithIdentifier("modalSegue", sender: nil)
         
         print("\(teamList[indexPath.row*2]) vs. \(teamList[indexPath.row*2+1])")
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "modalSegue") {
+            var svc = segue.destinationViewController as! gamePopup;
+            
+            svc.one = teamOne
+            svc.two = teamTwo
+            
+        }
     }
     
     
