@@ -358,14 +358,14 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="r1Cell" id="elh-Id-6XF">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="elh-Id-6XF" id="egk-do-CYW">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="teamName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNY-xY-ngb">
                                                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -460,6 +460,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="r2Cell" id="giG-7u-lX4">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="giG-7u-lX4" id="VZL-ym-Aqd">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </tableViewCellContentView>
@@ -481,10 +482,10 @@
                                 <exclude reference="83D-mN-NXW"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Ul9-U7-vOy"/>
                                 <exclude reference="c3Q-vT-rn8"/>
                                 <exclude reference="mlJ-ex-uk5"/>
                                 <exclude reference="wcd-Jk-Gd6"/>
-                                <exclude reference="Ul9-U7-vOy"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -492,10 +493,10 @@
                                 <include reference="83D-mN-NXW"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Ul9-U7-vOy"/>
                                 <include reference="c3Q-vT-rn8"/>
                                 <include reference="mlJ-ex-uk5"/>
                                 <include reference="wcd-Jk-Gd6"/>
-                                <include reference="Ul9-U7-vOy"/>
                             </mask>
                         </variation>
                     </view>
@@ -655,24 +656,23 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEL-c4-qbM">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Submit"/>
-                                <connections>
-                                    <action selector="closeBtn:" destination="MRm-ur-VN2" eventType="touchUpInside" id="sW7-Cd-1Ww"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matchup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOl-mc-3i0">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="30"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="153" y="230" width="96" height="32"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRV-4S-dLa">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
+                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="20"/>
                                 <state key="normal" title="Button"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="170" y="292" width="60" height="38"/>
+                                </variation>
                                 <connections>
                                     <action selector="teamOneBtnAction:" destination="MRm-ur-VN2" eventType="touchUpInside" id="xxf-SC-0ra"/>
                                 </connections>
@@ -682,6 +682,9 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="192" y="340" width="18" height="21"/>
+                                </variation>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJ1-ga-tFT">
                                 <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
@@ -694,7 +697,8 @@
                                         <exclude reference="JcO-jk-mqy"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="40" y="470" width="320" height="70"/>
                                     <mask key="constraints">
                                         <include reference="JcO-jk-mqy"/>
                                     </mask>
@@ -704,18 +708,49 @@
                                     <outlet property="delegate" destination="MRm-ur-VN2" id="119-eX-8nX"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cup Differential" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbH-Rx-BFZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cup Differential:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbH-Rx-BFZ">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="17"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="156" y="442" width="88" height="20"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoT-9e-zZT">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
+                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="20"/>
                                 <state key="normal" title="Button"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="170" y="371" width="60" height="38"/>
+                                </variation>
                                 <connections>
                                     <action selector="teamTwoBtnAction:" destination="MRm-ur-VN2" eventType="touchUpInside" id="XRZ-y3-CvC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOT-kD-QcZ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <state key="normal" title="Cancel"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="65" y="555" width="48" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="cancelBtn:" destination="MRm-ur-VN2" eventType="touchUpInside" id="vaz-zi-swd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEL-c4-qbM">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <state key="normal" title="Submit"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="286" y="555" width="49" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="closeBtn:" destination="MRm-ur-VN2" eventType="touchUpInside" id="sW7-Cd-1Ww"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -726,13 +761,15 @@
                             <constraint firstItem="YOl-mc-3i0" firstAttribute="top" secondItem="erM-vJ-bPh" secondAttribute="top" constant="30" id="Axu-Zt-fXB"/>
                             <constraint firstItem="vOn-ly-a1p" firstAttribute="centerX" secondItem="erM-vJ-bPh" secondAttribute="centerX" id="BjL-6A-yoq"/>
                             <constraint firstItem="YOl-mc-3i0" firstAttribute="centerX" secondItem="erM-vJ-bPh" secondAttribute="centerX" id="Ecn-SZ-iBR"/>
-                            <constraint firstItem="oEL-c4-qbM" firstAttribute="bottom" secondItem="erM-vJ-bPh" secondAttribute="bottom" constant="-20" id="Eoh-dX-Bgc"/>
                             <constraint firstItem="CJ1-ga-tFT" firstAttribute="top" secondItem="RbH-Rx-BFZ" secondAttribute="bottom" constant="8" id="Gia-pU-CZK"/>
                             <constraint firstItem="erM-vJ-bPh" firstAttribute="centerY" secondItem="aPw-ce-CML" secondAttribute="centerY" id="IPf-EZ-o3i"/>
+                            <constraint firstItem="NOT-kD-QcZ" firstAttribute="bottom" secondItem="erM-vJ-bPh" secondAttribute="bottom" constant="-15" id="KoE-kZ-QoP"/>
                             <constraint firstItem="uRV-4S-dLa" firstAttribute="top" secondItem="YOl-mc-3i0" secondAttribute="bottom" constant="30" id="RPy-vI-ceP"/>
-                            <constraint firstItem="oEL-c4-qbM" firstAttribute="centerX" secondItem="aPw-ce-CML" secondAttribute="centerX" id="b1d-K3-0xi"/>
+                            <constraint firstItem="oEL-c4-qbM" firstAttribute="bottom" secondItem="erM-vJ-bPh" secondAttribute="bottom" constant="-15" id="WQr-2A-qow"/>
+                            <constraint firstItem="oEL-c4-qbM" firstAttribute="trailing" secondItem="erM-vJ-bPh" secondAttribute="trailing" constant="-15" id="aDk-og-QtE"/>
                             <constraint firstItem="vOn-ly-a1p" firstAttribute="top" secondItem="uRV-4S-dLa" secondAttribute="bottom" constant="10" id="ce9-bL-nBN"/>
                             <constraint firstItem="uRV-4S-dLa" firstAttribute="centerX" secondItem="erM-vJ-bPh" secondAttribute="centerX" id="da3-va-X38"/>
+                            <constraint firstItem="NOT-kD-QcZ" firstAttribute="leading" secondItem="erM-vJ-bPh" secondAttribute="leading" constant="15" id="gBL-k6-Smr"/>
                             <constraint firstItem="AoT-9e-zZT" firstAttribute="centerX" secondItem="erM-vJ-bPh" secondAttribute="centerX" id="iOy-fE-tx2"/>
                             <constraint firstItem="CJ1-ga-tFT" firstAttribute="centerX" secondItem="erM-vJ-bPh" secondAttribute="centerX" id="qV2-Du-iK7"/>
                             <constraint firstItem="erM-vJ-bPh" firstAttribute="centerX" secondItem="aPw-ce-CML" secondAttribute="centerX" id="tmm-kP-jkG"/>
@@ -742,61 +779,67 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="erM-vJ-bPh"/>
-                                <exclude reference="oEL-c4-qbM"/>
                                 <exclude reference="YOl-mc-3i0"/>
                                 <exclude reference="uRV-4S-dLa"/>
                                 <exclude reference="vOn-ly-a1p"/>
                                 <exclude reference="CJ1-ga-tFT"/>
                                 <exclude reference="RbH-Rx-BFZ"/>
                                 <exclude reference="AoT-9e-zZT"/>
+                                <exclude reference="NOT-kD-QcZ"/>
+                                <exclude reference="oEL-c4-qbM"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Gia-pU-CZK"/>
-                                <exclude reference="qV2-Du-iK7"/>
-                                <exclude reference="546-bA-9ge"/>
-                                <exclude reference="iOy-fE-tx2"/>
-                                <exclude reference="Eoh-dX-Bgc"/>
-                                <exclude reference="b1d-K3-0xi"/>
-                                <exclude reference="vO6-mD-cVS"/>
-                                <exclude reference="RPy-vI-ceP"/>
-                                <exclude reference="da3-va-X38"/>
-                                <exclude reference="vZb-ac-n2w"/>
-                                <exclude reference="Axu-Zt-fXB"/>
-                                <exclude reference="Ecn-SZ-iBR"/>
-                                <exclude reference="BjL-6A-yoq"/>
-                                <exclude reference="ce9-bL-nBN"/>
                                 <exclude reference="IPf-EZ-o3i"/>
                                 <exclude reference="tmm-kP-jkG"/>
+                                <exclude reference="Axu-Zt-fXB"/>
+                                <exclude reference="Ecn-SZ-iBR"/>
+                                <exclude reference="RPy-vI-ceP"/>
+                                <exclude reference="da3-va-X38"/>
+                                <exclude reference="BjL-6A-yoq"/>
+                                <exclude reference="ce9-bL-nBN"/>
+                                <exclude reference="546-bA-9ge"/>
+                                <exclude reference="iOy-fE-tx2"/>
+                                <exclude reference="vZb-ac-n2w"/>
+                                <exclude reference="Gia-pU-CZK"/>
+                                <exclude reference="qV2-Du-iK7"/>
+                                <exclude reference="KoE-kZ-QoP"/>
+                                <exclude reference="gBL-k6-Smr"/>
+                                <exclude reference="WQr-2A-qow"/>
+                                <exclude reference="aDk-og-QtE"/>
+                                <exclude reference="vO6-mD-cVS"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="erM-vJ-bPh"/>
-                                <include reference="oEL-c4-qbM"/>
                                 <include reference="YOl-mc-3i0"/>
                                 <include reference="uRV-4S-dLa"/>
                                 <include reference="vOn-ly-a1p"/>
                                 <include reference="CJ1-ga-tFT"/>
                                 <include reference="RbH-Rx-BFZ"/>
                                 <include reference="AoT-9e-zZT"/>
+                                <include reference="NOT-kD-QcZ"/>
+                                <include reference="oEL-c4-qbM"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Gia-pU-CZK"/>
-                                <include reference="qV2-Du-iK7"/>
-                                <include reference="546-bA-9ge"/>
-                                <include reference="iOy-fE-tx2"/>
-                                <include reference="Eoh-dX-Bgc"/>
-                                <include reference="b1d-K3-0xi"/>
-                                <include reference="vO6-mD-cVS"/>
-                                <include reference="RPy-vI-ceP"/>
-                                <include reference="da3-va-X38"/>
-                                <include reference="vZb-ac-n2w"/>
-                                <include reference="Axu-Zt-fXB"/>
-                                <include reference="Ecn-SZ-iBR"/>
-                                <include reference="BjL-6A-yoq"/>
-                                <include reference="ce9-bL-nBN"/>
                                 <include reference="IPf-EZ-o3i"/>
                                 <include reference="tmm-kP-jkG"/>
+                                <include reference="Axu-Zt-fXB"/>
+                                <include reference="Ecn-SZ-iBR"/>
+                                <include reference="RPy-vI-ceP"/>
+                                <include reference="da3-va-X38"/>
+                                <include reference="BjL-6A-yoq"/>
+                                <include reference="ce9-bL-nBN"/>
+                                <include reference="546-bA-9ge"/>
+                                <include reference="iOy-fE-tx2"/>
+                                <include reference="vZb-ac-n2w"/>
+                                <include reference="Gia-pU-CZK"/>
+                                <include reference="qV2-Du-iK7"/>
+                                <include reference="KoE-kZ-QoP"/>
+                                <include reference="gBL-k6-Smr"/>
+                                <include reference="WQr-2A-qow"/>
+                                <include reference="aDk-og-QtE"/>
+                                <include reference="vO6-mD-cVS"/>
                             </mask>
                         </variation>
                     </view>
@@ -805,6 +848,7 @@
                         <outlet property="horizPopUpConstraint" destination="kAh-hL-8UG" id="9jZ-Ft-b4C"/>
                         <outlet property="teamOneBtn" destination="uRV-4S-dLa" id="2bt-5T-fkS"/>
                         <outlet property="teamTwoBtn" destination="AoT-9e-zZT" id="rkD-CO-RZH"/>
+                        <outlet property="vertPopUpConstraint" destination="zvM-nq-P1g" id="bzQ-7S-gBc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnh-QW-r9l" userLabel="First Responder" sceneMemberID="firstResponder"/>
