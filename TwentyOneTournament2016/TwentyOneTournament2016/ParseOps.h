@@ -15,5 +15,6 @@
 
 -(void)runTestOps;
 -(NSMutableArray*)getStandings;
+-(NSMutableArray*)getRoundSchedule:(NSInteger)matchesPerRound;
 
 @end

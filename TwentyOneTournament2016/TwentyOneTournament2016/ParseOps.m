@@ -2,12 +2,16 @@
 //  ParseOps.m
 //  TwentyOneTournament2016
 //
+//  Need to make a class for matches and rounds.  One method to retrieve all matches in a round,
+//  and return an array of rounds to the view controller for us
+//
 //  Created by Brandon Niedert on 10/23/15.
 //  Copyright © 2015 21Tournament. All rights reserved.
 //
 
 #import "ParseOps.h"
 #import "StandingsTeam.h"
+#import "Match.h"
 
 @interface ParseOps()
 
@@ -29,8 +33,8 @@ static ParseOps *sharedOps = nil;
 {
     self = [super init];
     if (self) {
-        [Parse setApplicationId:@"2xAc4hfwbGjhN4jLfrrzavL6dNvpS6zazUinq7JM"
-                      clientKey:@"5a0K8fv8YxVhaepz7jG6rvfUzr0FTfGHivBSHA2G"];
+        [Parse setApplicationId:@"uqmvXiqFfCkv2wwVMm1BGFrVuGqTlPjxbivHSM4N"
+                      clientKey:@"Q0hNnGIe0M643J8cQf6AfAVgsvRhMUh0mSa36nTI"];
     }
     return self;
 }
@@ -52,7 +56,7 @@ static ParseOps *sharedOps = nil;
 -(NSMutableArray*)getStandings
 {
     NSMutableArray* teamArray = [[NSMutableArray alloc]init];
-    PFQuery *query = [PFQuery queryWithClassName:@"Team"];
+    PFQuery *query = [PFQuery queryWithClassName:@"TeamOld"];
     [query addDescendingOrder:@"wins"];
     [query addDescendingOrder:@"CD"];
     NSArray* teams = [query findObjects];
@@ -66,6 +70,36 @@ static ParseOps *sharedOps = nil;
         [teamArray addObject:standingsTeam];
     }
     return teamArray;
+}
+
+-(NSMutableArray*)getRoundSchedule:(NSInteger)matchesPerRound
+{
+    NSMutableArray *scheduleArray = [[NSMutableArray alloc]init];
+    NSMutableArray *roundArray = [[NSMutableArray alloc]init];
+    PFQuery *query = [PFQuery queryWithClassName:@"MatchOld"];
+    [query addAscendingOrder:@"RoundNumber"];
+    [query addAscendingOrder:@"matchNumber"];
+    NSArray *matches = [query findObjects];
+    NSInteger currentMatchNumber = 1;
+    for (PFObject *match in matches)
+    {
+        if (currentMatchNumber == matchesPerRound)
+        {
+            Match *currentMatch = [[Match alloc]init:match.objectId team1:match[@"Team1"] team2:match[@"Team2"]];
+            [roundArray addObject:currentMatch];
+            [scheduleArray addObject:roundArray];
+            [roundArray removeAllObjects];
+            currentMatchNumber = 1;
+        }
+        
+        else
+        {
+            Match *currentMatch = [[Match alloc]init:match.objectId team1:match[@"Team1"] team2:match[@"Team2"]];
+            [roundArray addObject:currentMatch];
+            currentMatchNumber++;
+        }
+    }
+    return scheduleArray;
 }
 
 @end

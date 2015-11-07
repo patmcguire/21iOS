@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		136487131BEC55F4002BE319 /* Round.m in Sources */ = {isa = PBXBuildFile; fileRef = 136487121BEC55F4002BE319 /* Round.m */; };
+		136487161BEC561B002BE319 /* Match.m in Sources */ = {isa = PBXBuildFile; fileRef = 136487151BEC561B002BE319 /* Match.m */; };
 		1367D4C71BD8942000D5AD61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1367D4C61BD8942000D5AD61 /* AppDelegate.swift */; };
 		1367D4CC1BD8942000D5AD61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1367D4CA1BD8942000D5AD61 /* Main.storyboard */; };
 		1367D4CE1BD8942000D5AD61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1367D4CD1BD8942000D5AD61 /* Images.xcassets */; };
@@ -44,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		136487111BEC55F4002BE319 /* Round.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Round.h; sourceTree = "<group>"; };
+		136487121BEC55F4002BE319 /* Round.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Round.m; sourceTree = "<group>"; };
+		136487141BEC561B002BE319 /* Match.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Match.h; sourceTree = "<group>"; };
+		136487151BEC561B002BE319 /* Match.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Match.m; sourceTree = "<group>"; };
 		1367D4C11BD8942000D5AD61 /* TwentyOneTournament2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwentyOneTournament2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1367D4C51BD8942000D5AD61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1367D4C61BD8942000D5AD61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +175,10 @@
 			children = (
 				13F66A2A1BE3349900E11670 /* StandingsTeam.h */,
 				13F66A2B1BE3349900E11670 /* StandingsTeam.m */,
+				136487111BEC55F4002BE319 /* Round.h */,
+				136487121BEC55F4002BE319 /* Round.m */,
+				136487141BEC561B002BE319 /* Match.h */,
+				136487151BEC561B002BE319 /* Match.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -387,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				136487131BEC55F4002BE319 /* Round.m in Sources */,
 				43DBC3F21BDD5CD900BB2DC7 /* PlayoffsR5.swift in Sources */,
 				43DBC3EE1BDD5CBF00BB2DC7 /* PlayoffsR3.swift in Sources */,
 				4393D05E1BD9DE860001DDC5 /* gameCell.swift in Sources */,
@@ -396,6 +407,7 @@
 				43DBC3EC1BDD5CAA00BB2DC7 /* PlayoffsR2.swift in Sources */,
 				43DBC3F01BDD5CCD00BB2DC7 /* PlayoffsR4.swift in Sources */,
 				1391B0CE1BDAA33C00012AEE /* ParseOps.m in Sources */,
+				136487161BEC561B002BE319 /* Match.m in Sources */,
 				43DBC3E31BDBF2B100BB2DC7 /* Schedule.swift in Sources */,
 				4308CC601BE86139007F509F /* gamePopup.swift in Sources */,
 				4308CC5E1BE6C3EB007F509F /* standingsCustomCell.swift in Sources */,
