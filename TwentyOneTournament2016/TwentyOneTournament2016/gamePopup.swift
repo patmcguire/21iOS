@@ -55,7 +55,7 @@ class gamePopup: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
         cupDiffPicker.dataSource = self
         cupDiffPicker.delegate = self
 
-        if screenSize.width < 600 {
+        if screenSize.width < 350 {
             horizPopUpConstraint.constant = 250
         }
         
