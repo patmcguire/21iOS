@@ -556,15 +556,14 @@
                                 <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="JcO-jk-mqy"/>
+                                    <constraint firstAttribute="height" constant="70" id="JcO-jk-mqy"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="JcO-jk-mqy"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="40" y="465" width="320" height="60"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="JcO-jk-mqy"/>
                                     </mask>
@@ -580,7 +579,7 @@
                                 <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="159" y="437" width="84" height="20"/>
+                                    <rect key="frame" x="159" y="442" width="84" height="20"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoT-9e-zZT">
@@ -609,7 +608,7 @@
                             <constraint firstItem="AoT-9e-zZT" firstAttribute="centerX" secondItem="erM-vJ-bPh" secondAttribute="centerX" id="iOy-fE-tx2"/>
                             <constraint firstItem="CJ1-ga-tFT" firstAttribute="centerX" secondItem="erM-vJ-bPh" secondAttribute="centerX" id="qV2-Du-iK7"/>
                             <constraint firstItem="erM-vJ-bPh" firstAttribute="centerX" secondItem="aPw-ce-CML" secondAttribute="centerX" id="tmm-kP-jkG"/>
-                            <constraint firstItem="oEL-c4-qbM" firstAttribute="top" secondItem="CJ1-ga-tFT" secondAttribute="bottom" constant="35" id="vO6-mD-cVS"/>
+                            <constraint firstItem="oEL-c4-qbM" firstAttribute="top" secondItem="CJ1-ga-tFT" secondAttribute="bottom" constant="10" id="vO6-mD-cVS"/>
                             <constraint firstItem="RbH-Rx-BFZ" firstAttribute="centerX" secondItem="erM-vJ-bPh" secondAttribute="centerX" id="vZb-ac-n2w"/>
                         </constraints>
                         <variation key="default">
