@@ -13,4 +13,6 @@
 @property NSInteger roundNumber;
 @property NSArray *matches;
 
+-(id) init:(NSInteger)roundNumber matches:(NSArray *)matches;
+
 @end

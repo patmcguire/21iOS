@@ -12,6 +12,7 @@
 #import "ParseOps.h"
 #import "StandingsTeam.h"
 #import "Match.h"
+#import "Round.h"
 
 @interface ParseOps()
 
@@ -72,32 +73,26 @@ static ParseOps *sharedOps = nil;
     return teamArray;
 }
 
--(NSMutableArray*)getRoundSchedule:(NSInteger)matchesPerRound
+-(NSMutableArray*)getRoundSchedule:(NSNumber *)numberOfRounds
 {
+    //new thread for each round idea?
     NSMutableArray *scheduleArray = [[NSMutableArray alloc]init];
-    NSMutableArray *roundArray = [[NSMutableArray alloc]init];
-    PFQuery *query = [PFQuery queryWithClassName:@"MatchOld"];
-    [query addAscendingOrder:@"RoundNumber"];
-    [query addAscendingOrder:@"matchNumber"];
-    NSArray *matches = [query findObjects];
-    NSInteger currentMatchNumber = 1;
-    for (PFObject *match in matches)
-    {
-        if (currentMatchNumber == matchesPerRound)
+    NSNumber *currentRound = @1;
+    while (currentRound <= numberOfRounds) {
+        NSMutableArray *roundArray = [[NSMutableArray alloc]init];
+        PFQuery *query = [PFQuery queryWithClassName:@"MatchOld"];
+        [query whereKey:@"RoundNumber" equalTo:currentRound];
+        [query addAscendingOrder:@"matchNumber"];
+        NSArray *matches = [query findObjects];
+        for (PFObject *match in matches)
         {
-            Match *currentMatch = [[Match alloc]init:match.objectId team1:match[@"Team1"] team2:match[@"Team2"]];
+            Match *currentMatch = [[Match alloc] init:[match objectId] team1:match[@"Team1"] team2:match[@"Team2"]];
             [roundArray addObject:currentMatch];
-            [scheduleArray addObject:roundArray];
-            [roundArray removeAllObjects];
-            currentMatchNumber = 1;
+            //NSLog(@"%@ vs %@", team1, team2);
         }
-        
-        else
-        {
-            Match *currentMatch = [[Match alloc]init:match.objectId team1:match[@"Team1"] team2:match[@"Team2"]];
-            [roundArray addObject:currentMatch];
-            currentMatchNumber++;
-        }
+        Round *round = [[Round alloc] init:[currentRound intValue] matches:roundArray];
+        [scheduleArray addObject:round];
+        currentRound = [NSNumber numberWithInt:[currentRound intValue] + 1];
     }
     return scheduleArray;
 }

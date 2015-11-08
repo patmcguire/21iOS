@@ -11,9 +11,16 @@ import UIKit
 
 class TeamListViewController: UIViewController{
     
+    var schedule = []
     
-    
-    
-    
+    override func viewDidLoad() {
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY, 0), {
+            self.schedule = ParseOps.sharedOps().getRoundSchedule(10);
+            dispatch_async(dispatch_get_main_queue(), {
+                print("Number of rounds: \(self.schedule.count)")
+            });
+        });
+        
+    }
     
 }
