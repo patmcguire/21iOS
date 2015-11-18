@@ -86,9 +86,8 @@ static ParseOps *sharedOps = nil;
         NSArray *matches = [query findObjects];
         for (PFObject *match in matches)
         {
-            Match *currentMatch = [[Match alloc] init:[match objectId] team1:match[@"Team1"] team2:match[@"Team2"]];
+            Match *currentMatch = [[Match alloc] init:[match objectId] team1:match[@"Team1"] team2:match[@"Team2"] team1ID:match[@"Team1ID"] team2ID:match[@"Team2ID"]];
             [roundArray addObject:currentMatch];
-            //NSLog(@"%@ vs %@", team1, team2);
         }
         Round *round = [[Round alloc] init:[currentRound intValue] matches:roundArray];
         [scheduleArray addObject:round];
@@ -96,5 +95,52 @@ static ParseOps *sharedOps = nil;
     }
     return scheduleArray;
 }
+
+-(void)saveMatch:(NSString *)objectID winner:(NSNumber *)winner cd:(NSNumber *)cd
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"MatchOld"];
+    PFObject *match = [query getObjectWithId:objectID];
+    match[@"Winner"] = winner;
+    match[@"CD"] = cd;
+    [match save];
+    NSLog(@"Match saved");
+    [self startStandingsUpdate:match];
+}
+
+-(void)startStandingsUpdate:(PFObject *)match
+{
+    NSString *team1ID = match[@"Team1ID"];
+    NSString *team2ID = match[@"Team2ID"];
+    NSNumber *cd = match[@"CD"];
+    
+    [match[@"Winner"] intValue] == 1 ? [self updateStandings:team1ID loser:team2ID cd:cd] : [self updateStandings:team2ID loser:team1ID cd:cd];
+    
+}
+
+-(void)updateStandings:(NSString *)winner loser:(NSString *)loser cd:(NSNumber *)cd
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"TeamOld"];
+    
+    PFObject *team = [query getObjectWithId:winner];
+    NSInteger wins = [team[@"wins"] intValue];
+    NSInteger cdWinner = [team[@"CD"] intValue];
+    wins++;
+    cdWinner = cdWinner + cd.intValue;
+    team[@"wins"] = [NSNumber numberWithLong:wins];
+    team[@"CD"] = [NSNumber numberWithLong:cdWinner];
+    [team save];
+    
+    team = [query getObjectWithId:loser];
+    NSInteger losses = [team[@"losses"] intValue];
+    NSInteger cdLoser = [team[@"CD"] intValue];
+    losses++;
+    cdLoser = cdLoser - cd.intValue;
+    team[@"losses"] = [NSNumber numberWithLong:losses];
+    team[@"CD"] = [NSNumber numberWithLong:cdLoser];
+    [team save];
+    
+    NSLog(@"Standings Updated");
+}
+
 
 @end
