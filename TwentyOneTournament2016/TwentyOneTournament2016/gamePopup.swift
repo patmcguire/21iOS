@@ -36,8 +36,17 @@ class gamePopup: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     
     @IBAction func teamOneBtnAction(sender: AnyObject) {
         
-        //TODO - Make this team remain in selected state. Clear selected state from other team if applicable. Store this team as the winner of this match somewhere.
+        //Set button styling for both buttons after selecting a winner
+        teamOneBtn.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        teamOneBtn.backgroundColor = UIColor.greenColor()
+        teamOneBtn.alpha = 1.0
         
+        teamTwoBtn.setTitleColor(UIColor.lightGrayColor(), forState: UIControlState.Normal)
+        teamTwoBtn.backgroundColor = UIColor.redColor()
+        teamTwoBtn.alpha = 0.25
+        
+        
+        //Set the winner variable to team one
         winner = one
         
         print("Matchup winner: \(winner)")
@@ -45,8 +54,17 @@ class gamePopup: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
 
     @IBAction func teamTwoBtnAction(sender: AnyObject) {
         
-        //TODO - Make this team remain in selected state. Clear selected state from other team if applicable. Store this team as the winner of this match somewhere.
+        //Set buttons styling for both buttons after selecting a winner
+        teamTwoBtn.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        teamTwoBtn.backgroundColor = UIColor.greenColor()
+        teamTwoBtn.alpha = 1.0
         
+        teamOneBtn.setTitleColor(UIColor.lightGrayColor(), forState: UIControlState.Normal)
+        teamOneBtn.backgroundColor = UIColor.redColor()
+        teamOneBtn.alpha = 0.25
+        
+        
+        //Set the winner variable to team two
         winner = two
         
         print("Matchup winner: \(winner)")
@@ -58,6 +76,15 @@ class gamePopup: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
         //Make the team button titles match the teams that were picked from the Regular Season schedule.
         teamOneBtn.setTitle(one, forState: UIControlState.Normal)
         teamTwoBtn.setTitle(two, forState: UIControlState.Normal)
+        
+        //Set button styling for team buttons
+        teamOneBtn.layer.borderColor = UIColor.grayColor().CGColor
+        teamOneBtn.layer.borderWidth = 1
+        teamOneBtn.layer.cornerRadius = 5
+        
+        teamTwoBtn.layer.borderColor = UIColor.grayColor().CGColor
+        teamTwoBtn.layer.borderWidth = 1
+        teamTwoBtn.layer.cornerRadius = 5
         
         
         //Initialize Picker View

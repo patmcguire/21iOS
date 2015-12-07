@@ -13,8 +13,6 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     
     var roundNum = 1
     
-    var teamList = []
-    
     var schedule = []
     
     var i = 0
@@ -25,9 +23,16 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
 
     let textCellIdentifier = "cell"
     
+    let screenSize: CGRect = UIScreen.mainScreen().bounds
+    
     @IBOutlet var tableView: UITableView!
     
     @IBOutlet var roundLbl: UILabel!
+    
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
+    
+    //CRASH - App is crashing if you tap to go to round 8 from round 7
     
     
     //Let the user go back a round by swiping R to L
@@ -38,7 +43,6 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         }
         
         roundLbl.text = "Round \(roundNum)"
-        teamList = getRoundSchedule(roundNum)
         
         i = 0
         
@@ -54,8 +58,6 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         }
         
         roundLbl.text = "Round \(roundNum)"
-        teamList = getRoundSchedule(roundNum)
-        
         i = 0
         
         self.tableView.reloadData()
@@ -70,8 +72,6 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         }
         
         roundLbl.text = "Round \(roundNum)"
-        teamList = getRoundSchedule(roundNum)
-        
         i = 0
         
         self.tableView.reloadData()
@@ -86,7 +86,6 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         }
         
         roundLbl.text = "Round \(roundNum)"
-        teamList = getRoundSchedule(roundNum)
         
         i = 0
         
@@ -100,6 +99,17 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         
         roundNum = 1
+        
+        activityIndicator.startAnimating()
+        
+        //Set shadow for round label at th bottom.
+        //TODO - This stopped working and I don't know why.
+        roundLbl.layer.shadowColor = UIColor.blackColor().CGColor
+        roundLbl.layer.shadowOpacity = 0.9
+        roundLbl.layer.shadowOffset = CGSize(width: 0, height: -3)
+        
+        
+        
         
         //Initialize custom tableview cell
         let nib = UINib(nibName: "gameTblCell", bundle: nil)
@@ -121,8 +131,7 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
             self.schedule = ParseOps.sharedOps().getRoundSchedule(8)
             dispatch_async(dispatch_get_main_queue(), {
                 
-                print((self.schedule[0].matches?[0].team1)!)
-                
+                self.activityIndicator.stopAnimating()
                 
                 self.tableView.reloadData()
                 
