@@ -29,8 +29,6 @@ class StandingsViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.backgroundColor = UIColor.redColor()
-        
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY, 0), {
             print("Getting Standings...")
             self.teams = ParseOps.sharedOps().getStandings()

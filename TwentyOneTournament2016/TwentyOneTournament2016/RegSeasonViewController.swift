@@ -15,6 +15,8 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     
     var teamList = []
     
+    var schedule = []
+    
     var i = 0
     
     var teamOne = ""
@@ -99,10 +101,6 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         
         roundNum = 1
         
-        
-        //Get list of teams for whatever round is first loaded
-        teamList = getRoundSchedule(roundNum)
-        
         //Initialize custom tableview cell
         let nib = UINib(nibName: "gameTblCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: textCellIdentifier)
@@ -114,8 +112,23 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         //Set round title to the current round
         roundLbl.text = "Round \(roundNum)"
         
-        //Adjust tableview row heigh
-        self.tableView.rowHeight = 70.0
+        //Adjust tableview row height
+        tableView.rowHeight = 80.0
+        
+        //Get matches for all rounds from Parse
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY, 0), {
+            print("Getting schedule...")
+            self.schedule = ParseOps.sharedOps().getRoundSchedule(8)
+            dispatch_async(dispatch_get_main_queue(), {
+                
+                print((self.schedule[0].matches?[0].team1)!)
+                
+                
+                self.tableView.reloadData()
+                
+            })
+        })
+        
     }
     
     
@@ -126,7 +139,7 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     //Determine number of cells in the Table View
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return teamList.count/2
+        return schedule.count
     }
     
     
@@ -139,9 +152,11 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         //This is the part that I'm not sure makes sense or not. It definitely works but not sure if this is the best way to do it.
         let row = indexPath.row
         
-            cell.teamOneLbl.text = "\(teamList[row*2])"
-            cell.teamTwoLbl.text = "\(teamList[row*2+1])"
+            cell.teamOneLbl.text = "\((schedule[roundNum].matches?[indexPath.row].team1)!)"
+            cell.teamTwoLbl.text = "\((schedule[roundNum].matches?[indexPath.row].team2)!)"
             cell.gameCountLbl.text = "\(row+1)"
+            cell.teamOneRecordLbl.text = "(0-0)"
+            cell.teamTwoRecordLbl.text = "(0-0)"
             
         
         return cell
@@ -152,12 +167,12 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        teamOne = teamList[indexPath.row*2] as! String
-        teamTwo = teamList[indexPath.row*2+1] as! String
+        teamOne = (schedule[roundNum].matches?[indexPath.row].team1)!
+        teamTwo = (schedule[roundNum].matches?[indexPath.row].team2)!
         
         performSegueWithIdentifier("modalSegue", sender: nil)
         
-        print("\(teamList[indexPath.row*2]) vs. \(teamList[indexPath.row*2+1])")
+//        print("\(teamList[indexPath.row*2]) vs. \(teamList[indexPath.row*2+1])")
     }
     
     
