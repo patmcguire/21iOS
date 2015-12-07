@@ -26,7 +26,6 @@
 		43A3873D1BD9BB9D00FEB900 /* PlayoffsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3873C1BD9BB9D00FEB900 /* PlayoffsViewController.swift */; };
 		43A3873F1BD9BBAB00FEB900 /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3873E1BD9BBAB00FEB900 /* TeamListViewController.swift */; };
 		43A387411BD9BBB800FEB900 /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A387401BD9BBB800FEB900 /* StandingsViewController.swift */; };
-		43DBC3E31BDBF2B100BB2DC7 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBC3E21BDBF2B100BB2DC7 /* Schedule.swift */; };
 		43DBC3EA1BDD5C9E00BB2DC7 /* PlayoffsR1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBC3E91BDD5C9E00BB2DC7 /* PlayoffsR1.swift */; };
 		43DBC3EC1BDD5CAA00BB2DC7 /* PlayoffsR2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBC3EB1BDD5CAA00BB2DC7 /* PlayoffsR2.swift */; };
 		43DBC3EE1BDD5CBF00BB2DC7 /* PlayoffsR3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBC3ED1BDD5CBF00BB2DC7 /* PlayoffsR3.swift */; };
@@ -74,7 +73,6 @@
 		43A3873C1BD9BB9D00FEB900 /* PlayoffsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayoffsViewController.swift; sourceTree = "<group>"; };
 		43A3873E1BD9BBAB00FEB900 /* TeamListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListViewController.swift; sourceTree = "<group>"; };
 		43A387401BD9BBB800FEB900 /* StandingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandingsViewController.swift; sourceTree = "<group>"; };
-		43DBC3E21BDBF2B100BB2DC7 /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		43DBC3E91BDD5C9E00BB2DC7 /* PlayoffsR1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayoffsR1.swift; sourceTree = "<group>"; };
 		43DBC3EB1BDD5CAA00BB2DC7 /* PlayoffsR2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayoffsR2.swift; sourceTree = "<group>"; };
 		43DBC3ED1BDD5CBF00BB2DC7 /* PlayoffsR3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayoffsR3.swift; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 				4393D05D1BD9DE860001DDC5 /* gameCell.swift */,
 				4393D05B1BD9DD9F0001DDC5 /* gameTblCell.xib */,
 				43A3873A1BD9BB8B00FEB900 /* RegSeasonViewController.swift */,
-				43DBC3E21BDBF2B100BB2DC7 /* Schedule.swift */,
 				4308CC5F1BE86139007F509F /* gamePopup.swift */,
 			);
 			name = "Regular Season";
@@ -408,7 +405,6 @@
 				43DBC3F01BDD5CCD00BB2DC7 /* PlayoffsR4.swift in Sources */,
 				1391B0CE1BDAA33C00012AEE /* ParseOps.m in Sources */,
 				136487161BEC561B002BE319 /* Match.m in Sources */,
-				43DBC3E31BDBF2B100BB2DC7 /* Schedule.swift in Sources */,
 				4308CC601BE86139007F509F /* gamePopup.swift in Sources */,
 				4308CC5E1BE6C3EB007F509F /* standingsCustomCell.swift in Sources */,
 				43A387391BD9B94200FEB900 /* HomeScreen.swift in Sources */,
