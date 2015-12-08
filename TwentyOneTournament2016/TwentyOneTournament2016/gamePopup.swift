@@ -26,9 +26,13 @@ class gamePopup: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     
     var two: String!
     
-    var winner: String!
+    var matchId: String!
     
-    var cupDiffArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]
+    var winner = 0
+    
+    var cupDiffArray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]
+    
+    var cupDifferential = 0
     
     let screenSize: CGRect = UIScreen.mainScreen().bounds
     
@@ -47,7 +51,7 @@ class gamePopup: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
         
         
         //Set the winner variable to team one
-        winner = one
+        winner = 1
         
         print("Matchup winner: \(winner)")
     }
@@ -65,13 +69,21 @@ class gamePopup: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
         
         
         //Set the winner variable to team two
-        winner = two
+        winner = 2
+
         
         print("Matchup winner: \(winner)")
     }
     
     
     override func viewDidLoad() {
+        
+        //TODO - Preset winner and cupDifferential variables if game has already been played
+        
+        
+        
+        //TODO - Preset UI to show results of completed games
+        
         
         //Make the team button titles match the teams that were picked from the Regular Season schedule.
         teamOneBtn.setTitle(one, forState: UIControlState.Normal)
@@ -118,9 +130,10 @@ class gamePopup: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     //Selecting a cup differential.
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        //TODO - Add whatever you need to happen when the user selects the cup differential value they want. Probably need to store it in a variable so we can send it to Parse
         
-        print("\(cupDiffArray[row])")
+        //Store selected cup differential in variable
+        cupDifferential = cupDiffArray[row]
+
     }
     
     
@@ -143,10 +156,27 @@ class gamePopup: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     //Submit button. Send updated match results to Parse.
     @IBAction func closeBtn(sender: AnyObject) {
         
-        //TODO - Add code to submit updated result to Parse
+        //Make sure a winner is selected
+        if winner == 0{
+            let alert = UIAlertController(title: "Select Winner", message: "You must select a winner before submitting a match result.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
         
         
-        self.dismissViewControllerAnimated(true, completion: nil)
+        //Make sure cup differential is selected
+        if cupDifferential == 0{
+            let alert = UIAlertController(title: "Set Cup Differential", message: "You must set the cup differential before submitting a match result.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        
+        
+        //Submit updated result to Parse if winner and cup differential have been set
+        if winner != 0 && cupDifferential != 0 {
+            ParseOps.sharedOps().saveMatch(matchId, winner: winner, cd: cupDifferential)
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
         
     }
     
