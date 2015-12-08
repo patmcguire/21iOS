@@ -20,6 +20,8 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     var teamOne = ""
     
     var teamTwo = ""
+    
+    var matchId = ""
 
     let textCellIdentifier = "cell"
     
@@ -157,12 +159,10 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         
         let cell: gameCell = self.tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! gameCell
         
-
-        //This is the part that I'm not sure makes sense or not. It definitely works but not sure if this is the best way to do it.
         let row = indexPath.row
         
-            cell.teamOneLbl.text = "\((schedule[roundNum].matches?[indexPath.row].team1)!)"
-            cell.teamTwoLbl.text = "\((schedule[roundNum].matches?[indexPath.row].team2)!)"
+            cell.teamOneLbl.text = "\((schedule[roundNum-1].matches?[indexPath.row].team1)!)"
+            cell.teamTwoLbl.text = "\((schedule[roundNum-1].matches?[indexPath.row].team2)!)"
             cell.gameCountLbl.text = "\(row+1)"
             cell.teamOneRecordLbl.text = "(0-0)"
             cell.teamTwoRecordLbl.text = "(0-0)"
@@ -176,8 +176,9 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        teamOne = (schedule[roundNum].matches?[indexPath.row].team1)!
-        teamTwo = (schedule[roundNum].matches?[indexPath.row].team2)!
+        teamOne = (schedule[roundNum - 1].matches?[indexPath.row].team1)!
+        teamTwo = (schedule[roundNum - 1].matches?[indexPath.row].team2)!
+        matchId = (schedule[roundNum - 1].matches?[indexPath.row].objectID)!
         
         performSegueWithIdentifier("modalSegue", sender: nil)
         
@@ -192,6 +193,7 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
             
             svc.one = teamOne
             svc.two = teamTwo
+            svc.matchId = matchId
             
         }
     }
