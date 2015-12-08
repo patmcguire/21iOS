@@ -86,7 +86,7 @@ static ParseOps *sharedOps = nil;
         NSArray *matches = [query findObjects];
         for (PFObject *match in matches)
         {
-            Match *currentMatch = [[Match alloc] init:[match objectId] team1:match[@"Team1"] team2:match[@"Team2"] team1ID:match[@"Team1ID"] team2ID:match[@"Team2ID"]];
+            Match *currentMatch = [[Match alloc] init:[match objectId] team1:match[@"Team1"] team2:match[@"Team2"] team1ID:match[@"Team1ID"] team2ID:match[@"Team2ID"] cd:[match[@"CD"] intValue] winner:[match[@"Winner"] intValue]];
             [roundArray addObject:currentMatch];
         }
         Round *round = [[Round alloc] init:[currentRound intValue] matches:roundArray];
@@ -105,6 +105,7 @@ static ParseOps *sharedOps = nil;
     [match save];
     NSLog(@"Match saved");
     [self startStandingsUpdate:match];
+    //TODO: Update the match itself in the schedule view controller
 }
 
 -(void)startStandingsUpdate:(PFObject *)match
