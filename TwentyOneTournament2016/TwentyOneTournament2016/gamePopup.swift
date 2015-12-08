@@ -174,7 +174,14 @@ class gamePopup: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
         
         //Submit updated result to Parse if winner and cup differential have been set
         if winner != 0 && cupDifferential != 0 {
-            ParseOps.sharedOps().saveMatch(matchId, winner: winner, cd: cupDifferential)
+            dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY, 0), {
+                print("Saving match result...")
+                ParseOps.sharedOps().saveMatch(self.matchId, winner: self.winner, cd: self.cupDifferential)
+                dispatch_async(dispatch_get_main_queue(), {
+        
+                })
+            })
+            
             self.dismissViewControllerAnimated(true, completion: nil)
         }
         

@@ -166,7 +166,16 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
             cell.gameCountLbl.text = "\(row+1)"
             cell.teamOneRecordLbl.text = "(0-0)"
             cell.teamTwoRecordLbl.text = "(0-0)"
-            
+       
+        
+        //Adjust cell UI based on past results
+        if schedule[roundNum-1].matches?[indexPath.row].winner == 1 {
+            cell.teamOneLbl.textColor = UIColor.greenColor()
+            cell.teamTwoLbl.textColor = UIColor.redColor()
+        } else if schedule[roundNum-1].matches?[indexPath.row].winner == 2{
+            cell.teamTwoLbl.textColor = UIColor.greenColor()
+            cell.teamOneLbl.textColor = UIColor.redColor()
+        }
         
         return cell
     }
