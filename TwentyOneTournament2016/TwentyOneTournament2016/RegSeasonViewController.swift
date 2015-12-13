@@ -15,13 +15,17 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     
     var schedule = []
     
+    
+    
     var i = 0
     
     var teamOne = ""
-    
     var teamTwo = ""
-    
     var matchId = ""
+    var matchCupDiff = 0
+    var matchWinner = 0
+    
+    var teams = []
 
     let textCellIdentifier = "cell"
     
@@ -33,8 +37,7 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
-    
-    //CRASH - App is crashing if you tap to go to round 8 from round 7
+    //TODO - Make the game cell update its UI for the score that was just entered when closing the popup
     
     
     //Let the user go back a round by swiping R to L
@@ -69,12 +72,13 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     //Advance a round by tapping the Next Round arrow
     @IBAction func nextRoundBtn(sender: AnyObject) {
         
-        if roundNum < 10{
+        if roundNum < schedule.count{
             roundNum++
         }
         
         roundLbl.text = "Round \(roundNum)"
         i = 0
+        
         
         self.tableView.reloadData()
     }
@@ -104,11 +108,11 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         
         activityIndicator.startAnimating()
         
-        //Set shadow for round label at th bottom.
+        //Set shadow for round label at the bottom.
         //TODO - This stopped working and I don't know why.
         roundLbl.layer.shadowColor = UIColor.blackColor().CGColor
         roundLbl.layer.shadowOpacity = 0.9
-        roundLbl.layer.shadowOffset = CGSize(width: 0, height: -3)
+        roundLbl.layer.shadowOffset = CGSize(width: 0, height: -2)
         
         
         
@@ -134,7 +138,6 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
             dispatch_async(dispatch_get_main_queue(), {
                 
                 self.activityIndicator.stopAnimating()
-                
                 self.tableView.reloadData()
                 
             })
@@ -175,6 +178,9 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         } else if schedule[roundNum-1].matches?[indexPath.row].winner == 2{
             cell.teamTwoLbl.textColor = UIColor.greenColor()
             cell.teamOneLbl.textColor = UIColor.redColor()
+        } else {
+            cell.teamTwoLbl.textColor = UIColor.blackColor()
+            cell.teamOneLbl.textColor = UIColor.blackColor()
         }
         
         return cell
@@ -188,6 +194,8 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         teamOne = (schedule[roundNum - 1].matches?[indexPath.row].team1)!
         teamTwo = (schedule[roundNum - 1].matches?[indexPath.row].team2)!
         matchId = (schedule[roundNum - 1].matches?[indexPath.row].objectID)!
+        matchCupDiff = (schedule[roundNum - 1].matches?[indexPath.row].cupDifferential)!
+        matchWinner = (schedule[roundNum - 1].matches?[indexPath.row].winner)!
         
         performSegueWithIdentifier("modalSegue", sender: nil)
         
@@ -203,6 +211,8 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
             svc.one = teamOne
             svc.two = teamTwo
             svc.matchId = matchId
+            svc.cupDifferential = matchCupDiff
+            svc.winner = matchWinner
             
         }
     }

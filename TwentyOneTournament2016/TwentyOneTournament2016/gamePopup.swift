@@ -78,12 +78,30 @@ class gamePopup: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     
     override func viewDidLoad() {
         
-        //TODO - Preset winner and cupDifferential variables if game has already been played
-        
-        
+        //Initialize Picker View
+        cupDiffPicker.dataSource = self
+        cupDiffPicker.delegate = self
         
         //TODO - Preset UI to show results of completed games
+        if winner == 1{
+            teamOneBtn.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+            teamOneBtn.backgroundColor = UIColor.greenColor()
+            teamOneBtn.alpha = 1.0
+            
+            teamTwoBtn.setTitleColor(UIColor.lightGrayColor(), forState: UIControlState.Normal)
+            teamTwoBtn.backgroundColor = UIColor.redColor()
+            teamTwoBtn.alpha = 0.25
+        } else if winner == 2{
+            teamTwoBtn.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+            teamTwoBtn.backgroundColor = UIColor.greenColor()
+            teamTwoBtn.alpha = 1.0
+            
+            teamOneBtn.setTitleColor(UIColor.lightGrayColor(), forState: UIControlState.Normal)
+            teamOneBtn.backgroundColor = UIColor.redColor()
+            teamOneBtn.alpha = 0.25
+        }
         
+        cupDiffPicker.selectRow(cupDifferential, inComponent: 0, animated: true)
         
         //Make the team button titles match the teams that were picked from the Regular Season schedule.
         teamOneBtn.setTitle(one, forState: UIControlState.Normal)
@@ -98,11 +116,8 @@ class gamePopup: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
         teamTwoBtn.layer.borderWidth = 1
         teamTwoBtn.layer.cornerRadius = 5
         
-        
-        //Initialize Picker View
-        cupDiffPicker.dataSource = self
-        cupDiffPicker.delegate = self
 
+        
         
         //Set the popup size to fit whatever the screen width is. Should make it look right on all phone sizes.
         horizPopUpConstraint.constant = screenSize.width - 50
