@@ -31,6 +31,11 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     
     let screenSize: CGRect = UIScreen.mainScreen().bounds
     
+    
+    @IBOutlet weak var nextRoundBtnLbl: UIButton!
+    
+    @IBOutlet weak var prevRoundBtnLbl: UIButton!
+    
     @IBOutlet var tableView: UITableView!
     
     @IBOutlet var roundLbl: UILabel!
@@ -40,11 +45,25 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     //TODO - Make the game cell update its UI for the score that was just entered when closing the popup
     
     
-    //Let the user go back a round by swiping R to L
+    //Let the user go back a round by swiping L to R
     @IBAction func swipeRight(sender: AnyObject) {
         
         if roundNum > 1{
             roundNum--
+        }
+        
+        //If the round is #1 then hide the back arrow. If it's anything but 1 then show it.
+        if roundNum == 1 {
+            prevRoundBtnLbl.hidden = true
+        } else {
+            prevRoundBtnLbl.hidden = false
+        }
+        
+        //If the round is = max round then hide the forward arrow. If it's anything else then show it.
+        if roundNum == schedule.count{
+            nextRoundBtnLbl.hidden = true
+        } else {
+            nextRoundBtnLbl.hidden = false
         }
         
         roundLbl.text = "Round \(roundNum)"
@@ -55,11 +74,25 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     
-    //Let the user to forward a round by swiping L to R
+    //Let the user go forward a round by swiping R to L
     @IBAction func swipeLeft(sender: AnyObject) {
         
         if roundNum < 10{
             roundNum++
+        }
+        
+        //If the round is #1 then hide the back arrow. If it's anything but 1 then show it.
+        if roundNum == 1 {
+            prevRoundBtnLbl.hidden = true
+        } else {
+            prevRoundBtnLbl.hidden = false
+        }
+        
+        //If the round is = max round then hide the forward arrow. If it's anything else then show it.
+        if roundNum == schedule.count{
+            nextRoundBtnLbl.hidden = true
+        } else {
+            nextRoundBtnLbl.hidden = false
         }
         
         roundLbl.text = "Round \(roundNum)"
@@ -76,6 +109,21 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
             roundNum++
         }
         
+        //If the round is #1 then hide the back arrow. If it's anything but 1 then show it.
+        if roundNum == 1 {
+            prevRoundBtnLbl.hidden = true
+        } else {
+            prevRoundBtnLbl.hidden = false
+        }
+        
+        //If the round is = max round then hide the forward arrow. If it's anything else then show it.
+        if roundNum == schedule.count{
+            nextRoundBtnLbl.hidden = true
+        } else {
+            nextRoundBtnLbl.hidden = false
+        }
+        
+        
         roundLbl.text = "Round \(roundNum)"
         i = 0
         
@@ -90,6 +138,21 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         if roundNum > 1{
             roundNum--
         }
+        
+        //If the round is #1 then hide the back arrow. If it's anything but 1 then show it.
+        if roundNum == 1 {
+            prevRoundBtnLbl.hidden = true
+        } else {
+            prevRoundBtnLbl.hidden = false
+        }
+        
+        //If the round is = max round then hide the forward arrow. If it's anything else then show it.
+        if roundNum == schedule.count{
+            nextRoundBtnLbl.hidden = true
+        } else {
+            nextRoundBtnLbl.hidden = false
+        }
+        
         
         roundLbl.text = "Round \(roundNum)"
         
@@ -107,6 +170,12 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         roundNum = 1
         
         activityIndicator.startAnimating()
+        
+        
+        //Hide left arrow when on round #1
+        if roundNum == 1{
+            prevRoundBtnLbl.hidden = true
+        }
         
         //Set shadow for round label at the bottom.
         //TODO - This stopped working and I don't know why.
