@@ -71,8 +71,6 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         
         i = 0
         
-//        self.tableView.reloadData()
-
     }
     
     
@@ -101,7 +99,6 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         roundLbl.text = "Round \(roundNum)"
         i = 0
         
-//        self.tableView.reloadData()
 
     }
     
@@ -132,7 +129,6 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         i = 0
         
         
-//        self.tableView.reloadData()
         self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Left)
     }
     
@@ -163,7 +159,6 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         
         i = 0
         
-//        self.tableView.reloadData()
         self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Right)
     }
     
@@ -184,10 +179,9 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         }
         
         //Set shadow for round label at the bottom.
-        //TODO - This stopped working and I don't know why.
         roundLbl.layer.shadowColor = UIColor.blackColor().CGColor
-        roundLbl.layer.shadowOpacity = 0.9
-        roundLbl.layer.shadowOffset = CGSize(width: 0, height: -2)
+        roundLbl.layer.shadowOpacity = 0.8
+        roundLbl.layer.shadowOffset = CGSize(width: 0, height: 10)
         
         
         
