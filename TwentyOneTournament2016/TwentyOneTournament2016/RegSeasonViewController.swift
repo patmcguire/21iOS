@@ -50,6 +50,7 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         
         if roundNum > 1{
             roundNum--
+            self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Right)
         }
         
         //If the round is #1 then hide the back arrow. If it's anything but 1 then show it.
@@ -70,15 +71,17 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         
         i = 0
         
-        self.tableView.reloadData()
+//        self.tableView.reloadData()
+
     }
     
     
     //Let the user go forward a round by swiping R to L
     @IBAction func swipeLeft(sender: AnyObject) {
         
-        if roundNum < 10{
+        if roundNum < schedule.count{
             roundNum++
+            self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Left)
         }
         
         //If the round is #1 then hide the back arrow. If it's anything but 1 then show it.
@@ -98,7 +101,8 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         roundLbl.text = "Round \(roundNum)"
         i = 0
         
-        self.tableView.reloadData()
+//        self.tableView.reloadData()
+
     }
     
     
@@ -128,7 +132,8 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         i = 0
         
         
-        self.tableView.reloadData()
+//        self.tableView.reloadData()
+        self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Left)
     }
     
     
@@ -158,7 +163,8 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         
         i = 0
         
-        self.tableView.reloadData()
+//        self.tableView.reloadData()
+        self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Right)
     }
     
  
