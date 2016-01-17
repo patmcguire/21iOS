@@ -9,7 +9,14 @@
 import Foundation
 import UIKit
 
+
+protocol gamePopupControllerDelegate{
+    func myVCDidFinish(controller:gamePopup)
+}
+
 class gamePopup: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
+
+    var delegate:gamePopupControllerDelegate? = nil
     
     
     @IBOutlet var teamOneBtn: UIButton!
@@ -193,11 +200,14 @@ class gamePopup: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
                 print("Saving match result...")
                 ParseOps.sharedOps().saveMatch(self.matchId, winner: self.winner, cd: self.cupDifferential)
                 dispatch_async(dispatch_get_main_queue(), {
-        
+                    if (self.delegate != nil) {
+                        self.delegate!.myVCDidFinish(self)
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    }
                 })
             })
+         
             
-            self.dismissViewControllerAnimated(true, completion: nil)
         }
         
     }

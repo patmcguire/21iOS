@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, gamePopupControllerDelegate {
     
     var roundNum = 1
     
@@ -206,18 +206,22 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         //Adjust tableview row height
         tableView.rowHeight = 80.0
         
+        retrieveSchedule()
+        
+    }
+    
+    func retrieveSchedule(){
+        
         //Get matches for all rounds from Parse
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY, 0), {
             print("Getting schedule...")
             self.schedule = ParseOps.sharedOps().getRoundSchedule(8)
             dispatch_async(dispatch_get_main_queue(), {
-                
-                self.activityIndicator.stopAnimating()
                 self.tableView.reloadData()
-                
+                self.activityIndicator.stopAnimating()
+
             })
         })
-        
     }
     
     
@@ -288,9 +292,12 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
             svc.matchId = matchId
             svc.cupDifferential = matchCupDiff
             svc.winner = matchWinner
+            svc.delegate = self
             
         }
     }
     
-    
+    func myVCDidFinish(controller: gamePopup) {
+        retrieveSchedule()
+    }
 }
