@@ -184,7 +184,6 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         }
         
         //Set shadow for round label at the bottom.
-        //TODO - This stopped working and I don't know why.
         roundLbl.layer.shadowColor = UIColor.blackColor().CGColor
         roundLbl.layer.shadowOpacity = 0.9
         roundLbl.layer.shadowOffset = CGSize(width: 0, height: -2)
