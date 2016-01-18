@@ -47,8 +47,21 @@ class twitterPopup: UIViewController, UITextFieldDelegate{
     
     
     @IBAction func submitBtn(sender: AnyObject) {
-        //TODO - Submit twitter entry to Parse
         
+        if tweetBox.text != nil{
+            var tweet = PFObject(className:"Twitter")
+            tweet["tweet"] = tweetBox.text! as String
+            tweet.saveInBackgroundWithBlock {
+                (success: Bool, error: NSError?) -> Void in
+                if (success) {
+                    print("Tweet saved")
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                } else {
+                    print("Error saving tweet")
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }
+            }
+        }
         
     }
     @IBAction func tweetBoxStartEditing(sender: AnyObject) {
