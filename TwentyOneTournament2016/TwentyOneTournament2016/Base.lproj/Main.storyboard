@@ -208,6 +208,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="centerBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qix-Md-vRD"/>
+                                    <segue destination="qXB-bb-zul" kind="presentation" id="rjk-Ro-Hal"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -321,6 +322,195 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1483.5" y="494.25"/>
+        </scene>
+        <!--Twitter Popup-->
+        <scene sceneID="CKX-Wg-XUj">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="qXB-bb-zul" customClass="twitterPopup" customModule="TwentyOneTournament2016" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wtc-qr-Jf2"/>
+                        <viewControllerLayoutGuide type="bottom" id="mnK-l2-Een"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="7hw-Cz-R2E">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yCv-Ev-Agb">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="MDS-Cn-UY4"/>
+                                    <constraint firstAttribute="width" constant="300" id="xh7-Fd-9ap"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="MDS-Cn-UY4"/>
+                                        <exclude reference="xh7-Fd-9ap"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="MDS-Cn-UY4"/>
+                                        <include reference="xh7-Fd-9ap"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbn-Pw-Lte">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="289" y="555" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="submitBtn:" destination="qXB-bb-zul" eventType="touchUpInside" id="bhK-C9-YDg"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter tweet here" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idE-vK-Igb">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BWs-KY-PH2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BWs-KY-PH2"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="69" y="474" width="266" height="30"/>
+                                    <mask key="constraints">
+                                        <include reference="BWs-KY-PH2"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="tweetBoxEndEditing:" destination="qXB-bb-zul" eventType="editingDidEnd" id="XXX-FC-lQh"/>
+                                    <action selector="tweetBoxStartEditing:" destination="qXB-bb-zul" eventType="editingDidBegin" id="qLO-pn-ADO"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twenty One Twitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jmh-RV-gGv">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="181" y="223" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter text below to have it show up on everyone's home screen." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56c-z7-IjJ">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="Ok8-MF-831"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ok8-MF-831"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="181" y="351" width="42" height="21"/>
+                                    <mask key="constraints">
+                                        <include reference="Ok8-MF-831"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyM-OO-vbg">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="69" y="553" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="cancelBtn:" destination="qXB-bb-zul" eventType="touchUpInside" id="wj9-2C-NK7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.74762457770270274" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="iyM-OO-vbg" firstAttribute="leading" secondItem="yCv-Ev-Agb" secondAttribute="leading" constant="15" id="8NX-qX-uOf"/>
+                            <constraint firstItem="Jbn-Pw-Lte" firstAttribute="bottom" secondItem="yCv-Ev-Agb" secondAttribute="bottom" constant="-15" id="8i3-4l-YS6"/>
+                            <constraint firstItem="56c-z7-IjJ" firstAttribute="centerX" secondItem="yCv-Ev-Agb" secondAttribute="centerX" id="A6s-ox-sxQ"/>
+                            <constraint firstItem="yCv-Ev-Agb" firstAttribute="centerY" secondItem="7hw-Cz-R2E" secondAttribute="centerY" id="JUt-8u-ya1"/>
+                            <constraint firstItem="Jbn-Pw-Lte" firstAttribute="trailing" secondItem="yCv-Ev-Agb" secondAttribute="trailing" constant="-15" id="Kcr-OG-Fmu"/>
+                            <constraint firstItem="idE-vK-Igb" firstAttribute="trailing" secondItem="yCv-Ev-Agb" secondAttribute="trailing" constant="-15" id="LU7-Qm-a0x"/>
+                            <constraint firstItem="idE-vK-Igb" firstAttribute="leading" secondItem="yCv-Ev-Agb" secondAttribute="leading" constant="15" id="Lec-k9-qyR"/>
+                            <constraint firstItem="yCv-Ev-Agb" firstAttribute="centerX" secondItem="7hw-Cz-R2E" secondAttribute="centerX" id="Rcl-TA-8Hf"/>
+                            <constraint firstItem="56c-z7-IjJ" firstAttribute="top" secondItem="Jmh-RV-gGv" secondAttribute="bottom" constant="50" id="SvZ-Z1-LrC"/>
+                            <constraint firstItem="Jmh-RV-gGv" firstAttribute="top" secondItem="yCv-Ev-Agb" secondAttribute="top" constant="25" id="ZaB-K0-A4J"/>
+                            <constraint firstItem="idE-vK-Igb" firstAttribute="centerX" secondItem="yCv-Ev-Agb" secondAttribute="centerX" id="drd-hh-nMq"/>
+                            <constraint firstItem="iyM-OO-vbg" firstAttribute="bottom" secondItem="yCv-Ev-Agb" secondAttribute="bottom" constant="-15" id="g7B-vA-GRf"/>
+                            <constraint firstItem="Jmh-RV-gGv" firstAttribute="centerX" secondItem="yCv-Ev-Agb" secondAttribute="centerX" id="g9B-nQ-aZE"/>
+                            <constraint firstItem="Jbn-Pw-Lte" firstAttribute="top" secondItem="idE-vK-Igb" secondAttribute="bottom" constant="50" id="iYf-lk-E63"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="yCv-Ev-Agb"/>
+                                <exclude reference="Jbn-Pw-Lte"/>
+                                <exclude reference="idE-vK-Igb"/>
+                                <exclude reference="Jmh-RV-gGv"/>
+                                <exclude reference="56c-z7-IjJ"/>
+                                <exclude reference="iyM-OO-vbg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="JUt-8u-ya1"/>
+                                <exclude reference="Rcl-TA-8Hf"/>
+                                <exclude reference="ZaB-K0-A4J"/>
+                                <exclude reference="g9B-nQ-aZE"/>
+                                <exclude reference="A6s-ox-sxQ"/>
+                                <exclude reference="SvZ-Z1-LrC"/>
+                                <exclude reference="LU7-Qm-a0x"/>
+                                <exclude reference="Lec-k9-qyR"/>
+                                <exclude reference="drd-hh-nMq"/>
+                                <exclude reference="8NX-qX-uOf"/>
+                                <exclude reference="g7B-vA-GRf"/>
+                                <exclude reference="8i3-4l-YS6"/>
+                                <exclude reference="Kcr-OG-Fmu"/>
+                                <exclude reference="iYf-lk-E63"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="yCv-Ev-Agb"/>
+                                <include reference="Jbn-Pw-Lte"/>
+                                <include reference="idE-vK-Igb"/>
+                                <include reference="Jmh-RV-gGv"/>
+                                <include reference="56c-z7-IjJ"/>
+                                <include reference="iyM-OO-vbg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="JUt-8u-ya1"/>
+                                <include reference="Rcl-TA-8Hf"/>
+                                <include reference="ZaB-K0-A4J"/>
+                                <include reference="g9B-nQ-aZE"/>
+                                <include reference="A6s-ox-sxQ"/>
+                                <include reference="SvZ-Z1-LrC"/>
+                                <include reference="LU7-Qm-a0x"/>
+                                <include reference="Lec-k9-qyR"/>
+                                <include reference="drd-hh-nMq"/>
+                                <include reference="8NX-qX-uOf"/>
+                                <include reference="g7B-vA-GRf"/>
+                                <include reference="8i3-4l-YS6"/>
+                                <include reference="Kcr-OG-Fmu"/>
+                                <include reference="iYf-lk-E63"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="horizPopupConstraint" destination="xh7-Fd-9ap" id="fjb-EH-ysX"/>
+                        <outlet property="imageView" destination="yCv-Ev-Agb" id="hSA-5b-QEU"/>
+                        <outlet property="instructionsLbl" destination="56c-z7-IjJ" id="C8z-8K-Bgf"/>
+                        <outlet property="instructionsLblHorizConst" destination="Ok8-MF-831" id="sY2-KZ-3MV"/>
+                        <outlet property="instructionsLblVertConstraint" destination="SvZ-Z1-LrC" id="3yB-tc-oXe"/>
+                        <outlet property="textBoxVertConstraint" destination="iYf-lk-E63" id="WZV-K1-0EV"/>
+                        <outlet property="tweetBox" destination="idE-vK-Igb" id="0Rt-2r-wvq"/>
+                        <outlet property="vertPopupConstraint" destination="MDS-Cn-UY4" id="EXc-b6-S07"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HoF-e1-RaK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2266.5" y="494.25"/>
         </scene>
         <!--PlayoffsR1-->
         <scene sceneID="Ve8-fJ-DSs">

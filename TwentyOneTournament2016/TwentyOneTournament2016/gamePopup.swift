@@ -89,7 +89,7 @@ class gamePopup: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
         cupDiffPicker.dataSource = self
         cupDiffPicker.delegate = self
         
-        //TODO - Preset UI to show results of completed games
+        //Preset UI to show results of completed games
         if winner == 1{
             teamOneBtn.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
             teamOneBtn.backgroundColor = UIColor.greenColor()

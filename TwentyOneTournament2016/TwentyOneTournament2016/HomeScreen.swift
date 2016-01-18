@@ -18,11 +18,6 @@ class HomeScreen: UIViewController {
         print("Center button tapped")
     }
     
-    override func viewWillAppear(animated: Bool) {
-        navigationItem.title = "21 Tournament 2016"
-    }
-
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         navigationItem.title = nil
     }
