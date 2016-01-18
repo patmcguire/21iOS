@@ -19,6 +19,7 @@
 		4308CC5C1BE6C30D007F509F /* standingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4308CC5B1BE6C30D007F509F /* standingsCell.xib */; };
 		4308CC5E1BE6C3EB007F509F /* standingsCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308CC5D1BE6C3EB007F509F /* standingsCustomCell.swift */; };
 		4308CC601BE86139007F509F /* gamePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308CC5F1BE86139007F509F /* gamePopup.swift */; };
+		43587A981C4C581B00406716 /* twitterPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43587A971C4C581B00406716 /* twitterPopup.swift */; };
 		4393D05C1BD9DD9F0001DDC5 /* gameTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4393D05B1BD9DD9F0001DDC5 /* gameTblCell.xib */; };
 		4393D05E1BD9DE860001DDC5 /* gameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4393D05D1BD9DE860001DDC5 /* gameCell.swift */; };
 		43A387391BD9B94200FEB900 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A387381BD9B94200FEB900 /* HomeScreen.swift */; };
@@ -66,6 +67,7 @@
 		4308CC5B1BE6C30D007F509F /* standingsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = standingsCell.xib; sourceTree = "<group>"; };
 		4308CC5D1BE6C3EB007F509F /* standingsCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = standingsCustomCell.swift; sourceTree = "<group>"; };
 		4308CC5F1BE86139007F509F /* gamePopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gamePopup.swift; sourceTree = "<group>"; };
+		43587A971C4C581B00406716 /* twitterPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = twitterPopup.swift; sourceTree = "<group>"; };
 		4393D05B1BD9DD9F0001DDC5 /* gameTblCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = gameTblCell.xib; sourceTree = "<group>"; };
 		4393D05D1BD9DE860001DDC5 /* gameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameCell.swift; sourceTree = "<group>"; };
 		43A387381BD9B94200FEB900 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			children = (
 				13F66A291BE3342D00E11670 /* Objects */,
 				1367D4C61BD8942000D5AD61 /* AppDelegate.swift */,
+				43587A971C4C581B00406716 /* twitterPopup.swift */,
 				1367D4CA1BD8942000D5AD61 /* Main.storyboard */,
 				43A387381BD9B94200FEB900 /* HomeScreen.swift */,
 				43DBC3E11BDBF28800BB2DC7 /* Standings */,
@@ -401,6 +404,7 @@
 				1367D4C71BD8942000D5AD61 /* AppDelegate.swift in Sources */,
 				43DBC3EA1BDD5C9E00BB2DC7 /* PlayoffsR1.swift in Sources */,
 				13F66A2C1BE3349900E11670 /* StandingsTeam.m in Sources */,
+				43587A981C4C581B00406716 /* twitterPopup.swift in Sources */,
 				43DBC3EC1BDD5CAA00BB2DC7 /* PlayoffsR2.swift in Sources */,
 				43DBC3F01BDD5CCD00BB2DC7 /* PlayoffsR4.swift in Sources */,
 				1391B0CE1BDAA33C00012AEE /* ParseOps.m in Sources */,
