@@ -86,7 +86,19 @@ static ParseOps *sharedOps = nil;
         NSArray *matches = [query findObjects];
         for (PFObject *match in matches)
         {
-            Match *currentMatch = [[Match alloc] init:[match objectId] team1:match[@"Team1"] team2:match[@"Team2"] team1ID:match[@"Team1ID"] team2ID:match[@"Team2ID"] cd:[match[@"CD"] intValue] winner:[match[@"Winner"] intValue]];
+            PFQuery *recordQuery = [PFQuery queryWithClassName:@"TeamOld"];
+            [recordQuery whereKey:@"teamName" equalTo:match[@"Team1"]];
+            NSArray *team = [recordQuery findObjects];
+            NSLog(@"%@ vs %@\n",match[@"Team1"], match[@"Team2"]);
+            NSString *wins = team[0][@"wins"];
+            NSString *losses = team[0][@"losses"];
+            NSString *team1Record = [NSString stringWithFormat:@"%@-%@", wins, losses];
+            [recordQuery whereKey:@"teamName" equalTo:match[@"Team2"]];
+            team = [recordQuery findObjects];
+            wins = team[0][@"wins"];
+            losses = team[0][@"losses"];
+            NSString *team2Record = [NSString stringWithFormat:@"%@-%@", wins, losses];
+            Match *currentMatch = [[Match alloc] init:[match objectId] team1:match[@"Team1"] team2:match[@"Team2"] team1ID:match[@"Team1ID"] team2ID:match[@"Team2ID"] cd:[match[@"CD"] intValue] winner:[match[@"Winner"] intValue] team1Record:team1Record team2Record:team2Record];
             [roundArray addObject:currentMatch];
         }
         Round *round = [[Round alloc] init:[currentRound intValue] matches:roundArray];

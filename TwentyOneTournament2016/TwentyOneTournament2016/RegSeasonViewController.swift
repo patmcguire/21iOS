@@ -245,8 +245,8 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
             cell.teamOneLbl.text = "\((schedule[roundNum-1].matches?[indexPath.row].team1)!)"
             cell.teamTwoLbl.text = "\((schedule[roundNum-1].matches?[indexPath.row].team2)!)"
             cell.gameCountLbl.text = "\(row+1)"
-            cell.teamOneRecordLbl.text = "(0-0)"
-            cell.teamTwoRecordLbl.text = "(0-0)"
+            cell.teamOneRecordLbl.text = "\((schedule[roundNum-1].matches?[indexPath.row].team1Record)!)"
+            cell.teamTwoRecordLbl.text = "\((schedule[roundNum-1].matches?[indexPath.row].team2Record)!)"
        
         
         //Adjust cell UI based on past results
