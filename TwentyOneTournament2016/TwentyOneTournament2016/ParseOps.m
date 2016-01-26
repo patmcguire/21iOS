@@ -78,6 +78,16 @@ static ParseOps *sharedOps = nil;
     //new thread for each round idea?
     NSMutableArray *scheduleArray = [[NSMutableArray alloc]init];
     NSNumber *currentRound = @1;
+    NSMutableDictionary *recordDictionary = [[NSMutableDictionary alloc] init];
+    PFQuery *recordQuery = [PFQuery queryWithClassName:@"TeamOld"];
+    NSArray *teams = [recordQuery findObjects];
+    for (PFObject *team in teams)
+    {
+        NSString *wins = team[@"wins"];
+        NSString *losses = team[@"losses"];
+        NSString *record = [NSString stringWithFormat:@"%@-%@", wins, losses];
+        [recordDictionary setObject:record forKey:team[@"teamName"]];
+    }
     while (currentRound <= numberOfRounds) {
         NSMutableArray *roundArray = [[NSMutableArray alloc]init];
         PFQuery *query = [PFQuery queryWithClassName:@"MatchOld"];
@@ -86,19 +96,7 @@ static ParseOps *sharedOps = nil;
         NSArray *matches = [query findObjects];
         for (PFObject *match in matches)
         {
-            PFQuery *recordQuery = [PFQuery queryWithClassName:@"TeamOld"];
-            [recordQuery whereKey:@"teamName" equalTo:match[@"Team1"]];
-            NSArray *team = [recordQuery findObjects];
-            NSLog(@"%@ vs %@\n",match[@"Team1"], match[@"Team2"]);
-            NSString *wins = team[0][@"wins"];
-            NSString *losses = team[0][@"losses"];
-            NSString *team1Record = [NSString stringWithFormat:@"%@-%@", wins, losses];
-            [recordQuery whereKey:@"teamName" equalTo:match[@"Team2"]];
-            team = [recordQuery findObjects];
-            wins = team[0][@"wins"];
-            losses = team[0][@"losses"];
-            NSString *team2Record = [NSString stringWithFormat:@"%@-%@", wins, losses];
-            Match *currentMatch = [[Match alloc] init:[match objectId] team1:match[@"Team1"] team2:match[@"Team2"] team1ID:match[@"Team1ID"] team2ID:match[@"Team2ID"] cd:[match[@"CD"] intValue] winner:[match[@"Winner"] intValue] team1Record:team1Record team2Record:team2Record];
+            Match *currentMatch = [[Match alloc] init:[match objectId] team1:match[@"Team1"] team2:match[@"Team2"] team1ID:match[@"Team1ID"] team2ID:match[@"Team2ID"] cd:[match[@"CD"] intValue] winner:[match[@"Winner"] intValue] team1Record:[recordDictionary objectForKey:match[@"Team1"]] team2Record:[recordDictionary objectForKey:match[@"Team2"]]];
             [roundArray addObject:currentMatch];
         }
         Round *round = [[Round alloc] init:[currentRound intValue] matches:roundArray];
