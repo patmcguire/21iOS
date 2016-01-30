@@ -120,19 +120,19 @@ static ParseOps *sharedOps = nil;
 
 -(void)startStandingsUpdate:(PFObject *)match
 {
-    NSString *team1ID = match[@"Team1ID"];
-    NSString *team2ID = match[@"Team2ID"];
+    NSString *team1 = match[@"Team1"];
+    NSString *team2 = match[@"Team2"];
     NSNumber *cd = match[@"CD"];
     
-    [match[@"Winner"] intValue] == 1 ? [self updateStandings:team1ID loser:team2ID cd:cd] : [self updateStandings:team2ID loser:team1ID cd:cd];
+    [match[@"Winner"] intValue] == 1 ? [self updateStandings:team1 loser:team2 cd:cd] : [self updateStandings:team2 loser:team1 cd:cd];
     
 }
 
 -(void)updateStandings:(NSString *)winner loser:(NSString *)loser cd:(NSNumber *)cd
 {
     PFQuery *query = [PFQuery queryWithClassName:@"TeamOld"];
-    
-    PFObject *team = [query getObjectWithId:winner];
+    [query whereKey:@"teamName" equalTo:winner];
+    PFObject *team = [query findObjects][0];
     NSInteger wins = [team[@"wins"] intValue];
     NSInteger cdWinner = [team[@"CD"] intValue];
     wins++;
@@ -141,7 +141,8 @@ static ParseOps *sharedOps = nil;
     team[@"CD"] = [NSNumber numberWithLong:cdWinner];
     [team save];
     
-    team = [query getObjectWithId:loser];
+    [query whereKey:@"teamName" equalTo:loser];
+    team = [query findObjects][0];
     NSInteger losses = [team[@"losses"] intValue];
     NSInteger cdLoser = [team[@"CD"] intValue];
     losses++;
