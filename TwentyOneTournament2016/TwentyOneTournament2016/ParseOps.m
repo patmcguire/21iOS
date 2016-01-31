@@ -110,12 +110,18 @@ static ParseOps *sharedOps = nil;
 {
     PFQuery *query = [PFQuery queryWithClassName:@"MatchOld"];
     PFObject *match = [query getObjectWithId:objectID];
-    match[@"Winner"] = winner;
-    match[@"CD"] = cd;
-    [match save];
-    NSLog(@"Match saved");
-    [self startStandingsUpdate:match];
-    //TODO: Update the match itself in the schedule view controller
+    if ([match[@"Winner"] intValue] != 0)
+    {
+        [self startEditStandings:objectID winner:winner cd:cd oldCD:match[@"CD"]];
+    }
+    else
+    {
+        match[@"Winner"] = winner;
+        match[@"CD"] = cd;
+        [match save];
+        NSLog(@"Match saved");
+        [self startStandingsUpdate:match];
+    }
 }
 
 -(void)startStandingsUpdate:(PFObject *)match
@@ -154,5 +160,44 @@ static ParseOps *sharedOps = nil;
     NSLog(@"Standings Updated");
 }
 
+-(void)startEditStandings:(NSString *)objectID winner:(NSNumber *)winner cd:(NSNumber *)cd oldCD:(NSNumber *)oldCD{
+    PFQuery *query = [PFQuery queryWithClassName:@"MatchOld"];
+    PFObject *match = [query getObjectWithId:objectID];
+    
+    NSString *team1 = match[@"Team1"];
+    NSString *team2 = match[@"Team2"];
+    [match[@"Winner"] intValue] == 1 ? [self editStandings:team1 loser:team2 cd:cd oldCD:oldCD] : [self editStandings:team2 loser:team1 cd:cd oldCD:oldCD];
+    
+    match[@"Winner"] = @0;
+    NSInteger previousCD = [match[@"CD"] intValue];
+    match[@"CD"] = [NSNumber numberWithLong:(previousCD - [oldCD intValue])];
+    [match save];
+    NSLog(@"Match saved");
+    [self saveMatch:objectID winner:winner cd:cd];
+}
+
+-(void)editStandings:(NSString *)winner loser:(NSString *)loser cd:(NSNumber *)cd oldCD:(NSNumber *)oldCD
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"TeamOld"];
+    [query whereKey:@"teamName" equalTo:winner];
+    PFObject *team = [query findObjects][0];
+    NSInteger wins = [team[@"wins"] intValue];
+    NSInteger cdWinner = [team[@"CD"] intValue];
+    wins--;
+    cdWinner = cdWinner - oldCD.intValue;
+    team[@"wins"] = [NSNumber numberWithLong:wins];
+    team[@"CD"] = [NSNumber numberWithLong:cdWinner];
+    [team save];
+    
+    [query whereKey:@"teamName" equalTo:loser];
+    team = [query findObjects][0];
+    NSInteger losses = [team[@"losses"] intValue];
+    NSInteger cdLoser = [team[@"CD"] intValue];
+    losses--;
+    cdLoser = cdLoser + oldCD.intValue;
+    team[@"losses"] = [NSNumber numberWithLong:losses];
+    team[@"CD"] = [NSNumber numberWithLong:cdLoser];
+    [team save];
+}
 
 @end
