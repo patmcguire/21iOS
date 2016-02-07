@@ -20,12 +20,14 @@
 		4308CC5E1BE6C3EB007F509F /* standingsCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308CC5D1BE6C3EB007F509F /* standingsCustomCell.swift */; };
 		4308CC601BE86139007F509F /* gamePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308CC5F1BE86139007F509F /* gamePopup.swift */; };
 		43587A981C4C581B00406716 /* twitterPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43587A971C4C581B00406716 /* twitterPopup.swift */; };
+		436AEC931C66D3470041E936 /* TeamScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436AEC921C66D3470041E936 /* TeamScreen.swift */; };
+		436AEC951C66DE970041E936 /* teamScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 436AEC941C66DE970041E936 /* teamScheduleCell.xib */; };
+		436AEC981C66DF890041E936 /* teamScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436AEC971C66DF890041E936 /* teamScheduleCell.swift */; };
 		4393D05C1BD9DD9F0001DDC5 /* gameTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4393D05B1BD9DD9F0001DDC5 /* gameTblCell.xib */; };
 		4393D05E1BD9DE860001DDC5 /* gameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4393D05D1BD9DE860001DDC5 /* gameCell.swift */; };
 		43A387391BD9B94200FEB900 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A387381BD9B94200FEB900 /* HomeScreen.swift */; };
 		43A3873B1BD9BB8B00FEB900 /* RegSeasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3873A1BD9BB8B00FEB900 /* RegSeasonViewController.swift */; };
 		43A3873D1BD9BB9D00FEB900 /* PlayoffsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3873C1BD9BB9D00FEB900 /* PlayoffsViewController.swift */; };
-		43A3873F1BD9BBAB00FEB900 /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3873E1BD9BBAB00FEB900 /* TeamListViewController.swift */; };
 		43A387411BD9BBB800FEB900 /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A387401BD9BBB800FEB900 /* StandingsViewController.swift */; };
 		43DBC3EA1BDD5C9E00BB2DC7 /* PlayoffsR1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBC3E91BDD5C9E00BB2DC7 /* PlayoffsR1.swift */; };
 		43DBC3EC1BDD5CAA00BB2DC7 /* PlayoffsR2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBC3EB1BDD5CAA00BB2DC7 /* PlayoffsR2.swift */; };
@@ -68,12 +70,14 @@
 		4308CC5D1BE6C3EB007F509F /* standingsCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = standingsCustomCell.swift; sourceTree = "<group>"; };
 		4308CC5F1BE86139007F509F /* gamePopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gamePopup.swift; sourceTree = "<group>"; };
 		43587A971C4C581B00406716 /* twitterPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = twitterPopup.swift; sourceTree = "<group>"; };
+		436AEC921C66D3470041E936 /* TeamScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamScreen.swift; sourceTree = "<group>"; };
+		436AEC941C66DE970041E936 /* teamScheduleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = teamScheduleCell.xib; sourceTree = "<group>"; };
+		436AEC971C66DF890041E936 /* teamScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = teamScheduleCell.swift; sourceTree = "<group>"; };
 		4393D05B1BD9DD9F0001DDC5 /* gameTblCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = gameTblCell.xib; sourceTree = "<group>"; };
 		4393D05D1BD9DE860001DDC5 /* gameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameCell.swift; sourceTree = "<group>"; };
 		43A387381BD9B94200FEB900 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		43A3873A1BD9BB8B00FEB900 /* RegSeasonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegSeasonViewController.swift; sourceTree = "<group>"; };
 		43A3873C1BD9BB9D00FEB900 /* PlayoffsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayoffsViewController.swift; sourceTree = "<group>"; };
-		43A3873E1BD9BBAB00FEB900 /* TeamListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListViewController.swift; sourceTree = "<group>"; };
 		43A387401BD9BBB800FEB900 /* StandingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandingsViewController.swift; sourceTree = "<group>"; };
 		43DBC3E91BDD5C9E00BB2DC7 /* PlayoffsR1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayoffsR1.swift; sourceTree = "<group>"; };
 		43DBC3EB1BDD5CAA00BB2DC7 /* PlayoffsR2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayoffsR2.swift; sourceTree = "<group>"; };
@@ -132,9 +136,9 @@
 				43587A971C4C581B00406716 /* twitterPopup.swift */,
 				1367D4CA1BD8942000D5AD61 /* Main.storyboard */,
 				43A387381BD9B94200FEB900 /* HomeScreen.swift */,
+				436AEC961C66DF6A0041E936 /* TeamScreen */,
 				43DBC3E11BDBF28800BB2DC7 /* Standings */,
 				43DBC3E01BDBF27300BB2DC7 /* Playoffs */,
-				43DBC3DE1BDBF23400BB2DC7 /* Team List */,
 				43DBC3DF1BDBF24A00BB2DC7 /* Regular Season */,
 				1367D4CD1BD8942000D5AD61 /* Images.xcassets */,
 				1367D4CF1BD8942000D5AD61 /* LaunchScreen.xib */,
@@ -192,12 +196,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		43DBC3DE1BDBF23400BB2DC7 /* Team List */ = {
+		436AEC961C66DF6A0041E936 /* TeamScreen */ = {
 			isa = PBXGroup;
 			children = (
-				43A3873E1BD9BBAB00FEB900 /* TeamListViewController.swift */,
+				436AEC941C66DE970041E936 /* teamScheduleCell.xib */,
+				436AEC921C66D3470041E936 /* TeamScreen.swift */,
+				436AEC971C66DF890041E936 /* teamScheduleCell.swift */,
 			);
-			name = "Team List";
+			name = TeamScreen;
 			sourceTree = "<group>";
 		};
 		43DBC3DF1BDBF24A00BB2DC7 /* Regular Season */ = {
@@ -330,6 +336,7 @@
 				4308CC5C1BE6C30D007F509F /* standingsCell.xib in Resources */,
 				4393D05C1BD9DD9F0001DDC5 /* gameTblCell.xib in Resources */,
 				1367D4CC1BD8942000D5AD61 /* Main.storyboard in Resources */,
+				436AEC951C66DE970041E936 /* teamScheduleCell.xib in Resources */,
 				1367D4D11BD8942000D5AD61 /* LaunchScreen.xib in Resources */,
 				1367D4CE1BD8942000D5AD61 /* Images.xcassets in Resources */,
 			);
@@ -401,10 +408,12 @@
 				43DBC3F21BDD5CD900BB2DC7 /* PlayoffsR5.swift in Sources */,
 				43DBC3EE1BDD5CBF00BB2DC7 /* PlayoffsR3.swift in Sources */,
 				4393D05E1BD9DE860001DDC5 /* gameCell.swift in Sources */,
+				436AEC931C66D3470041E936 /* TeamScreen.swift in Sources */,
 				1367D4C71BD8942000D5AD61 /* AppDelegate.swift in Sources */,
 				43DBC3EA1BDD5C9E00BB2DC7 /* PlayoffsR1.swift in Sources */,
 				13F66A2C1BE3349900E11670 /* StandingsTeam.m in Sources */,
 				43587A981C4C581B00406716 /* twitterPopup.swift in Sources */,
+				436AEC981C66DF890041E936 /* teamScheduleCell.swift in Sources */,
 				43DBC3EC1BDD5CAA00BB2DC7 /* PlayoffsR2.swift in Sources */,
 				43DBC3F01BDD5CCD00BB2DC7 /* PlayoffsR4.swift in Sources */,
 				1391B0CE1BDAA33C00012AEE /* ParseOps.m in Sources */,
@@ -414,7 +423,6 @@
 				43A387391BD9B94200FEB900 /* HomeScreen.swift in Sources */,
 				43A387411BD9BBB800FEB900 /* StandingsViewController.swift in Sources */,
 				43A3873D1BD9BB9D00FEB900 /* PlayoffsViewController.swift in Sources */,
-				43A3873F1BD9BBAB00FEB900 /* TeamListViewController.swift in Sources */,
 				43A3873B1BD9BB8B00FEB900 /* RegSeasonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,6 +553,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TwentyOneTournament2016/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TwentyOneTournament2016/TwentyOneTournament2016-Bridging-Header.h";
@@ -559,6 +568,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TwentyOneTournament2016/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TwentyOneTournament2016/TwentyOneTournament2016-Bridging-Header.h";
