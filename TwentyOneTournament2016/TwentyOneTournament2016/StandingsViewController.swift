@@ -69,6 +69,12 @@ class StandingsViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
+        let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("teamInfo") as! TeamScreen
+
+        secondViewController.selectedTeam = teams[indexPath.row].teamName
+        
+        self.navigationController?.pushViewController(secondViewController, animated: true)
+        
         print(teams[indexPath.row].teamName)
     }
     

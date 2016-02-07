@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E33e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="5oo-tF-Tqh" customClass="teamScheduleCell" customModule="TwentyOneTournament2016" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5oo-tF-Tqh" id="1Ia-7b-CF0">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMn-qW-tg8">
+                        <rect key="frame" x="8" y="10.5" width="10.5" height="22.5"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opponent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngz-rG-EXh">
+                        <rect key="frame" x="26.5" y="10.5" width="78.5" height="22.5"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(#-#)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWo-Jw-6T4">
+                        <rect key="frame" x="274.5" y="10.5" width="37.5" height="22.5"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W/L" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phP-fh-bpG">
+                        <rect key="frame" x="232" y="10.5" width="34.5" height="22.5"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ngz-rG-EXh" firstAttribute="leading" secondItem="TMn-qW-tg8" secondAttribute="trailing" constant="8" id="01F-59-ANV"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="TMn-qW-tg8" secondAttribute="leading" id="8Oa-pM-wOE"/>
+                    <constraint firstItem="ngz-rG-EXh" firstAttribute="centerY" secondItem="1Ia-7b-CF0" secondAttribute="centerY" id="DLh-MN-wHt"/>
+                    <constraint firstItem="TMn-qW-tg8" firstAttribute="centerY" secondItem="1Ia-7b-CF0" secondAttribute="centerY" id="DfW-PT-K38"/>
+                    <constraint firstItem="phP-fh-bpG" firstAttribute="centerY" secondItem="1Ia-7b-CF0" secondAttribute="centerY" id="MmF-EW-TU0"/>
+                    <constraint firstItem="DWo-Jw-6T4" firstAttribute="centerY" secondItem="1Ia-7b-CF0" secondAttribute="centerY" id="Phn-gn-080"/>
+                    <constraint firstItem="DWo-Jw-6T4" firstAttribute="leading" secondItem="phP-fh-bpG" secondAttribute="trailing" constant="8" id="Pld-Kz-fGZ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="DWo-Jw-6T4" secondAttribute="trailing" id="p0F-Dd-OAc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="opponentNameLbl" destination="ngz-rG-EXh" id="kCk-pz-IFU"/>
+                <outlet property="roundNumLbl" destination="TMn-qW-tg8" id="x7W-cV-fmf"/>
+                <outlet property="teamRecordLbl" destination="DWo-Jw-6T4" id="g9q-Tj-6hN"/>
+                <outlet property="winOrLossLbl" destination="phP-fh-bpG" id="M1a-uI-4JG"/>
+            </connections>
+            <point key="canvasLocation" x="273" y="233"/>
+        </tableViewCell>
+    </objects>
+</document>
