@@ -13,6 +13,7 @@
 #import "StandingsTeam.h"
 #import "Match.h"
 #import "Round.h"
+#import "TeamDetails.h"
 
 @interface ParseOps()
 
@@ -97,6 +98,37 @@ static ParseOps *sharedOps = nil;
         for (PFObject *match in matches)
         {
             Match *currentMatch = [[Match alloc] init:[match objectId] team1:match[@"Team1"] team2:match[@"Team2"] team1ID:match[@"Team1ID"] team2ID:match[@"Team2ID"] cd:[match[@"CD"] intValue] winner:[match[@"Winner"] intValue] team1Record:[recordDictionary objectForKey:match[@"Team1"]] team2Record:[recordDictionary objectForKey:match[@"Team2"]]];
+            [roundArray addObject:currentMatch];
+        }
+        Round *round = [[Round alloc] init:[currentRound intValue] matches:roundArray];
+        [scheduleArray addObject:round];
+        currentRound = [NSNumber numberWithInt:[currentRound intValue] + 1];
+    }
+    return scheduleArray;
+}
+
+-(NSMutableArray*)getRoundSchedule:(NSNumber *)numberOfRounds forTeam:(NSString *)team
+{
+    //new thread for each round idea?
+    NSMutableArray *scheduleArray = [[NSMutableArray alloc]init];
+    NSNumber *currentRound = @1;
+    while (currentRound <= numberOfRounds) {
+        NSMutableArray *roundArray = [[NSMutableArray alloc]init];
+        PFQuery *query1 = [PFQuery queryWithClassName:@"MatchOld"];
+        PFQuery *query2 = [PFQuery queryWithClassName:@"MatchOld"];
+        [query1 whereKey:@"RoundNumber" equalTo:currentRound];
+        [query1 whereKey:@"Team1" equalTo:team];
+        [query2 whereKey:@"RoundNumber" equalTo:currentRound];
+        [query2 whereKey:@"Team2" equalTo:team];
+        NSMutableArray *array = [[NSMutableArray alloc]init];
+        [array addObject:query1];
+        [array addObject:query2];
+        PFQuery *query = [PFQuery orQueryWithSubqueries:array];
+        [query addAscendingOrder:@"matchNumber"];
+        NSArray *matches = [query findObjects];
+        for (PFObject *match in matches)
+        {
+            Match *currentMatch = [[Match alloc] init:[match objectId] team1:match[@"Team1"] team2:match[@"Team2"] team1ID:match[@"Team1ID"] team2ID:match[@"Team2ID"] cd:[match[@"CD"] intValue] winner:[match[@"Winner"] intValue] team1Record:nil team2Record:nil];
             [roundArray addObject:currentMatch];
         }
         Round *round = [[Round alloc] init:[currentRound intValue] matches:roundArray];
@@ -198,6 +230,24 @@ static ParseOps *sharedOps = nil;
     team[@"losses"] = [NSNumber numberWithLong:losses];
     team[@"CD"] = [NSNumber numberWithLong:cdLoser];
     [team save];
+}
+
+-(TeamDetails *)getTeamInfo:(NSString *)team
+{
+    TeamDetails *currentTeam;
+    PFQuery *query = [PFQuery queryWithClassName:@"TeamOld"];
+    [query whereKey:@"teamName" equalTo:team];
+    PFObject *parseTeam = [query findObjects][0];
+    NSInteger wins = [parseTeam[@"wins"] intValue];
+    NSInteger losses = [parseTeam[@"losses"] intValue];
+    NSInteger CD = [parseTeam[@"CD"] intValue];
+    NSInteger seasons = [parseTeam[@"seasons"] intValue];
+    NSString *player1 = parseTeam[@"player1"];
+    NSString *player2 = parseTeam[@"player2"];
+    NSString *player3 = parseTeam[@"player3"];
+    NSMutableArray *schedule = [self getRoundSchedule:@10 forTeam:team];
+    
+    return [currentTeam init:wins losses:losses cupDifferential:CD season:seasons player1:player1 player2:player2 player3:player3 schedule:schedule];
 }
 
 @end

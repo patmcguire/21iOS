@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
+#import "TeamDetails.h"
 
 @interface ParseOps : NSObject
 
@@ -17,5 +18,6 @@
 -(NSMutableArray*)getStandings;
 -(NSMutableArray*)getRoundSchedule:(NSNumber *)matchesPerRound;
 -(void)saveMatch:(NSString *)objectID winner:(NSNumber *)winner cd:(NSNumber *)cd;
+-(TeamDetails *)getTeamInfo:(NSString *)team;
 
 @end

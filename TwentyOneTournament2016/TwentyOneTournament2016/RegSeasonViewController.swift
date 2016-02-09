@@ -214,7 +214,7 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         //Get matches for all rounds from Parse
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY, 0), {
             print("Getting schedule...")
-            self.schedule = ParseOps.sharedOps().getRoundSchedule(8)
+            self.schedule = ParseOps.sharedOps().getRoundSchedule(10)
             dispatch_async(dispatch_get_main_queue(), {
                 self.tableView.reloadData()
                 self.activityIndicator.stopAnimating()
