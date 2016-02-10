@@ -16,11 +16,23 @@ class TeamScreen: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet var tableView: UITableView!
     
+    @IBOutlet var p1Lbl: UILabel!
+    
+    @IBOutlet var p2Lbl: UILabel!
+
+    @IBOutlet var p3Lbl: UILabel!
+    
+    @IBOutlet var numOfSeasons: UILabel!
+    
+    
+    
     var cellIdentifier = "cell"
     
     var selectedTeam = ""
     
-    var schedule: [String] = ["Round 1","Round 2","Round 3","Round 4","Round 5","Round 6","Round 7","Round 8"]
+    var teamInfo: AnyObject!
+    
+    var teamSchedule = []
     
     
     override func viewDidLoad() {
@@ -36,6 +48,28 @@ class TeamScreen: UIViewController, UITableViewDataSource, UITableViewDelegate{
         tableView.dataSource = self
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         
+        getTeamInfo()
+        
+    }
+    
+    func getTeamInfo(){
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY, 0), {
+            print("Getting Standings...")
+            self.teamInfo = ParseOps.sharedOps().getTeamInfo(self.selectedTeam)
+            dispatch_async(dispatch_get_main_queue(), {
+                
+                //Do everthing you need to do with the Parse Objects in this area.
+                self.teamSchedule = self.teamInfo.schedule
+                self.tableView.reloadData()
+                
+                self.p1Lbl.text = self.teamInfo.player1
+                self.p2Lbl.text = self.teamInfo.player2
+                self.p3Lbl.text = self.teamInfo.player3
+                self.numOfSeasons.text = "Number of Tournaments: \(self.teamInfo.seasons)"
+                
+                //TODO - Add championship years to this screen
+            })
+        })
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -43,7 +77,7 @@ class TeamScreen: UIViewController, UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return schedule.count
+        return teamSchedule.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -53,7 +87,31 @@ class TeamScreen: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
         cell.roundNumLbl.text = "#\(row+1). "
 
-        //TODO - fill out the rest of the values of the team schedule cell
+        if teamSchedule[row].matches?[0].team1 != selectedTeam{
+            cell.opponentNameLbl.text = teamSchedule[row].matches?[0].team1!
+            if teamSchedule[row].matches?[0].winner! == 1{
+                cell.cupDiffLbl.text = "(-\(teamSchedule[row].matches![0].cupDifferential!))"
+                cell.winOrLossLbl.text = "L"
+            }else if teamSchedule[row].matches?[0].winner! == 2{
+                cell.cupDiffLbl.text = "(\(teamSchedule[row].matches![0].cupDifferential!))"
+                cell.winOrLossLbl.text = "W"
+            } else{
+                cell.cupDiffLbl.text = "(-)"
+                cell.winOrLossLbl.text = "-"
+            }
+        } else {
+            cell.opponentNameLbl.text = teamSchedule[row].matches![0].team2!
+            if teamSchedule[row].matches?[0].winner! == 1{
+                cell.cupDiffLbl.text = "(\(teamSchedule[row].matches![0].cupDifferential!))"
+                cell.winOrLossLbl.text = "W"
+            }else if teamSchedule[row].matches?[0].winner! == 2{
+                cell.cupDiffLbl.text = "(-\(teamSchedule[row].matches![0].cupDifferential!))"
+                cell.winOrLossLbl.text = "L"
+            }else {
+                cell.cupDiffLbl.text = "(-)"
+                cell.winOrLossLbl.text = "-"
+            }
+        }
         
         return cell
         

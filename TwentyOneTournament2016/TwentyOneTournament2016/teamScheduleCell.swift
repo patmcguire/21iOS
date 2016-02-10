@@ -10,12 +10,16 @@ import Foundation
 
 class teamScheduleCell: UITableViewCell{
     
-    @IBOutlet var teamRecordLbl: UILabel!
-    
     @IBOutlet var winOrLossLbl: UILabel!
     
     @IBOutlet var opponentNameLbl: UILabel!
     
     @IBOutlet var roundNumLbl: UILabel!
+    
+    @IBOutlet var cupDiffLbl: UILabel!
+    
+    
+    
+    
     
 }

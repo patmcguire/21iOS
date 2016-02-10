@@ -117,6 +117,7 @@
                         <viewControllerLayoutGuide type="bottom" id="uc2-qO-kPP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cdb-Ad-8cG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="teamName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hec-aC-aMS">
@@ -130,36 +131,24 @@
                                 <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="13"/>
                                 <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="107" y="72" width="186.5" height="20.5"/>
-                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player #1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ccr-uX-G7e">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="165.5" y="100.5" width="69.5" height="20.5"/>
-                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player #2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tO9-ej-uIp">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="164" y="129" width="72" height="20.5"/>
-                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player #3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCH-RB-rJB">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="164" y="157.5" width="72" height="20.5"/>
-                                </variation>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hbS-cA-xAc">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -170,13 +159,11 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="gFF-3y-6me">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gFF-3y-6me" id="V7r-ic-Yla">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="186" width="400" height="614"/>
-                                </variation>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -207,21 +194,21 @@
                                 <exclude reference="hbS-cA-xAc"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="8z1-wH-vy9"/>
-                                <exclude reference="ZJ7-P3-QSV"/>
+                                <exclude reference="gXy-ae-boq"/>
+                                <exclude reference="OzT-Ya-sxB"/>
+                                <exclude reference="WaH-mz-9gE"/>
+                                <exclude reference="Z4V-1V-Iuz"/>
+                                <exclude reference="zn6-rg-CPB"/>
                                 <exclude reference="faC-Qx-bfI"/>
                                 <exclude reference="lbN-QN-ZIc"/>
+                                <exclude reference="8z1-wH-vy9"/>
+                                <exclude reference="ZJ7-P3-QSV"/>
+                                <exclude reference="9xm-B4-mWP"/>
+                                <exclude reference="ik9-Rg-Vu3"/>
                                 <exclude reference="1vB-xd-fQs"/>
                                 <exclude reference="OK3-Y9-IsP"/>
                                 <exclude reference="jcC-vk-Iqr"/>
                                 <exclude reference="n0i-fU-oyf"/>
-                                <exclude reference="OzT-Ya-sxB"/>
-                                <exclude reference="WaH-mz-9gE"/>
-                                <exclude reference="9xm-B4-mWP"/>
-                                <exclude reference="ik9-Rg-Vu3"/>
-                                <exclude reference="Z4V-1V-Iuz"/>
-                                <exclude reference="zn6-rg-CPB"/>
-                                <exclude reference="gXy-ae-boq"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -234,25 +221,29 @@
                                 <include reference="hbS-cA-xAc"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="8z1-wH-vy9"/>
-                                <include reference="ZJ7-P3-QSV"/>
+                                <include reference="gXy-ae-boq"/>
+                                <include reference="OzT-Ya-sxB"/>
+                                <include reference="WaH-mz-9gE"/>
+                                <include reference="Z4V-1V-Iuz"/>
+                                <include reference="zn6-rg-CPB"/>
                                 <include reference="faC-Qx-bfI"/>
                                 <include reference="lbN-QN-ZIc"/>
+                                <include reference="8z1-wH-vy9"/>
+                                <include reference="ZJ7-P3-QSV"/>
+                                <include reference="9xm-B4-mWP"/>
+                                <include reference="ik9-Rg-Vu3"/>
                                 <include reference="1vB-xd-fQs"/>
                                 <include reference="OK3-Y9-IsP"/>
                                 <include reference="jcC-vk-Iqr"/>
                                 <include reference="n0i-fU-oyf"/>
-                                <include reference="OzT-Ya-sxB"/>
-                                <include reference="WaH-mz-9gE"/>
-                                <include reference="9xm-B4-mWP"/>
-                                <include reference="ik9-Rg-Vu3"/>
-                                <include reference="Z4V-1V-Iuz"/>
-                                <include reference="zn6-rg-CPB"/>
-                                <include reference="gXy-ae-boq"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="numOfSeasons" destination="McN-68-QwH" id="Ijw-yy-j3q"/>
+                        <outlet property="p1Lbl" destination="Ccr-uX-G7e" id="T7m-Es-IQd"/>
+                        <outlet property="p2Lbl" destination="tO9-ej-uIp" id="EaQ-A6-n3B"/>
+                        <outlet property="p3Lbl" destination="HCH-RB-rJB" id="JcL-Kf-BaQ"/>
                         <outlet property="tableView" destination="hbS-cA-xAc" id="BSe-vb-6O7"/>
                         <outlet property="teamNameLbl" destination="Hec-aC-aMS" id="3Bi-rq-QcI"/>
                     </connections>
