@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1338F9101C6AD17400B3BC1F /* TeamDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 1338F90F1C6AD17400B3BC1F /* TeamDetails.m */; };
 		136487131BEC55F4002BE319 /* Round.m in Sources */ = {isa = PBXBuildFile; fileRef = 136487121BEC55F4002BE319 /* Round.m */; };
 		136487161BEC561B002BE319 /* Match.m in Sources */ = {isa = PBXBuildFile; fileRef = 136487151BEC561B002BE319 /* Match.m */; };
 		1367D4C71BD8942000D5AD61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1367D4C61BD8942000D5AD61 /* AppDelegate.swift */; };
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1338F90F1C6AD17400B3BC1F /* TeamDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamDetails.m; sourceTree = "<group>"; };
+		1338F9111C6AD18D00B3BC1F /* TeamDetails.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeamDetails.h; sourceTree = "<group>"; };
 		136487111BEC55F4002BE319 /* Round.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Round.h; sourceTree = "<group>"; };
 		136487121BEC55F4002BE319 /* Round.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Round.m; sourceTree = "<group>"; };
 		136487141BEC561B002BE319 /* Match.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Match.h; sourceTree = "<group>"; };
@@ -178,6 +181,8 @@
 		13F66A291BE3342D00E11670 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				1338F90F1C6AD17400B3BC1F /* TeamDetails.m */,
+				1338F9111C6AD18D00B3BC1F /* TeamDetails.h */,
 				13F66A2A1BE3349900E11670 /* StandingsTeam.h */,
 				13F66A2B1BE3349900E11670 /* StandingsTeam.m */,
 				136487111BEC55F4002BE319 /* Round.h */,
@@ -407,6 +412,7 @@
 				136487131BEC55F4002BE319 /* Round.m in Sources */,
 				43DBC3F21BDD5CD900BB2DC7 /* PlayoffsR5.swift in Sources */,
 				43DBC3EE1BDD5CBF00BB2DC7 /* PlayoffsR3.swift in Sources */,
+				1338F9101C6AD17400B3BC1F /* TeamDetails.m in Sources */,
 				4393D05E1BD9DE860001DDC5 /* gameCell.swift in Sources */,
 				436AEC931C66D3470041E936 /* TeamScreen.swift in Sources */,
 				1367D4C71BD8942000D5AD61 /* AppDelegate.swift in Sources */,

@@ -234,7 +234,6 @@ static ParseOps *sharedOps = nil;
 
 -(TeamDetails *)getTeamInfo:(NSString *)team
 {
-    TeamDetails *currentTeam;
     PFQuery *query = [PFQuery queryWithClassName:@"TeamOld"];
     [query whereKey:@"teamName" equalTo:team];
     PFObject *parseTeam = [query findObjects][0];
@@ -247,7 +246,7 @@ static ParseOps *sharedOps = nil;
     NSString *player3 = parseTeam[@"player3"];
     NSMutableArray *schedule = [self getRoundSchedule:@10 forTeam:team];
     
-    return [currentTeam init:wins losses:losses cupDifferential:CD season:seasons player1:player1 player2:player2 player3:player3 schedule:schedule];
+    return [[TeamDetails alloc] init:wins losses:losses cupDifferential:CD season:seasons player1:player1 player2:player2 player3:player3 schedule:schedule];
 }
 
 @end

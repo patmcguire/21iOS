@@ -29,7 +29,6 @@ class TeamScreen: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
         //TODO - get team schedule and results information from Parse
         
-        
         let nib = UINib(nibName: "teamScheduleCell", bundle: nil)
         self.tableView.registerNib(nib, forCellReuseIdentifier: cellIdentifier)
         
