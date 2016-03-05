@@ -15,8 +15,6 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     
     var schedule = []
     
-    
-    
     var i = 0
     
     var teamOne = ""
@@ -41,9 +39,7 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet var roundLbl: UILabel!
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
-    
-    //TODO - Make the game cell update its UI for the score that was just entered when closing the popup
-    
+        
     
     //Let the user go back a round by swiping L to R
     @IBAction func swipeRight(sender: AnyObject) {
@@ -189,15 +185,11 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         roundLbl.layer.shadowOffset = CGSize(width: 0, height: -2)
         
         
-        
+        retrieveSchedule()
         
         //Initialize custom tableview cell
-        let nib = UINib(nibName: "gameTblCell", bundle: nil)
-        tableView.registerNib(nib, forCellReuseIdentifier: textCellIdentifier)
+
         
-        //Initialize TableView
-        tableView.delegate = self
-        tableView.dataSource = self
         
         //Set round title to the current round
         roundLbl.text = "Round \(roundNum)"
@@ -205,7 +197,7 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         //Adjust tableview row height
         tableView.rowHeight = 80.0
         
-        retrieveSchedule()
+
         
     }
     
@@ -216,6 +208,13 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
             print("Getting schedule...")
             self.schedule = ParseOps.sharedOps().getRoundSchedule(10)
             dispatch_async(dispatch_get_main_queue(), {
+                let nib = UINib(nibName: "gameTblCell", bundle: nil)
+                self.tableView.registerNib(nib, forCellReuseIdentifier: self.textCellIdentifier)
+                
+                //Initialize TableView
+                self.tableView.dataSource = self
+                self.tableView.delegate = self
+                
                 self.tableView.reloadData()
                 self.activityIndicator.stopAnimating()
 
@@ -230,8 +229,9 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     
     //Determine number of cells in the Table View
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return schedule.count
+
+//        return schedule.count
+        return (schedule[roundNum-1].matches?.count)!
     }
     
     
