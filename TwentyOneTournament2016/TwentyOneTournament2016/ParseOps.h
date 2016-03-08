@@ -16,7 +16,7 @@
 
 -(void)runTestOps;
 -(NSMutableArray*)getStandings;
--(NSMutableArray*)getRoundSchedule:(NSNumber *)matchesPerRound;
+-(NSMutableArray*)getRoundSchedule;
 -(void)saveMatch:(NSString *)objectID winner:(NSNumber *)winner cd:(NSNumber *)cd;
 -(TeamDetails *)getTeamInfo:(NSString *)team;
 
