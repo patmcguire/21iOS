@@ -24,6 +24,16 @@
 		436AEC931C66D3470041E936 /* TeamScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436AEC921C66D3470041E936 /* TeamScreen.swift */; };
 		436AEC951C66DE970041E936 /* teamScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 436AEC941C66DE970041E936 /* teamScheduleCell.xib */; };
 		436AEC981C66DF890041E936 /* teamScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436AEC971C66DF890041E936 /* teamScheduleCell.swift */; };
+		4379084D1C95C87B0066EBE4 /* R1PlayoffCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4379084C1C95C87B0066EBE4 /* R1PlayoffCell.xib */; };
+		4379084F1C95CC9C0066EBE4 /* r1Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379084E1C95CC9C0066EBE4 /* r1Cell.swift */; };
+		437908511C95D4490066EBE4 /* r2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437908501C95D4490066EBE4 /* r2Cell.swift */; };
+		437908531C95D5140066EBE4 /* R2PlayoffCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437908521C95D5140066EBE4 /* R2PlayoffCell.xib */; };
+		437908551C95D68D0066EBE4 /* R3PlayoffCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437908541C95D68D0066EBE4 /* R3PlayoffCell.xib */; };
+		437908571C95D9E50066EBE4 /* r3Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437908561C95D9E50066EBE4 /* r3Cell.swift */; };
+		437908591C95DDC50066EBE4 /* R4PlayoffCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437908581C95DDC50066EBE4 /* R4PlayoffCell.xib */; };
+		4379085B1C95DFFA0066EBE4 /* r4Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379085A1C95DFFA0066EBE4 /* r4Cell.swift */; };
+		4379085D1C95E2490066EBE4 /* R5PlayoffCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4379085C1C95E2490066EBE4 /* R5PlayoffCell.xib */; };
+		4379085F1C95E3250066EBE4 /* r5Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379085E1C95E3250066EBE4 /* r5Cell.swift */; };
 		4393D05C1BD9DD9F0001DDC5 /* gameTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4393D05B1BD9DD9F0001DDC5 /* gameTblCell.xib */; };
 		4393D05E1BD9DE860001DDC5 /* gameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4393D05D1BD9DE860001DDC5 /* gameCell.swift */; };
 		43A387391BD9B94200FEB900 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A387381BD9B94200FEB900 /* HomeScreen.swift */; };
@@ -76,6 +86,16 @@
 		436AEC921C66D3470041E936 /* TeamScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamScreen.swift; sourceTree = "<group>"; };
 		436AEC941C66DE970041E936 /* teamScheduleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = teamScheduleCell.xib; sourceTree = "<group>"; };
 		436AEC971C66DF890041E936 /* teamScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = teamScheduleCell.swift; sourceTree = "<group>"; };
+		4379084C1C95C87B0066EBE4 /* R1PlayoffCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = R1PlayoffCell.xib; sourceTree = "<group>"; };
+		4379084E1C95CC9C0066EBE4 /* r1Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = r1Cell.swift; sourceTree = "<group>"; };
+		437908501C95D4490066EBE4 /* r2Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = r2Cell.swift; sourceTree = "<group>"; };
+		437908521C95D5140066EBE4 /* R2PlayoffCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = R2PlayoffCell.xib; sourceTree = "<group>"; };
+		437908541C95D68D0066EBE4 /* R3PlayoffCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = R3PlayoffCell.xib; sourceTree = "<group>"; };
+		437908561C95D9E50066EBE4 /* r3Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = r3Cell.swift; sourceTree = "<group>"; };
+		437908581C95DDC50066EBE4 /* R4PlayoffCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = R4PlayoffCell.xib; sourceTree = "<group>"; };
+		4379085A1C95DFFA0066EBE4 /* r4Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = r4Cell.swift; sourceTree = "<group>"; };
+		4379085C1C95E2490066EBE4 /* R5PlayoffCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = R5PlayoffCell.xib; sourceTree = "<group>"; };
+		4379085E1C95E3250066EBE4 /* r5Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = r5Cell.swift; sourceTree = "<group>"; };
 		4393D05B1BD9DD9F0001DDC5 /* gameTblCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = gameTblCell.xib; sourceTree = "<group>"; };
 		4393D05D1BD9DE860001DDC5 /* gameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameCell.swift; sourceTree = "<group>"; };
 		43A387381BD9B94200FEB900 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -231,6 +251,16 @@
 				43DBC3ED1BDD5CBF00BB2DC7 /* PlayoffsR3.swift */,
 				43DBC3EF1BDD5CCD00BB2DC7 /* PlayoffsR4.swift */,
 				43DBC3F11BDD5CD900BB2DC7 /* PlayoffsR5.swift */,
+				4379084C1C95C87B0066EBE4 /* R1PlayoffCell.xib */,
+				437908521C95D5140066EBE4 /* R2PlayoffCell.xib */,
+				437908541C95D68D0066EBE4 /* R3PlayoffCell.xib */,
+				437908581C95DDC50066EBE4 /* R4PlayoffCell.xib */,
+				4379085C1C95E2490066EBE4 /* R5PlayoffCell.xib */,
+				4379084E1C95CC9C0066EBE4 /* r1Cell.swift */,
+				437908501C95D4490066EBE4 /* r2Cell.swift */,
+				437908561C95D9E50066EBE4 /* r3Cell.swift */,
+				4379085A1C95DFFA0066EBE4 /* r4Cell.swift */,
+				4379085E1C95E3250066EBE4 /* r5Cell.swift */,
 			);
 			name = Playoffs;
 			sourceTree = "<group>";
@@ -341,9 +371,14 @@
 				4308CC5C1BE6C30D007F509F /* standingsCell.xib in Resources */,
 				4393D05C1BD9DD9F0001DDC5 /* gameTblCell.xib in Resources */,
 				1367D4CC1BD8942000D5AD61 /* Main.storyboard in Resources */,
+				4379085D1C95E2490066EBE4 /* R5PlayoffCell.xib in Resources */,
+				437908591C95DDC50066EBE4 /* R4PlayoffCell.xib in Resources */,
 				436AEC951C66DE970041E936 /* teamScheduleCell.xib in Resources */,
 				1367D4D11BD8942000D5AD61 /* LaunchScreen.xib in Resources */,
+				437908551C95D68D0066EBE4 /* R3PlayoffCell.xib in Resources */,
 				1367D4CE1BD8942000D5AD61 /* Images.xcassets in Resources */,
+				4379084D1C95C87B0066EBE4 /* R1PlayoffCell.xib in Resources */,
+				437908531C95D5140066EBE4 /* R2PlayoffCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,10 +446,12 @@
 			files = (
 				136487131BEC55F4002BE319 /* Round.m in Sources */,
 				43DBC3F21BDD5CD900BB2DC7 /* PlayoffsR5.swift in Sources */,
+				4379085F1C95E3250066EBE4 /* r5Cell.swift in Sources */,
 				43DBC3EE1BDD5CBF00BB2DC7 /* PlayoffsR3.swift in Sources */,
 				1338F9101C6AD17400B3BC1F /* TeamDetails.m in Sources */,
 				4393D05E1BD9DE860001DDC5 /* gameCell.swift in Sources */,
 				436AEC931C66D3470041E936 /* TeamScreen.swift in Sources */,
+				4379084F1C95CC9C0066EBE4 /* r1Cell.swift in Sources */,
 				1367D4C71BD8942000D5AD61 /* AppDelegate.swift in Sources */,
 				43DBC3EA1BDD5C9E00BB2DC7 /* PlayoffsR1.swift in Sources */,
 				13F66A2C1BE3349900E11670 /* StandingsTeam.m in Sources */,
@@ -422,11 +459,14 @@
 				436AEC981C66DF890041E936 /* teamScheduleCell.swift in Sources */,
 				43DBC3EC1BDD5CAA00BB2DC7 /* PlayoffsR2.swift in Sources */,
 				43DBC3F01BDD5CCD00BB2DC7 /* PlayoffsR4.swift in Sources */,
+				437908511C95D4490066EBE4 /* r2Cell.swift in Sources */,
 				1391B0CE1BDAA33C00012AEE /* ParseOps.m in Sources */,
 				136487161BEC561B002BE319 /* Match.m in Sources */,
 				4308CC601BE86139007F509F /* gamePopup.swift in Sources */,
 				4308CC5E1BE6C3EB007F509F /* standingsCustomCell.swift in Sources */,
 				43A387391BD9B94200FEB900 /* HomeScreen.swift in Sources */,
+				4379085B1C95DFFA0066EBE4 /* r4Cell.swift in Sources */,
+				437908571C95D9E50066EBE4 /* r3Cell.swift in Sources */,
 				43A387411BD9BBB800FEB900 /* StandingsViewController.swift in Sources */,
 				43A3873D1BD9BB9D00FEB900 /* PlayoffsViewController.swift in Sources */,
 				43A3873B1BD9BB8B00FEB900 /* RegSeasonViewController.swift in Sources */,

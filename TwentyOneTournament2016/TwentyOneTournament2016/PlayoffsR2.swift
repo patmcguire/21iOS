@@ -14,15 +14,22 @@ class PlayoffsR2: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     @IBOutlet var tableView: UITableView!
     
-    let cellId = "r2Cell"
-    
-    var midCells = [3,7,11,15]
+    let cellId = "round2Cell"
     
     
     override func viewDidLoad() {
         
+        
+        // Register custom cell
+        var nib = UINib(nibName: "R2PlayoffCell", bundle: nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: cellId)
+        
         tableView.delegate = self
         tableView.dataSource = self
+        
+        self.tableView.rowHeight = 150
+        
+        tableView.contentOffset = CGPoint(x:0, y:0)
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -30,33 +37,16 @@ class PlayoffsR2: UIViewController, UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 16
+        return 4
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath)
+        let cell: r2Cell = self.tableView.dequeueReusableCellWithIdentifier(cellId) as! r2Cell
         
         let row = indexPath.row
         
-        if (row + 1) % 4 == 0{
-            cell.backgroundView = UIImageView (image: UIImage (named: "r2lowerBracket"))
-            cell.backgroundColor = UIColor.redColor()
-        } else if (row + 1) % 2 == 0{
-            cell.backgroundView = UIImageView (image: UIImage (named: "r2topBracket"))
-            cell.backgroundColor = UIColor.redColor()
-        }else if (row + 1) % 2 != 0 {
-            for n in 0...3{
-                if row+1 == midCells[n]{
-                    cell.backgroundView = UIImageView (image: UIImage (named: "r2midBracket"))
-                    cell.backgroundColor = UIColor.redColor()
-                }else{
-                    cell.backgroundColor = UIColor.redColor()
-                }
-            }
-        }else{
-            cell.backgroundColor = UIColor.redColor()
-        }
+        
         
         return cell
     }
