@@ -13,13 +13,23 @@ class PlayoffsR1: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet var tableView: UITableView!
     
-    let cellId = "r1Cell"
+    let cellId = "round1Cell"
     
+    let seeds = [9,8,12,5,10,7,11,6]
     
     override func viewDidLoad() {
         
+        
+        // Register custom cell
+        var nib = UINib(nibName: "R1PlayoffCell", bundle: nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: cellId)
+        
         tableView.delegate = self
         tableView.dataSource = self
+        
+        self.tableView.rowHeight = 150
+        
+        tableView.contentOffset = CGPoint(x:0, y:0)
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -27,21 +37,27 @@ class PlayoffsR1: UIViewController, UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 16
+        return 4
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath)
+        let cell: r1Cell = self.tableView.dequeueReusableCellWithIdentifier(cellId) as! r1Cell
         
         let row = indexPath.row
         
-        if row % 2 == 0{
-            cell.backgroundView = UIImageView (image: UIImage (named: "upperBracket"))
-            cell.backgroundColor = UIColor.redColor()
-        } else{
-            cell.backgroundView = UIImageView (image: UIImage (named: "lowerBracket"))
-            cell.backgroundColor = UIColor.redColor()
+        if row == 0{
+            cell.seed1.text = "\(seeds[0])"
+            cell.seed2.text = "\(seeds[1])"
+        } else if row == 1{
+            cell.seed1.text = "\(seeds[2])"
+            cell.seed2.text = "\(seeds[3])"
+        } else if row == 2{
+            cell.seed1.text = "\(seeds[4])"
+            cell.seed2.text = "\(seeds[5])"
+        } else if row == 3{
+            cell.seed1.text = "\(seeds[6])"
+            cell.seed2.text = "\(seeds[7])"
         }
         
         return cell
@@ -54,5 +70,14 @@ class PlayoffsR1: UIViewController, UITableViewDataSource, UITableViewDelegate{
         let row = indexPath.row
         print("Row: \(row+1)")
     }
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        let svc = segue.destinationViewController as! PlayoffsR2;
+//        
+//        svc.scrollPosition = tableView.contentOffset
+//        print(tableView.contentOffset)
+//        
+//        
+//    }
     
 }
