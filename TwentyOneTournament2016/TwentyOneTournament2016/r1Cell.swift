@@ -6,6 +6,7 @@
 //  Copyright © 2016 21Tournament. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class r1Cell: UITableViewCell{
@@ -17,6 +18,23 @@ class r1Cell: UITableViewCell{
     @IBOutlet var seed1: UILabel!
 
     @IBOutlet var seed2: UILabel!
+    
+    @IBAction func team1BtnAction(sender: AnyObject) {
+        
+        
+        team1Btn.tintColor = UIColor.greenColor()
+        team2Btn.tintColor = UIColor.redColor()
+        
+        //TODO - Send result to Parse
+    }
+    
+    @IBAction func team2BtnAction(sender: AnyObject) {
+        team2Btn.tintColor = UIColor.greenColor()
+        team1Btn.tintColor = UIColor.redColor()
+        
+        //TODO - Send result to Parse
+        
+    }
     
     
 }

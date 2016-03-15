@@ -178,6 +178,11 @@ class gamePopup: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     //Submit button. Send updated match results to Parse.
     @IBAction func closeBtn(sender: AnyObject) {
         
+        #if PLEB_VERSION
+            let alertView = UIAlertController(title: "No plebs allowed", message: "You are a pleb so you can't change scores.", preferredStyle: .Alert)
+            alertView.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            presentViewController(alertView, animated: true, completion: nil)
+        #else
         //Make sure a winner is selected
         if winner == 0{
             let alert = UIAlertController(title: "Select Winner", message: "You must select a winner before submitting a match result.", preferredStyle: UIAlertControllerStyle.Alert)
@@ -209,6 +214,8 @@ class gamePopup: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
          
             
         }
+        
+        #endif
         
     }
     
