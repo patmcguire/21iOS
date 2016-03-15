@@ -87,6 +87,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-TwentyOneTournament2016/Bolts.framework"
   install_framework "Pods-TwentyOneTournament2016/Parse.framework"
 fi
+if [[ "$CONFIGURATION" == "PLEB_VERSION" ]]; then
+  install_framework "Pods-TwentyOneTournament2016/Bolts.framework"
+  install_framework "Pods-TwentyOneTournament2016/Parse.framework"
+fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-TwentyOneTournament2016/Bolts.framework"
   install_framework "Pods-TwentyOneTournament2016/Parse.framework"
