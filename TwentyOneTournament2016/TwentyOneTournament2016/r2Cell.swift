@@ -18,4 +18,22 @@ class r2Cell: UITableViewCell {
     
     @IBOutlet var seed2Lbl: UILabel!
 
+    @IBAction func team1BtnAction(sender: AnyObject) {
+        team1Btn.tintColor = UIColor.greenColor()
+        team2Btn.tintColor = UIColor.redColor()
+        
+        //TODO - Send result to Parse
+        
+    }
+    
+    
+    @IBAction func team2BtnAction(sender: AnyObject) {
+        
+        team2Btn.tintColor = UIColor.greenColor()
+        team1Btn.tintColor = UIColor.redColor()
+        
+        //TODO - Send result to Parse
+    }
+    
+    
 }

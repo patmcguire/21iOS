@@ -31,6 +31,10 @@ class HomeScreen: UIViewController {
     override func viewDidLoad() {
         retrieveTweets()
         
+        #if PLEB_VERSION
+            print("This is the PLEB_VERSION")
+        #endif
+        
         //Set shadow for round label at the bottom.
         twitterZoneBackground.layer.shadowColor = UIColor.blackColor().CGColor
         twitterZoneBackground.layer.shadowOpacity = 0.5
