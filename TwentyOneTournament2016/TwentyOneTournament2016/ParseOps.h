@@ -19,5 +19,6 @@
 -(NSMutableArray*)getRoundSchedule;
 -(void)saveMatch:(NSString *)objectID winner:(NSNumber *)winner cd:(NSNumber *)cd;
 -(TeamDetails *)getTeamInfo:(NSString *)team;
+-(NSMutableArray *)getPlayoffs;
 
 @end

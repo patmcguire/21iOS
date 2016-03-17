@@ -250,4 +250,26 @@ static ParseOps *sharedOps = nil;
     return [[TeamDetails alloc] init:wins losses:losses cupDifferential:CD season:seasons player1:player1 player2:player2 player3:player3 schedule:schedule];
 }
 
+-(NSMutableArray *)getPlayoffs{
+    NSMutableArray *scheduleArray = [[NSMutableArray alloc]init];
+    int currentRound = 1;
+    int numRounds = 4;
+    while (currentRound <= numRounds) {
+        NSMutableArray *roundArray = [[NSMutableArray alloc]init];
+        PFQuery *query = [PFQuery queryWithClassName:@"PlayoffMatch"];
+        [query whereKey:@"RoundNumber" equalTo:[NSNumber numberWithInt:currentRound]];
+        [query addAscendingOrder:@"MatchNumber"];
+        NSArray *matches = [query findObjects];
+        for (PFObject *match in matches)
+        {
+            Match *currentMatch = [[Match alloc] init:[match objectId] team1:match[@"Team1"] team2:match[@"Team2"] team1ID:match[@"Team1ID"] team2ID:match[@"Team2ID"] cd:[match[@"CD"] intValue] winner:[match[@"Winner"] intValue] team1Record:nil team2Record:nil];
+            [roundArray addObject:currentMatch];
+        }
+        Round *round = [[Round alloc] init:currentRound matches:roundArray];
+        [scheduleArray addObject:round];
+        currentRound++;
+    }
+    return scheduleArray;
+}
+
 @end
