@@ -12,6 +12,8 @@ class PlayoffsPageViewController: UIPageViewController, UIPageViewControllerDele
     
     var myViewControllers : [UIViewController] = []
     
+    var schedule = []
+    
     //    override func viewWillAppear(animated: Bool) {
     //        super.viewWillAppear(true)
     //        self.navigationController?.setNavigationBarHidden(true, animated: false)
@@ -32,26 +34,39 @@ class PlayoffsPageViewController: UIPageViewController, UIPageViewControllerDele
         self.delegate = self
         self.dataSource = self
         
-        let p1 = storyboard?.instantiateViewControllerWithIdentifier("R1") as! PlayoffsR1
-        let p2 = storyboard?.instantiateViewControllerWithIdentifier("R2") as! PlayoffsR2
-        let p3 = storyboard?.instantiateViewControllerWithIdentifier("R3") as! PlayoffsR3
-        let p4 = storyboard?.instantiateViewControllerWithIdentifier("R4") as! PlayoffsR4
-        let p5 = storyboard?.instantiateViewControllerWithIdentifier("R5") as! PlayoffsR5
-        
-        myViewControllers = [p1,p2,p3,p4,p5]
-        
-        
-        for var index = 0; index < myViewControllers.count; ++index {
-            NSLog("\(myViewControllers[index])")
-        }
-        
-        let startingViewController = self.viewControllerAtIndex(0)
-        let viewControllers: NSArray = [startingViewController]
-        
-        self.setViewControllers(viewControllers as! [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: {(done: Bool) in
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY, 0), {
+            print("Getting Standings...")
+            self.schedule = ParseOps.sharedOps().getPlayoffs()
+            dispatch_async(dispatch_get_main_queue(), {
+                let p1 = self.storyboard?.instantiateViewControllerWithIdentifier("R1") as! PlayoffsR1
+                p1.matches = self.schedule[0].matches
+                let p2 = self.storyboard?.instantiateViewControllerWithIdentifier("R2") as! PlayoffsR2
+                p2.matches = self.schedule[1].matches
+                let p3 = self.storyboard?.instantiateViewControllerWithIdentifier("R3") as! PlayoffsR3
+                p3.matches = self.schedule[2].matches
+                let p4 = self.storyboard?.instantiateViewControllerWithIdentifier("R4") as! PlayoffsR4
+                p4.matches = self.schedule[3].matches
+                let p5 = self.storyboard?.instantiateViewControllerWithIdentifier("R5") as! PlayoffsR5
+                
+                self.myViewControllers = [p1,p2,p3,p4,p5]
+                
+                
+                for var index = 0; index < self.myViewControllers.count; ++index {
+                    NSLog("\(self.myViewControllers[index])")
+                }
+                
+                let startingViewController = self.viewControllerAtIndex(0)
+                let viewControllers: NSArray = [startingViewController]
+                
+                self.setViewControllers(viewControllers as! [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: {(done: Bool) in
+                })
+                
+                NSLog("loaded!");
+                
+            })
         })
         
-        NSLog("loaded!");
+       
         
     }
     

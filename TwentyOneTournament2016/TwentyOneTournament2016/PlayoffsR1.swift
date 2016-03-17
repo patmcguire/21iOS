@@ -19,10 +19,10 @@ class PlayoffsR1: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     var teams = []
     
+    var matches = []
+    
     override func viewDidLoad() {
-        
-        
-        //Get standings
+                //Get standings
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY, 0), {
             print("Getting Standings...")
             self.teams = ParseOps.sharedOps().getStandings()
@@ -65,24 +65,24 @@ class PlayoffsR1: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
         if row == 0{
             cell.seed1.text = "\(seeds[0])"
-            cell.team1Btn.setTitle(teams[8].teamName, forState: UIControlState.Normal)
+            cell.team1Btn.setTitle(matches[row].team1, forState: UIControlState.Normal)
             cell.seed2.text = "\(seeds[1])"
-            cell.team2Btn.setTitle(teams[7].teamName, forState: UIControlState.Normal)
+            cell.team2Btn.setTitle(matches[row].team2, forState: UIControlState.Normal)
         } else if row == 1{
             cell.seed1.text = "\(seeds[2])"
-            cell.team1Btn.setTitle(teams[11].teamName, forState: UIControlState.Normal)
+            cell.team1Btn.setTitle(matches[row].team1, forState: UIControlState.Normal)
             cell.seed2.text = "\(seeds[3])"
-            cell.team2Btn.setTitle(teams[4].teamName, forState: UIControlState.Normal)
+            cell.team2Btn.setTitle(matches[row].team2, forState: UIControlState.Normal)
         } else if row == 2{
             cell.seed1.text = "\(seeds[4])"
-            cell.team1Btn.setTitle(teams[9].teamName, forState: UIControlState.Normal)
+            cell.team1Btn.setTitle(matches[row].team1, forState: UIControlState.Normal)
             cell.seed2.text = "\(seeds[5])"
-            cell.team2Btn.setTitle(teams[6].teamName, forState: UIControlState.Normal)
+            cell.team2Btn.setTitle(matches[row].team2, forState: UIControlState.Normal)
         } else if row == 3{
             cell.seed1.text = "\(seeds[6])"
-            cell.team1Btn.setTitle(teams[10].teamName, forState: UIControlState.Normal)
+            cell.team1Btn.setTitle(matches[row].team1, forState: UIControlState.Normal)
             cell.seed2.text = "\(seeds[7])"
-            cell.team2Btn.setTitle(teams[5].teamName, forState: UIControlState.Normal)
+            cell.team2Btn.setTitle(matches[row].team2, forState: UIControlState.Normal)
         }
         
         return cell

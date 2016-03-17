@@ -15,6 +15,7 @@ class PlayoffsR4: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     let cellId = "round4Cell"
     
+    var matches = []
     
     
     override func viewDidLoad() {
@@ -48,7 +49,12 @@ class PlayoffsR4: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
         let row = indexPath.row
         
-        
+        if row == 0{
+            //            cell.seed1.text = "\(seeds[0])"
+            cell.team1Btn.setTitle(matches[row].team1, forState: UIControlState.Normal)
+            //            cell.seed2.text = "\(seeds[1])"
+            cell.team2Btn.setTitle(matches[row].team2, forState: UIControlState.Normal)
+        } 
         
         return cell
     }
