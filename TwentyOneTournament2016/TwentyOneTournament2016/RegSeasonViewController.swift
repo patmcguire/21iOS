@@ -29,6 +29,8 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
     
     let screenSize: CGRect = UIScreen.mainScreen().bounds
     
+    var refreshControl: UIRefreshControl!
+    
     
     @IBOutlet weak var nextRoundBtnLbl: UIButton!
     
@@ -197,6 +199,11 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
         //Adjust tableview row height
         tableView.rowHeight = 80.0
         
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(self.refreshControl)
+        
 
         
     }
@@ -220,6 +227,12 @@ class RegSeasonViewController: UIViewController, UITableViewDataSource, UITableV
 
             })
         })
+    }
+    
+    func refresh(sender:AnyObject)
+    {
+        retrieveSchedule()
+        self.refreshControl.endRefreshing()
     }
     
     

@@ -10,7 +10,7 @@
 
 @implementation Match
 
--(id) init:(NSString *)objectID team1:(NSString *)team1 team2:(NSString *)team2 team1ID:(NSString *)team1ID team2ID:(NSString *)team2ID cd:(NSInteger)cd winner:(NSInteger)winner team1Record:(NSString *)team1Record team2Record:(NSString *)team2Record
+-(id) init:(NSString *)objectID team1:(NSString *)team1 team2:(NSString *)team2 team1ID:(NSString *)team1ID team2ID:(NSString *)team2ID cd:(NSInteger)cd winner:(NSInteger)winner team1Record:(NSString *)team1Record team2Record:(NSString *)team2Record seed1:(NSInteger)seed1 seed2:(NSInteger)seed2
 {
     self = [super init];
     if (self)
@@ -24,6 +24,8 @@
         self.cupDifferential = cd;
         self.team1Record = team1Record;
         self.team2Record = team2Record;
+        self.seed1 = seed1;
+        self.seed2 = seed2;
     }
     return self;
 }

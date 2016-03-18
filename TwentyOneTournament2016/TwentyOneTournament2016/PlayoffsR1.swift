@@ -64,25 +64,30 @@ class PlayoffsR1: UIViewController, UITableViewDataSource, UITableViewDelegate{
         let row = indexPath.row
         
         if row == 0{
-            cell.seed1.text = "\(seeds[0])"
             cell.team1Btn.setTitle(matches[row].team1, forState: UIControlState.Normal)
-            cell.seed2.text = "\(seeds[1])"
             cell.team2Btn.setTitle(matches[row].team2, forState: UIControlState.Normal)
         } else if row == 1{
-            cell.seed1.text = "\(seeds[2])"
             cell.team1Btn.setTitle(matches[row].team1, forState: UIControlState.Normal)
-            cell.seed2.text = "\(seeds[3])"
             cell.team2Btn.setTitle(matches[row].team2, forState: UIControlState.Normal)
         } else if row == 2{
-            cell.seed1.text = "\(seeds[4])"
             cell.team1Btn.setTitle(matches[row].team1, forState: UIControlState.Normal)
-            cell.seed2.text = "\(seeds[5])"
             cell.team2Btn.setTitle(matches[row].team2, forState: UIControlState.Normal)
         } else if row == 3{
-            cell.seed1.text = "\(seeds[6])"
             cell.team1Btn.setTitle(matches[row].team1, forState: UIControlState.Normal)
-            cell.seed2.text = "\(seeds[7])"
             cell.team2Btn.setTitle(matches[row].team2, forState: UIControlState.Normal)
+        }
+        
+        
+        cell.seed1.text = "\(matches[row].seed1!)"
+        cell.seed2.text = "\(matches[row].seed2!)"
+        
+        if (matches[row].winner! == 1){
+            cell.team1Btn.tintColor = UIColor.greenColor()
+            cell.team2Btn.tintColor = UIColor.redColor()
+        }
+        else if (matches[row].winner! == 2){
+            cell.team2Btn.tintColor = UIColor.greenColor()
+            cell.team1Btn.tintColor = UIColor.redColor()
         }
         
         return cell
