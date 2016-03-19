@@ -32,7 +32,9 @@
                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ou-MS-kek">
                         <rect key="frame" x="84" y="260" width="83" height="32"/>
                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                        <state key="normal" title="Team Name"/>
+                        <state key="normal" title="Team Name">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <connections>
                             <action selector="team2BtnAction:" destination="Efm-QK-Iiy" eventType="touchUpInside" id="d2C-q8-ini"/>
                         </connections>
@@ -66,7 +68,9 @@
                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhM-wc-lFr">
                         <rect key="frame" x="84" y="205" width="83" height="32"/>
                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                        <state key="normal" title="Team Name"/>
+                        <state key="normal" title="Team Name">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <connections>
                             <action selector="team1BtnAction:" destination="Efm-QK-Iiy" eventType="touchUpInside" id="P5K-M6-gdC"/>
                         </connections>
