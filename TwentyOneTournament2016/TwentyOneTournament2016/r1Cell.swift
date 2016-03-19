@@ -11,13 +11,11 @@ import UIKit
 
 class r1Cell: UITableViewCell{
 
-    @IBOutlet var team1Btn: UIButton!
-    
-    @IBOutlet var team2Btn: UIButton!
-
     @IBOutlet var seed1: UILabel!
 
     @IBOutlet var seed2: UILabel!
     
+    @IBOutlet var team1Lbl: UILabel!
     
+    @IBOutlet var team2Lbl: UILabel!
 }

@@ -29,16 +29,6 @@
                             <constraint firstAttribute="height" constant="5" id="1Hb-cQ-J7U"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ou-MS-kek">
-                        <rect key="frame" x="84" y="260" width="83" height="32"/>
-                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                        <state key="normal" title="Team Name">
-                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                        <connections>
-                            <action selector="team2BtnAction:" destination="Efm-QK-Iiy" eventType="touchUpInside" id="d2C-q8-ini"/>
-                        </connections>
-                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Nb-i7-jWT">
                         <rect key="frame" x="8" y="211" width="11" height="20"/>
                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
@@ -65,19 +55,20 @@
                             <constraint firstAttribute="height" constant="5" id="OdR-lJ-23r"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhM-wc-lFr">
-                        <rect key="frame" x="84" y="205" width="83" height="32"/>
-                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                        <state key="normal" title="Team Name">
-                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                        <connections>
-                            <action selector="team1BtnAction:" destination="Efm-QK-Iiy" eventType="touchUpInside" id="P5K-M6-gdC"/>
-                        </connections>
-                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfP-EO-QXk">
+                        <rect key="frame" x="104" y="212" width="42" height="21"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHb-6D-aWo">
+                        <rect key="frame" x="104" y="265" width="42" height="21"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="2wQ-ZQ-wmw" firstAttribute="top" secondItem="LhM-wc-lFr" secondAttribute="bottom" constant="3" id="4iU-pl-EHX"/>
                     <constraint firstItem="ztl-75-j8d" firstAttribute="top" secondItem="2wQ-ZQ-wmw" secondAttribute="bottom" constant="50" id="AJx-6Q-59Z"/>
                     <constraint firstAttribute="bottom" secondItem="ztl-75-j8d" secondAttribute="bottom" id="Bro-wm-4my"/>
                     <constraint firstItem="EaQ-lT-mgr" firstAttribute="leading" secondItem="dkK-4E-vnX" secondAttribute="trailing" id="GRW-KS-v7e"/>
@@ -85,16 +76,17 @@
                     <constraint firstAttribute="trailing" secondItem="2wQ-ZQ-wmw" secondAttribute="trailing" constant="50" id="JWO-xM-LK3"/>
                     <constraint firstAttribute="bottom" secondItem="EaQ-lT-mgr" secondAttribute="bottom" constant="25" id="MUn-0D-f2b"/>
                     <constraint firstItem="2wQ-ZQ-wmw" firstAttribute="top" secondItem="1Nb-i7-jWT" secondAttribute="bottom" constant="8" id="OM5-hC-Ypb"/>
-                    <constraint firstItem="ztl-75-j8d" firstAttribute="top" secondItem="5Ou-MS-kek" secondAttribute="bottom" constant="3" id="ULN-s2-DSa"/>
+                    <constraint firstItem="ztl-75-j8d" firstAttribute="top" secondItem="YHb-6D-aWo" secondAttribute="bottom" constant="8" id="RGq-hZ-EU6"/>
                     <constraint firstItem="1Nb-i7-jWT" firstAttribute="leading" secondItem="FLc-Y9-NP7" secondAttribute="leadingMargin" id="Wp6-KZ-2xe"/>
+                    <constraint firstItem="YHb-6D-aWo" firstAttribute="centerX" secondItem="ztl-75-j8d" secondAttribute="centerX" id="aDg-8I-QgB"/>
                     <constraint firstItem="ztl-75-j8d" firstAttribute="top" secondItem="ga4-79-gIQ" secondAttribute="bottom" constant="8" id="fY2-kN-RWw"/>
                     <constraint firstItem="2wQ-ZQ-wmw" firstAttribute="leading" secondItem="FLc-Y9-NP7" secondAttribute="leading" id="ha6-70-Q5b"/>
                     <constraint firstAttribute="bottom" secondItem="ztl-75-j8d" secondAttribute="bottom" id="hdh-TI-TP8"/>
                     <constraint firstItem="ga4-79-gIQ" firstAttribute="leading" secondItem="FLc-Y9-NP7" secondAttribute="leadingMargin" id="i6U-Ug-XeX"/>
                     <constraint firstAttribute="bottom" secondItem="dkK-4E-vnX" secondAttribute="bottom" id="jgX-4q-GIH"/>
                     <constraint firstAttribute="trailing" secondItem="EaQ-lT-mgr" secondAttribute="trailing" id="mk6-aX-Eti"/>
-                    <constraint firstItem="LhM-wc-lFr" firstAttribute="centerX" secondItem="2wQ-ZQ-wmw" secondAttribute="centerX" id="oMc-I2-oDE"/>
-                    <constraint firstItem="5Ou-MS-kek" firstAttribute="centerX" secondItem="ztl-75-j8d" secondAttribute="centerX" id="qWd-19-Hc5"/>
+                    <constraint firstItem="wfP-EO-QXk" firstAttribute="centerX" secondItem="2wQ-ZQ-wmw" secondAttribute="centerX" id="ppv-jv-pQ6"/>
+                    <constraint firstItem="2wQ-ZQ-wmw" firstAttribute="top" secondItem="wfP-EO-QXk" secondAttribute="bottom" constant="6" id="rHL-Ft-Fo0"/>
                     <constraint firstAttribute="trailing" secondItem="dkK-4E-vnX" secondAttribute="trailing" constant="45" id="s1h-d6-zlI"/>
                     <constraint firstAttribute="trailing" secondItem="ztl-75-j8d" secondAttribute="trailing" constant="50" id="zdk-rm-wR6"/>
                 </constraints>
@@ -102,8 +94,8 @@
             <connections>
                 <outlet property="seed1" destination="1Nb-i7-jWT" id="6Wu-eK-fKe"/>
                 <outlet property="seed2" destination="ga4-79-gIQ" id="O5m-Aq-JoU"/>
-                <outlet property="team1Btn" destination="LhM-wc-lFr" id="euq-6R-Uq1"/>
-                <outlet property="team2Btn" destination="5Ou-MS-kek" id="Zkv-79-309"/>
+                <outlet property="team1Lbl" destination="wfP-EO-QXk" id="Wyg-Xm-8Yq"/>
+                <outlet property="team2Lbl" destination="YHb-6D-aWo" id="fVj-mz-t1b"/>
             </connections>
             <point key="canvasLocation" x="42" y="329"/>
         </tableViewCell>
