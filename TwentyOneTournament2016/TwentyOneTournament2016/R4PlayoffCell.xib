@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E61b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E64a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -16,29 +16,29 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5RO-Wg-FLj">
-                        <rect key="frame" x="0.0" y="1056.5" width="250" height="5"/>
+                        <rect key="frame" x="0.0" y="1073.5" width="250" height="5"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="5" id="jCH-ZQ-fPR"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HAk-zd-LZV">
-                        <rect key="frame" x="0.0" y="755.5" width="250" height="5"/>
+                        <rect key="frame" x="0.0" y="813.5" width="250" height="5"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="5" id="KQq-VW-cPY"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4rh-Vq-AsY">
-                        <rect key="frame" x="250" y="755.5" width="5" height="306"/>
+                        <rect key="frame" x="250" y="813.5" width="5" height="265"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="306" id="srv-7u-shc"/>
+                            <constraint firstAttribute="height" constant="265" id="srv-7u-shc"/>
                             <constraint firstAttribute="width" constant="5" id="zBL-8i-EnA"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IRx-I4-Od8">
-                        <rect key="frame" x="255" y="894.5" width="45" height="5"/>
+                        <rect key="frame" x="255" y="941.5" width="45" height="5"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="45" id="APh-Wj-lX1"/>
@@ -48,19 +48,21 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SM3-MG-Bzm">
                         <rect key="frame" x="8" y="726.5" width="10.5" height="20.5"/>
                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0y-Uw-eWy">
                         <rect key="frame" x="8" y="1027.5" width="10.5" height="20.5"/>
                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnU-cv-R1d">
                         <rect key="frame" x="102" y="1023" width="46" height="30"/>
                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                        <state key="normal" title="Button"/>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <connections>
                             <action selector="team2BtnAction:" destination="Vtf-aQ-C74" eventType="touchUpInside" id="4ax-8f-Hah"/>
                         </connections>
@@ -68,7 +70,9 @@
                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qm2-UQ-5OF">
                         <rect key="frame" x="102" y="722" width="46" height="30"/>
                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                        <state key="normal" title="Button"/>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <connections>
                             <action selector="team1BtnAction:" destination="Vtf-aQ-C74" eventType="touchUpInside" id="T84-Qq-XWM"/>
                         </connections>
@@ -76,9 +80,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="HAk-zd-LZV" secondAttribute="trailing" constant="50" id="0W2-3F-PVg"/>
-                    <constraint firstAttribute="bottom" secondItem="4rh-Vq-AsY" secondAttribute="bottom" constant="138" id="2Oz-jH-9VH"/>
+                    <constraint firstAttribute="bottom" secondItem="4rh-Vq-AsY" secondAttribute="bottom" constant="121" id="2Oz-jH-9VH"/>
                     <constraint firstItem="5RO-Wg-FLj" firstAttribute="leading" secondItem="oHz-la-U0T" secondAttribute="leading" id="2VP-yG-W8k"/>
-                    <constraint firstAttribute="bottom" secondItem="IRx-I4-Od8" secondAttribute="bottom" constant="300" id="3uW-y8-qTX"/>
+                    <constraint firstAttribute="bottom" secondItem="IRx-I4-Od8" secondAttribute="bottom" constant="253" id="3uW-y8-qTX"/>
                     <constraint firstItem="HAk-zd-LZV" firstAttribute="leading" secondItem="oHz-la-U0T" secondAttribute="leading" id="4sV-lh-gWi"/>
                     <constraint firstItem="HAk-zd-LZV" firstAttribute="top" secondItem="SM3-MG-Bzm" secondAttribute="bottom" constant="8.5" id="90h-L0-fIk"/>
                     <constraint firstItem="HAk-zd-LZV" firstAttribute="top" secondItem="Qm2-UQ-5OF" secondAttribute="bottom" constant="3.5" id="FXY-Ix-t6z"/>
@@ -91,8 +95,8 @@
                     <constraint firstItem="5RO-Wg-FLj" firstAttribute="top" secondItem="xnU-cv-R1d" secondAttribute="bottom" constant="3.5" id="jkc-2u-UNa"/>
                     <constraint firstAttribute="trailing" secondItem="IRx-I4-Od8" secondAttribute="trailing" id="lX7-yB-4Cg"/>
                     <constraint firstAttribute="leadingMargin" secondItem="S0y-Uw-eWy" secondAttribute="leading" id="og1-qp-DIv"/>
-                    <constraint firstItem="5RO-Wg-FLj" firstAttribute="top" secondItem="HAk-zd-LZV" secondAttribute="bottom" constant="296" id="psT-ue-lmF"/>
-                    <constraint firstAttribute="bottom" secondItem="5RO-Wg-FLj" secondAttribute="bottom" constant="138" id="t82-JL-NMd"/>
+                    <constraint firstItem="5RO-Wg-FLj" firstAttribute="top" secondItem="HAk-zd-LZV" secondAttribute="bottom" constant="255" id="psT-ue-lmF"/>
+                    <constraint firstAttribute="bottom" secondItem="5RO-Wg-FLj" secondAttribute="bottom" constant="121" id="t82-JL-NMd"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
