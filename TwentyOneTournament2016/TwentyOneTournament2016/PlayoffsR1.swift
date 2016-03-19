@@ -22,30 +22,19 @@ class PlayoffsR1: UIViewController, UITableViewDataSource, UITableViewDelegate{
     var matches = []
     
     override func viewDidLoad() {
-                //Get standings
-        dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY, 0), {
-            print("Getting Standings...")
-            self.teams = ParseOps.sharedOps().getStandings()
-            dispatch_async(dispatch_get_main_queue(), {
-                //Do everthing you need to do with the Parse Objects in this area.
                 
                 // Register custom cell
-                var nib = UINib(nibName: "R1PlayoffCell", bundle: nil)
-                self.tableView.registerNib(nib, forCellReuseIdentifier: self.cellId)
-                
-                self.tableView.delegate = self
-                self.tableView.dataSource = self
-                
-                self.tableView.rowHeight = 130
-                
-                self.tableView.contentOffset = CGPoint(x:0, y:0)
-                
-                self.tableView.reloadData()
-                
-            })
-        })
+        var nib = UINib(nibName: "R1PlayoffCell", bundle: nil)
+        self.tableView.registerNib(nib, forCellReuseIdentifier: self.cellId)
         
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         
+        self.tableView.rowHeight = 130
+                
+        self.tableView.contentOffset = CGPoint(x:0, y:0)
+                
+        self.tableView.reloadData()
         
     }
     
