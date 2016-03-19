@@ -29,7 +29,7 @@ class PlayoffsR3: UIViewController, UITableViewDataSource, UITableViewDelegate{
         tableView.delegate = self
         tableView.dataSource = self
         
-        self.tableView.rowHeight = 300
+        self.tableView.rowHeight = 260
         
         
         tableView.contentOffset = CGPoint(x:0, y:0)
