@@ -45,65 +45,57 @@
                             <constraint firstAttribute="width" constant="45" id="gC1-S1-JnR"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qei-Yq-bjZ">
-                        <rect key="frame" x="8" y="161" width="11" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qei-Yq-bjZ">
+                        <rect key="frame" x="8" y="184.5" width="10.5" height="22.5"/>
                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ena-ow-wdP">
-                        <rect key="frame" x="102" y="156" width="46" height="30"/>
-                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                        <state key="normal" title="Button">
-                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                        <connections>
-                            <action selector="team1BtnAction:" destination="2OU-TL-O95" eventType="touchUpInside" id="E6J-Q9-Lto"/>
-                        </connections>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTI-RA-auW">
-                        <rect key="frame" x="102" y="236" width="46" height="30"/>
-                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                        <state key="normal" title="Button">
-                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                        <connections>
-                            <action selector="team2BtnAction:" destination="2OU-TL-O95" eventType="touchUpInside" id="Dzg-U8-oSg"/>
-                        </connections>
-                    </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYe-Wd-Hov">
-                        <rect key="frame" x="8" y="241" width="11" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYe-Wd-Hov">
+                        <rect key="frame" x="8" y="239.5" width="10.5" height="22.5"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXc-vh-cQs">
+                        <rect key="frame" x="104" y="186" width="42" height="21"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJM-Ea-Hd1">
+                        <rect key="frame" x="104" y="241" width="42" height="21"/>
                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="yTI-RA-auW" firstAttribute="centerX" secondItem="weg-66-dDc" secondAttribute="centerX" id="0cK-MJ-mAH"/>
                     <constraint firstAttribute="trailing" secondItem="weg-66-dDc" secondAttribute="trailing" constant="50" id="5I0-Tg-S7T"/>
                     <constraint firstItem="QNU-pM-LLk" firstAttribute="leading" secondItem="Kic-Id-cDS" secondAttribute="leading" id="6TU-6v-zfv"/>
-                    <constraint firstItem="QNU-pM-LLk" firstAttribute="top" secondItem="Ena-ow-wdP" secondAttribute="bottom" constant="3.5" id="7uK-aS-PKp"/>
-                    <constraint firstItem="Ena-ow-wdP" firstAttribute="centerX" secondItem="QNU-pM-LLk" secondAttribute="centerX" id="9Kg-4L-8b1"/>
+                    <constraint firstItem="qXc-vh-cQs" firstAttribute="centerX" secondItem="QNU-pM-LLk" secondAttribute="centerX" id="BIq-Jb-fWE"/>
                     <constraint firstAttribute="bottom" secondItem="cfZ-yy-K3D" secondAttribute="bottom" constant="25" id="ENY-sq-IZY"/>
                     <constraint firstItem="weg-66-dDc" firstAttribute="top" secondItem="QNU-pM-LLk" secondAttribute="bottom" constant="50" id="IkL-4s-G7l"/>
+                    <constraint firstItem="weg-66-dDc" firstAttribute="top" secondItem="iJM-Ea-Hd1" secondAttribute="bottom" constant="8" id="K1v-90-etT"/>
+                    <constraint firstItem="iJM-Ea-Hd1" firstAttribute="centerX" secondItem="weg-66-dDc" secondAttribute="centerX" id="Q4e-cA-74I"/>
                     <constraint firstItem="cYe-Wd-Hov" firstAttribute="leading" secondItem="Kic-Id-cDS" secondAttribute="leadingMargin" id="Rwb-55-9VJ"/>
                     <constraint firstAttribute="trailing" secondItem="F8y-cn-hKy" secondAttribute="trailing" id="TlS-xj-rTT"/>
                     <constraint firstAttribute="bottom" secondItem="F8y-cn-hKy" secondAttribute="bottom" constant="55" id="Tvf-Ez-QE4"/>
                     <constraint firstAttribute="bottom" secondItem="weg-66-dDc" secondAttribute="bottom" constant="25" id="Vdn-kD-Qn8"/>
+                    <constraint firstItem="QNU-pM-LLk" firstAttribute="top" secondItem="qXc-vh-cQs" secondAttribute="bottom" constant="8" id="Wss-3j-bJS"/>
                     <constraint firstItem="weg-66-dDc" firstAttribute="top" secondItem="cYe-Wd-Hov" secondAttribute="bottom" constant="8" id="evy-Yt-BXD"/>
                     <constraint firstItem="QNU-pM-LLk" firstAttribute="top" secondItem="Qei-Yq-bjZ" secondAttribute="bottom" constant="8" id="gt9-mn-SwC"/>
                     <constraint firstItem="Qei-Yq-bjZ" firstAttribute="leading" secondItem="Kic-Id-cDS" secondAttribute="leadingMargin" id="hsb-Kb-b5Y"/>
                     <constraint firstItem="weg-66-dDc" firstAttribute="leading" secondItem="Kic-Id-cDS" secondAttribute="leading" id="oby-C7-bfz"/>
                     <constraint firstAttribute="trailing" secondItem="cfZ-yy-K3D" secondAttribute="trailing" constant="45" id="s44-1M-GpW"/>
                     <constraint firstAttribute="trailing" secondItem="QNU-pM-LLk" secondAttribute="trailing" constant="50" id="yKT-vI-bzT"/>
-                    <constraint firstItem="weg-66-dDc" firstAttribute="top" secondItem="yTI-RA-auW" secondAttribute="bottom" constant="3.5" id="zyE-CP-c6n"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="seed1Lbl" destination="Qei-Yq-bjZ" id="0io-kJ-8G1"/>
                 <outlet property="seed2Lbl" destination="cYe-Wd-Hov" id="9dW-Qk-IBG"/>
-                <outlet property="team1Btn" destination="Ena-ow-wdP" id="DOm-l9-lRj"/>
-                <outlet property="team2Btn" destination="yTI-RA-auW" id="hNf-SK-qTM"/>
+                <outlet property="team1Lbl" destination="qXc-vh-cQs" id="AIx-eK-KP9"/>
+                <outlet property="team2Lbl" destination="iJM-Ea-Hd1" id="efw-13-1OV"/>
             </connections>
             <point key="canvasLocation" x="469" y="329"/>
         </tableViewCell>

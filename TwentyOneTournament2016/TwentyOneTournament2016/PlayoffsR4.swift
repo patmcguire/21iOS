@@ -50,10 +50,8 @@ class PlayoffsR4: UIViewController, UITableViewDataSource, UITableViewDelegate{
         let row = indexPath.row
         
         if row == 0{
-            //            cell.seed1.text = "\(seeds[0])"
-            cell.team1Btn.setTitle(matches[row].team1, forState: UIControlState.Normal)
-            //            cell.seed2.text = "\(seeds[1])"
-            cell.team2Btn.setTitle(matches[row].team2, forState: UIControlState.Normal)
+            cell.team1Lbl.text = matches[row].team1
+            cell.team2Lbl.text = matches[row].team2
         }
         
         if ((matches[row].seed1!) > 0){
@@ -71,12 +69,12 @@ class PlayoffsR4: UIViewController, UITableViewDataSource, UITableViewDelegate{
         }
         
         if (matches[row].winner! == 1){
-            cell.team1Btn.tintColor = UIColor.greenColor()
-            cell.team2Btn.tintColor = UIColor.redColor()
+            cell.team1Lbl.textColor = UIColor.greenColor()
+            cell.team2Lbl.textColor = UIColor.redColor()
         }
         else if (matches[row].winner! == 2){
-            cell.team2Btn.tintColor = UIColor.greenColor()
-            cell.team1Btn.tintColor = UIColor.redColor()
+            cell.team2Lbl.textColor = UIColor.greenColor()
+            cell.team1Lbl.textColor = UIColor.redColor()
         }
         
         return cell
