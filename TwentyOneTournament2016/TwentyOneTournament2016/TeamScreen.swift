@@ -24,6 +24,7 @@ class TeamScreen: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet var numOfSeasons: UILabel!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     var cellIdentifier = "cell"
@@ -38,8 +39,13 @@ class TeamScreen: UIViewController, UITableViewDataSource, UITableViewDelegate{
     override func viewDidLoad() {
         teamNameLbl.text = selectedTeam
         
+        activityIndicator.startAnimating()
         
-        //TODO - get team schedule and results information from Parse
+        
+        p1Lbl.text = ""
+        p2Lbl.text = ""
+        p3Lbl.text = ""
+        numOfSeasons.text = ""
         
         let nib = UINib(nibName: "teamScheduleCell", bundle: nil)
         self.tableView.registerNib(nib, forCellReuseIdentifier: cellIdentifier)
@@ -67,7 +73,7 @@ class TeamScreen: UIViewController, UITableViewDataSource, UITableViewDelegate{
                 self.p3Lbl.text = self.teamInfo.player3
                 self.numOfSeasons.text = "Number of Tournaments: \(self.teamInfo.seasons)"
                 
-                //TODO - Add championship years to this screen
+                self.activityIndicator.stopAnimating()
             })
         })
     }
