@@ -15,7 +15,7 @@ class PlayoffsR5: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     let cellId = "round5Cell"
     
-
+    var winner = ""
     
     
     override func viewDidLoad() {
@@ -45,9 +45,7 @@ class PlayoffsR5: UIViewController, UITableViewDataSource, UITableViewDelegate{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: r5Cell = self.tableView.dequeueReusableCellWithIdentifier(cellId) as! r5Cell
         
-        let row = indexPath.row
-        
-        
+        cell.winnerLbl.text = winner
         
         return cell
     }

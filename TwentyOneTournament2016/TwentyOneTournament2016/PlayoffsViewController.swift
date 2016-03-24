@@ -47,11 +47,17 @@ class PlayoffsPageViewController: UIPageViewController, UIPageViewControllerDele
                 let p4 = self.storyboard?.instantiateViewControllerWithIdentifier("R4") as! PlayoffsR4
                 p4.matches = self.schedule[3].matches
                 let p5 = self.storyboard?.instantiateViewControllerWithIdentifier("R5") as! PlayoffsR5
+                if p4.matches[0].winner == 1{
+                    p5.winner = p4.matches[0].team1
+                }
+                else if p4.matches[0].winner == 2{
+                    p5.winner = p4.matches[0].team2
+                }
                 
                 self.myViewControllers = [p1,p2,p3,p4,p5]
                 
                 
-                for var index = 0; index < self.myViewControllers.count; ++index {
+                for index in 0 ..< self.myViewControllers.count {
                     NSLog("\(self.myViewControllers[index])")
                 }
                 
